@@ -7,7 +7,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-slate-950 bg-[url('/wp.webp')] bg-[length:100%] bg-no-repeat">
+      <body className="bg-[url('/wp2.png')] bg-no-repeat bg-center bg-cover">
         {children}
       </body>
     </html>

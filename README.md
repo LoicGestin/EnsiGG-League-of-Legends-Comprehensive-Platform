@@ -59,8 +59,6 @@ Optional VSCode extensions:
 
 ```plantuml
 left to right direction
-actor "User" as us
-actor "Game Creator" as gc
 rectangle Ensi.gg {
   usecase "Ecrire un message dans le chat de la partie" as UC1 #pink;line:red;text:black
   usecase "Spéctateur de la partie" as UC2 #pink;line:red;text:black
@@ -119,9 +117,13 @@ UC3 -- UC6
 
 Détail des appels : 
 
+
 GET Summoner : /lol/summoner/v4/summoners/by-name/{summonerName}   Get a summoner by summoner name.
+
 Return :  SummonerDTO
+
 SummonerDTO : 
+
 accountId	string	Encrypted account ID. Max length 56 characters.
 profileIconId	int	ID of the summoner icon associated with the summoner.
 revisionDate	long	Date summoner was last modified specified as epoch milliseconds. The following events will update this timestamp: summoner name change, summoner level change, or profile icon change.
@@ -130,9 +132,13 @@ id	string	Encrypted summoner ID. Max length 63 characters.
 puuid	string	Encrypted PUUID. Exact length of 78 characters.
 summonerLevel	long	Summoner level associated with the summoner.
 
+
 GET League : /lol/league/v4/entries/by-summoner/{encryptedSummonerId} Get league entries in all queues for a given summoner ID 
+
 Return  : Set[LeagueEntryDTO]
+
 LeagueEntryDTO : 
+
 leagueId	string	
 summonerId	string	Player's encrypted summonerId.
 summonerName	string	
@@ -148,17 +154,29 @@ freshBlood	boolean
 inactive	boolean	
 miniSeries	MiniSeriesDTO
 
+
+
 GET Matches ID :  /lol/match/v5/matches/by-puuid/{puuid}/ids : Get a list of match ids by puuid
+
 Return : 
+
 List[string]
 
+
+
 GET Matches infos  && Get Maches General Info:  /lol/match/v5/matches/{matchId}  Get a match by match id
+
 Return  MatchDto (Object with many many info, go check : https://developer.riotgames.com/apis#match-v5/GET_getMatch )
+
+
 
 GET Mastery : /lol/champion-mastery/v4/champion-masteries/by-puuid/{encryptedPUUID} Get all champion mastery entries sorted by number of champion points descending
 Return :
+
 List[ChampionMasteryDto]
+
 ChampionMasteryDto : 
+
 puuid	string	Player Universal Unique Identifier. Exact length of 78 characters. (Encrypted)
 championPointsUntilNextLevel	long	Number of points needed to achieve next level. Zero if player reached maximum champion level for this champion.
 chestGranted	boolean	Is chest granted for this champion or not in current season.
@@ -171,7 +189,10 @@ championPointsSinceLastLevel	long	Number of points earned since current level ha
 tokensEarned	int	The token earned for this champion at the current championLevel. When the championLevel is advanced the tokensEarned resets to 0.
 
 
-Get Champion General Info :  /lol/platform/v3/champion-rotations Returns champion rotations, including free-to-play and low-level free-to-play rotations (REST) Return : ChampionInfo
+Get Champion General Info :  /lol/platform/v3/champion-rotations Returns champion rotations, including free-to-play and low-level free-to-play rotations (REST) 
+
+Return : ChampionInfo
+
 ChampionInfo : 
 maxNewPlayerLevel	int	
 freeChampionIdsForNewPlayers	List[int]	

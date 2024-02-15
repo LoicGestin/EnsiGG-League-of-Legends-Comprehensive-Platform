@@ -59,6 +59,8 @@ Optional VSCode extensions:
 
 ```plantuml
 left to right direction
+actor "User" as us
+actor "Game Creator" as gc
 rectangle Ensi.gg {
   usecase "Ecrire un message dans le chat de la partie" as UC1 #pink;line:red;text:black
   usecase "Spéctateur de la partie" as UC2 #pink;line:red;text:black
@@ -87,8 +89,6 @@ Pour ce projet, nous utiliserons l'API de Riot games https://developer.riotgames
 
 ```plantuml
 left to right direction
-actor "User" as us
-actor "Game Creator" as gc
 rectangle "Ensi.gg API" {
   usecase "Afficher détail du jeu" as UC3 #Yellowgreen;line:green;text:black
   usecase "Afficher détail d'un personnage" as UC4 #Yellowgreen;line:green;text:black

@@ -5,7 +5,8 @@ import Image from "next/image";
  * Display summoners ranking.
  */
 export default function Ranked({ data }: any) {
-  let league = new LeagueEntryDTO(data);
+  // @ts-ignore
+    let league = new LeagueEntryDTO(data);
   let isSoloq = league.queueType === "RANKED_SOLO_5x5";
   let winrate = (league.wins / (league.losses + league.wins)) * 100;
 

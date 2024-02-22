@@ -1,4 +1,5 @@
 import { MatchData } from "./Matchs";
+import Link from "next/link";
 
 interface Props {
   data: MatchData;
@@ -28,8 +29,8 @@ export default function SingleMatch({ data, id }: Props) {
         <div className={"flex"}>
             <div className={"flex-col m-3 items-end"}>
                 {players.slice(0,5).map((player: any, key: number) => (
-                    <div className={"flex "}>
-                        <p className="truncate">{player.summonerName}</p>
+                    <div key={key} className={"flex "}>
+                        <Link href={`/summoners/${player.summonerName}`}>{player.summonerName}</Link>
                         <img className="ml-auto" src={`https://ddragon.leagueoflegends.com/cdn/14.4.1/img/champion/${player.championName}.png`} alt={"Champion Image"} width={25} height={25}/>
                     </div>
                 ))}
@@ -37,9 +38,9 @@ export default function SingleMatch({ data, id }: Props) {
 
             <div className={"flex-col m-3"}>
                 {players.slice(5,10).map((player: any, key: number) => (
-                    <div className={"flex"}>
+                    <div key={key} className={"flex"}>
                         <img  src={`https://ddragon.leagueoflegends.com/cdn/14.4.1/img/champion/${player.championName}.png`} alt={"Champion Image"} width={25} height={25}/>
-                        <p className="truncate">{player.summonerName}</p>
+                        <Link href={`/summoners/${player.summonerName}`}>{player.summonerName}</Link>
                     </div>
                 ))}
             </div>

@@ -11,10 +11,10 @@ interface Props {
 export function AppLayout({ children }: Props) {
   return (
     <div className="flex h-screen">
-      <Sidebar />
-      <div className="my-auto grow">
-        <Searchbar />
+      <div className="fixed">
+        <Sidebar />
       </div>
+      <div className="my-auto grow">{children}</div>
     </div>
   );
 }

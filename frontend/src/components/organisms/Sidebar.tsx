@@ -7,7 +7,7 @@ import { LabelImage } from "../molecules/LabelImage";
  */
 export function Sidebar() {
   return (
-    <div className="flex h-screen flex-col items-center space-y-5 bg-slate-800 px-6 py-5">
+    <nav className="flex h-screen flex-col items-center space-y-5 bg-slate-800 px-6 py-5">
       <Link href="/" className="w-full rounded-md bg-slate-700 py-2.5">
         <h2>
           <Text
@@ -52,6 +52,6 @@ export function Sidebar() {
           />
         </Link>
       </div>
-    </div>
+    </nav>
   );
 }

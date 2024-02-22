@@ -1,10 +1,13 @@
 import { SummonersLayout } from "@/components/templates/SummonersLayout";
-import Image from "next/image";
-import Link from 'next/link';
-export default function Page() {
+
+export default function Page({
+  params: { nameUID },
+}: {
+  params: { nameUID: string };
+}) {
   return (
     <div>
-      <SummonersLayout>
+      <SummonersLayout name={nameUID}>
         <div>
           <span>This is the home page</span>
         </div>

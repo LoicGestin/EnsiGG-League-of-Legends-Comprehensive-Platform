@@ -7,13 +7,14 @@ import { SummonersInfo } from "../organisms/SummonersInfo";
  */
 interface Props {
   children: ReactNode;
+  name: string;
 }
 
-export function SummonersLayout({ children }: Props) {
+export function SummonersLayout({ children, name }: Props) {
   return (
     <div className="flex h-screen">
       <Sidebar />
-      <SummonersInfo name={"Sigma Shadowman"}/>
+      <SummonersInfo name={name} />
     </div>
   );
 }

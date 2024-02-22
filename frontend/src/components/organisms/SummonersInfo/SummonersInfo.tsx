@@ -60,12 +60,13 @@ interface Props {
 export async function SummonersInfo({ name }: Props) {
   let data = await getServerSideProps(name);
 
+  // @ts-ignore
   const summonerInfo = new SummonerDTO(data[0]);
   const leagueInfoSoloq = data[1][0];
   const leagueInfoFlex = data[1][1];
   const matches = data[2];
   return (
-    <div className="mx-auto w-3/4 flex-col bg-slate-600 ">
+    <div className="mx-auto w-3/4 flex-col text-white ">
       <div className="m-3">
         <SummonerHeader data={summonerInfo}></SummonerHeader>
       </div>
@@ -75,7 +76,7 @@ export async function SummonersInfo({ name }: Props) {
           <Ranked data={leagueInfoFlex}></Ranked>
         </div>
         <div className="mx-auto mr-3 flex w-9/12 rounded-xl  px-[1.5vw] py-[1.5vh] ">
-          <Matchs data={matches} id={summonerInfo.id}></Matchs>
+          <Matchs data={matches} id={summonerInfo.puuid}></Matchs>
         </div>
       </div>
     </div>

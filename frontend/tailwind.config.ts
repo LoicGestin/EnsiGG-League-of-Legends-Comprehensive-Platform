@@ -1,5 +1,9 @@
 import type { Config } from "tailwindcss";
-
+module.exports = {
+  images: {
+    domains: ['ddragon.leagueoflegends.com'],
+  },
+};
 module.exports = {
   mode:'jit',
   purge: [

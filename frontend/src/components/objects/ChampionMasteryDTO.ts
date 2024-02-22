@@ -1,4 +1,4 @@
-export function ChampionMasteryDto(data) {
+export function ChampionMasteryDto(data : any) {
     this.puuid = data.puuid;
     this.championPointsUntilNextLevel = data.championPointsUntilNextLevel;
     this.chestGranted = data.chestGranted;

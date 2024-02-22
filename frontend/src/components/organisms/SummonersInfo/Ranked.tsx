@@ -10,7 +10,7 @@ export default function Ranked({ data }: any) {
   let winrate = (league.wins / (league.losses + league.wins)) * 100;
 
   return (
-    <div className="m-3 mx-auto flex  w-full justify-between rounded-xl bg-slate-100 px-[1.5vw] py-[1.5vh]">
+    <div className="m-3 mx-auto flex  w-full justify-between rounded-xl bg-slate-800 px-[1.5vw] py-[1.5vh]">
       <div className={"w-auto  flex-col pl-5 pr-3"}>
         <h2>{"Ranked " + (isSoloq ? "Solo/Duo" : "Flex")}</h2>
         <div>

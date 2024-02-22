@@ -1,6 +1,6 @@
-import {MetadataDTO} from "./MetadataDTO";
+import { MetadataDTO } from "./MetadataDTO";
 
-export function MatchDTO(data) {
-    this.metadata = new MetadataDTO(data.metadata);
-    this.info = new InfoDTO(data.info);
+export function MatchDTO(data: any) {
+  this.metadata = new MetadataDTO(data.metadata);
+  this.info = new InfoDTO(data.info);
 }

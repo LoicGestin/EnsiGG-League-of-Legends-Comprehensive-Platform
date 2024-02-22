@@ -1,3 +1,4 @@
+import { Searchbar } from "@/components/organisms/Searchbar";
 import { SummonersLayout } from "@/components/templates/SummonersLayout";
 
 export default function Page({
@@ -8,8 +9,8 @@ export default function Page({
   return (
     <div>
       <SummonersLayout name={nameUID}>
-        <div>
-          <span>This is the home page</span>
+        <div className="mx-auto w-3/4">
+          <Searchbar />
         </div>
       </SummonersLayout>
     </div>

@@ -38,6 +38,9 @@ export function Searchbar() {
           className="w-full bg-transparent text-slate-950 focus:outline-none"
           onChange={handleSummonerName}
           value={summonerName}
+          onKeyDown={(event) => {
+            event.key === "Enter" && router.push(`/summoners/${summonerName}`);
+          }}
         ></input>
       </div>
 

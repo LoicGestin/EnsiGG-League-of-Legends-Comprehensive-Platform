@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import { Sidebar } from "../organisms/Sidebar";
-import { SummonersInfo } from "../organisms/SummonersInfo";
+import { SummonersInfo } from "../organisms/SummonersInfo/SummonersInfo";
 
 /**
  * Template of the app layout.

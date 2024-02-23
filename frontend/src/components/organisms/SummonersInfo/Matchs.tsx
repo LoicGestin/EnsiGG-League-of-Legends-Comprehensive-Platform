@@ -10,7 +10,7 @@ interface Props {
 
 export default function Matchs({ data, id }: Props) {
   return (
-    <div className="w-full">
+    <div className={"flex-col w-full space-y-1"}>
       {data.map((match: any, key: number) => (
         <SingleMatch key={key} data={match} id={id}></SingleMatch>
       ))}
@@ -23,6 +23,8 @@ export interface MatchData {
 }
 
 interface GameData {
+  queueId: any;
+  gameMode: any;
   gameType: any;
   gameCreation: any;
   platformId: any;

@@ -11,21 +11,24 @@ export default function Ranked({ data }: any) {
   let winrate = (league.wins / (league.losses + league.wins)) * 100;
 
   return (
-    <div className="m-3 mx-auto flex  w-full justify-between rounded-xl bg-slate-800 px-[1.5vw] py-[1.5vh]">
-      <div className={"w-auto  flex-col pl-5 pr-3"}>
+    <div className="flex justify-between rounded-md space-x-5 bg-slate-800 px-[1vw] py-[1vh]">
+      <div className={"flex-col space-y-2"}>
         <h2>{"Ranked " + (isSoloq ? "Solo/Duo" : "Flex")}</h2>
-        <div>
+          <div className={"flex space-x-2"}>
           <Image
             src={`/icons/RankedEmblemsLatest/Rank=${league.tier}.png`}
             alt="Rank"
-            width={50}
-            height={50}
+            width={72}
+            height={72}
           />
-          <p>{league.tier}</p>
-          <p>LP: {league.leaguePoints}</p>
-        </div>
+              <div className={"flex-col"}>
+                  <p>{league.tier}</p>
+                  <p>LP: {league.leaguePoints}</p>
+              </div>
+
+          </div>
       </div>
-      <div className={"w- flex-col pr-10 "}>
+      <div className={"flex-col"}>
         <p>{league.wins + "W - " + league.losses + "L"}</p>
         <p>{winrate.toFixed(2)} %</p>
       </div>

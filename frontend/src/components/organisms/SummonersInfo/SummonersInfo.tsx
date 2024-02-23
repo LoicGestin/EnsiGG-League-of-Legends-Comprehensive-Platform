@@ -66,18 +66,16 @@ export async function SummonersInfo({ name }: Props) {
   const leagueInfoFlex = data[1][1];
   const matches = data[2];
   return (
-    <div className="mx-auto w-3/4 flex-col text-white ">
-      <div className="m-3">
-        <SummonerHeader data={summonerInfo}></SummonerHeader>
-      </div>
-      <div className="flex w-full">
-        <div className="m-3 mr-10 flex w-4/12 flex-col ">
+    <div className="mx-auto w-10/12 flex-col text-white space-y-3 ">
+
+      <SummonerHeader data={summonerInfo}></SummonerHeader>
+
+      <div className="flex w-full space-x-3">
+        <div className=" flex w-5/12 flex-col space-y-1 ">
           <Ranked data={leagueInfoSoloq}></Ranked>
           <Ranked data={leagueInfoFlex}></Ranked>
         </div>
-        <div className="mx-auto mr-3 flex w-9/12 rounded-xl  px-[1.5vw] py-[1.5vh] ">
           <Matchs data={matches} id={summonerInfo.puuid}></Matchs>
-        </div>
       </div>
     </div>
   );

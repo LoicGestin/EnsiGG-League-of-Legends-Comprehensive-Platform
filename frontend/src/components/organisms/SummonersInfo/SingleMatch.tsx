@@ -47,17 +47,17 @@ export default function SingleMatch({ data, id }: Props) {
     }
     return (
     <div className={`rounded-md px-[1vw] py-[1vh] flex justify-between ${user.win ? 'bg-blue-950' : 'bg-red-950'}`}>
-        <div className={"flex-col"}>
+        <div className={"flex-col w-2/12 text-center"}>
             <div>
-              <p>{queuesData.find(queue => queue.queueId === data.info.queueId ).description}</p>
-              <p>{timeSinceCreation}</p>
+              <p className="text-[16px]">{queuesData.find(queue => queue.queueId === data.info.queueId ).description}</p>
+              <p className="text-[12px]">{timeSinceCreation}</p>
             </div>
-            <p>{user.win ? "WIN " : "LOSS "} {formatGameDuration(data.info.gameDuration) }</p>
+            <p className="text-[12px]">{user.win ? "WIN " : "LOSS "} {formatGameDuration(data.info.gameDuration) }</p>
         </div>
-        <div>
+        <div className="w-2/12">
             <img className="ml-auto" src={`https://ddragon.leagueoflegends.com/cdn/14.4.1/img/champion/${user.championName}.png`} alt={"Champion Image"} width={72} height={72}/>
         </div>
-        <div className="text-center">
+        <div className="text-center w-2/12">
             <p>{user.kills} / {user.deaths} / {user.assists}</p>
             <p>{kdaCalcul(user.kills,user.deaths,user.assists)} KDA</p>
             <p>{user.totalMinionsKilled} CS</p>
@@ -82,7 +82,7 @@ export default function SingleMatch({ data, id }: Props) {
                 {players.slice(0,5).map((player: any, key: number) => (
                     <div key={key} className={"flex "}>
                         <div style={{ fontSize: '10.5px', overflow: "hidden",whiteSpace: "nowrap" ,textOverflow:"ellipsis"}}>
-                        <Link  href={`/summoners/${player.summonerName}`}>{player.summonerName}</Link>
+                        <Link  href={`/summoners/${player.summonerName}%3A${player.riotIdTagline}`}>{player.summonerName}</Link>
                         </div>
                         <img className="ml-auto shrink-0"  src={`https://ddragon.leagueoflegends.com/cdn/14.4.1/img/champion/${player.championName}.png`} alt={"Champion Image"} width={20} height={20}/>
                     </div>
@@ -94,7 +94,7 @@ export default function SingleMatch({ data, id }: Props) {
                     <div key={key} className={"flex"}>
                         <img  src={`https://ddragon.leagueoflegends.com/cdn/14.4.1/img/champion/${player.championName}.png`} alt={"Champion Image"} width={20} height={20}/>
                         <div style={{ fontSize: '10.5px', overflow: "hidden",whiteSpace: "nowrap",textOverflow:"ellipsis" }}>
-                            <Link  href={`/summoners/${player.summonerName}`}>{player.summonerName}</Link>
+                            <Link  href={`/summoners/${player.summonerName}%3A${player.riotIdTagline}`}>{player.summonerName}</Link>
                         </div>
                     </div>
                 ))}

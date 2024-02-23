@@ -39,14 +39,14 @@ export function Searchbar() {
           onChange={handleSummonerName}
           value={summonerName}
           onKeyDown={(event) => {
-            event.key === "Enter" && router.push(`/summoners/${summonerName}`);
+            event.key === "Enter" && router.push(`/summoners/${summonerName.replace('#',":")}`);
           }}
         ></input>
       </div>
 
       <button
         className="rounded-md bg-blue-900 px-1 py-2.5"
-        onClick={() => router.push(`/summoners/${summonerName}`)}
+        onClick={() => router.push(`/summoners/${summonerName.replace('#',":")}`)}
       >
         <h2>
           <Text

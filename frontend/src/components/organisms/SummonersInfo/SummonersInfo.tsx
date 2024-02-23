@@ -8,9 +8,36 @@ import Matchs from "@/components/organisms/SummonersInfo/Matchs";
 
 const League = dynamic(() => import("./Ranked"));
 
-export async function getServerSideProps(summonerName: string) {
-  const apiKey = "RGAPI-58ed4674-c9dd-4d24-89f7-e9b2ae2696e3";
-  const apiUrlID = `https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-name/${summonerName}?api_key=${apiKey}`;
+export async function getServerSideProps(summonerName: string){
+  const apiKey = "RGAPI-8c9240b2-3b52-4aba-aafe-04afdc0390cd";
+  let name = summonerName.split("%3A")[0];
+  let tag = summonerName.split("%3A")[1];
+
+  console.log(summonerName)
+  console.log(summonerName)
+  console.log(summonerName)
+  console.log(summonerName)
+  console.log(summonerName)
+  console.log(summonerName)
+  console.log(summonerName)
+  console.log(summonerName)
+  const apiUrlAccount = `https://europe.api.riotgames.com/riot/account/v1/accounts/by-riot-id/${name}/${tag}?api_key=${apiKey}`;
+  const data = await fetch(apiUrlAccount, {
+    headers: {
+      "Content-Type": "application/json",
+      "Accept-Charset": "application/json; charset=UTF-8",
+    },
+  });
+
+  const accountInfo = await data.json();
+
+
+  return getServerSidePropsExt(accountInfo.puuid);
+}
+export async function getServerSidePropsExt(puuid: string) {
+  const apiKey = "RGAPI-8c9240b2-3b52-4aba-aafe-04afdc0390cd";
+
+  const apiUrlID = `https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-puuid/${puuid}?api_key=${apiKey}`;
 
   const data = await fetch(apiUrlID, {
     headers: {
@@ -29,7 +56,7 @@ export async function getServerSideProps(summonerName: string) {
   });
   const jsonResponseLeague = await league.json();
 
-  const apiUrlMatchId = `https://europe.api.riotgames.com/lol/match/v5/matches/by-puuid/${summonerInfo.puuid}/ids?start=0&count=8&api_key=${apiKey}`;
+  const apiUrlMatchId = `https://europe.api.riotgames.com/lol/match/v5/matches/by-puuid/${summonerInfo.puuid}/ids?start=0&count=20&api_key=${apiKey}`;
   const matchIdResponse = await fetch(apiUrlMatchId, {
     headers: {
       "Content-Type": "application/json",
@@ -58,8 +85,8 @@ interface Props {
 }
 
 export async function SummonersInfo({ name }: Props) {
-  let data = await getServerSideProps(name);
-
+  let data ;
+  data = await getServerSideProps(name);
   // @ts-ignore
   const summonerInfo = new SummonerDTO(data[0]);
   const leagueInfoSoloq = data[1][0];

@@ -2,6 +2,8 @@
 import { MatchData } from "./Matchs";
 import { useEffect, useState } from 'react';
 const queuesData = require('../../../../public/assets/queues.json');
+const summonerData = require('../../../../public/assets/summoner.json');
+const runesData = require('../../../../public/assets/runesReforged.json');
 import Link from "next/link";
 
 interface Props {
@@ -15,7 +17,18 @@ export default function SingleMatch({ data, id }: Props) {
     let players = data.info.participants;
     // @ts-ignore
     let user = players.find(player => player.puuid === id);
+
+    let firstSum = summonerData.find((spell) => spell.key == user.summoner1Id).id
+    let secondSum = summonerData.find((spell) => spell.key == user.summoner2Id).id
+
+    firstSum = firstSum.charAt(0).toUpperCase() + firstSum.slice(1);
+    secondSum = secondSum.charAt(0).toUpperCase() + secondSum.slice(1);
+
+    let firstRune = runesData.find((rune) => rune.id == user.perks.styles[0].style).icon
+    let secondRune = runesData.find((rune) => rune.id == user.perks.styles[1].style).icon
+
     const [timeSinceCreation, setTimeSinceCreation] = useState('');
+
 
     useEffect(() => {
         const gameCreationTimestamp = data.info.gameCreation;
@@ -47,40 +60,53 @@ export default function SingleMatch({ data, id }: Props) {
     }
     return (
     <div className={`rounded-md px-[1vw] py-[1vh] flex justify-between ${user.win ? 'bg-blue-950' : 'bg-red-950'}`}>
-        <div className={"flex-col w-2/12 text-center"}>
-            <div>
-              <p className="text-[16px]">{queuesData.find(queue => queue.queueId === data.info.queueId ).description}</p>
-              <p className="text-[12px]">{timeSinceCreation}</p>
-            </div>
+        <div className={"flex-col w-2/12 text-center pt-3 "}>
+
+            <p className="text-[16px]">{queuesData.find(queue => queue.queueId === data.info.queueId ).description}</p>
+            <p className="text-[12px]">{timeSinceCreation}</p>
             <p className="text-[12px]">{user.win ? "WIN " : "LOSS "} {formatGameDuration(data.info.gameDuration) }</p>
+
         </div>
-        <div className="w-2/12">
-            <img className="ml-auto" src={`https://ddragon.leagueoflegends.com/cdn/14.4.1/img/champion/${user.championName}.png`} alt={"Champion Image"} width={72} height={72}/>
+        <div className="w-2/12  my-auto  flex">
+            <img  src={`https://ddragon.leagueoflegends.com/cdn/14.4.1/img/champion/${user.championName}.png`} alt={"Champion Image"} width={72} height={72}/>
+            <div className="flex-col w-72">
+                <img  className="min-w-[36px]" src={`https://ddragon.leagueoflegends.com/cdn/14.4.1/img/spell/Summoner${firstSum}.png`} alt={firstSum} width={36} height={36}/>
+                <img  className="min-w-[36px]" src={`https://ddragon.leagueoflegends.com/cdn/14.4.1/img/spell/Summoner${secondSum}.png`} alt={secondSum} width={36} height={36}/>
+            </div>
+            <div className="flex-col w-72">
+                <img className="min-w-[36px]" src={`https://ddragon.canisback.com/img/${firstRune}`} alt={firstRune} width={36} height={36}/>
+                <img className="min-w-[36px]" src={`https://ddragon.canisback.com/img/${secondRune}`} alt={secondRune} width={36} height={36}/>
+            </div>
+
         </div>
-        <div className="text-center w-2/12">
-            <p>{user.kills} / {user.deaths} / {user.assists}</p>
-            <p>{kdaCalcul(user.kills,user.deaths,user.assists)} KDA</p>
-            <p>{user.totalMinionsKilled} CS</p>
+        <div className="text-center text-[12px] w-2/12 text-slate-500 leading-[14px] my-auto">
+            <p>
+                <span className="text-blue-600">{user.kills}</span> / <span className="text-red-600">{user.deaths}</span> / <span className="text-yellow-600">{user.assists}</span>
+
+            </p>
+            <p className="text-white">{kdaCalcul(user.kills,user.deaths,user.assists)} KDA</p>
+            <p>{user.totalMinionsKilled} CS ({(user.totalMinionsKilled / ((data.info.gameDuration) / 60)).toFixed(2)})</p>
             <p>{user.visionScore} vision</p>
             <p>{user.visionWardsBoughtInGame} Control Ward</p>
         </div>
-        <div className="flex-col ">
+        <div className="flex-col my-auto ">
             <div className="flex">
-            <img  src={`https://ddragon.leagueoflegends.com/cdn/14.4.1/img/item/${user.item0}.png`} alt={"Item Image"} width={30} height={30}/>
-            <img  src={`https://ddragon.leagueoflegends.com/cdn/14.4.1/img/item/${user.item1}.png`} alt={"Item Image"} width={30} height={30}/>
-            <img  src={`https://ddragon.leagueoflegends.com/cdn/14.4.1/img/item/${user.item2}.png`} alt={"Item Image"} width={30} height={30}/>
+            <img  src={`https://ddragon.leagueoflegends.com/cdn/14.4.1/img/item/${user.item0 == "0" ? "2056" : user.item0}.png`} alt={"Item Image"} width={30} height={30}/>
+            <img  src={`https://ddragon.leagueoflegends.com/cdn/14.4.1/img/item/${user.item1 == "0" ? "2056" : user.item1}.png`} alt={"Item Image"} width={30} height={30}/>
+            <img  src={`https://ddragon.leagueoflegends.com/cdn/14.4.1/img/item/${user.item2 == "0" ? "2056" : user.item2}.png`} alt={"Item Image"} width={30} height={30}/>
+            <img  src={`https://ddragon.leagueoflegends.com/cdn/14.4.1/img/item/${user.item6 == "0" ? "2056" : user.item6}.png`} alt={"Item Image"} width={30} height={30}/>
             </div>
             <div className="flex">
-            <img  src={`https://ddragon.leagueoflegends.com/cdn/14.4.1/img/item/${user.item3}.png`} alt={"Item Image"} width={30} height={30}/>
-            <img  src={`https://ddragon.leagueoflegends.com/cdn/14.4.1/img/item/${user.item4}.png`} alt={"Item Image"} width={30} height={30}/>
-            <img  src={`https://ddragon.leagueoflegends.com/cdn/14.4.1/img/item/${user.item5}.png`} alt={"Item Image"} width={30} height={30}/>
+            <img  src={`https://ddragon.leagueoflegends.com/cdn/14.4.1/img/item/${user.item3 == "0" ? "2056" : user.item3}.png`} alt={"Item Image"} width={30} height={30}/>
+            <img  src={`https://ddragon.leagueoflegends.com/cdn/14.4.1/img/item/${user.item4 == "0" ? "2056" : user.item4}.png`} alt={"Item Image"} width={30} height={30}/>
+            <img  src={`https://ddragon.leagueoflegends.com/cdn/14.4.1/img/item/${user.item5 == "0" ? "2056" : user.item5}.png`} alt={"Item Image"} width={30} height={30}/>
             </div>
-            <img  src={`https://ddragon.leagueoflegends.com/cdn/14.4.1/img/item/${user.item6}.png`} alt={"Item Image"} width={30} height={30}/>
+
         </div>
         <div className={"flex items-center"}>
             <div className={"flex-col "} style={{width : "57.8px"}}>
                 {players.slice(0,5).map((player: any, key: number) => (
-                    <div key={key} className={"flex "}>
+                    <div key={key} className={"flex  "}>
                         <div style={{ fontSize: '10.5px', overflow: "hidden",whiteSpace: "nowrap" ,textOverflow:"ellipsis"}}>
                         <Link  href={`/summoners/${player.summonerName}%3A${player.riotIdTagline}`}>{player.summonerName}</Link>
                         </div>

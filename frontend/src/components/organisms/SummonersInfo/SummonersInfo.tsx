@@ -9,7 +9,7 @@ import Matchs from "@/components/organisms/SummonersInfo/Matchs";
 const League = dynamic(() => import("./Ranked"));
 
 export async function getServerSideProps(summonerName: string){
-  const apiKey = "RGAPI-8c9240b2-3b52-4aba-aafe-04afdc0390cd";
+  const apiKey = "RGAPI-f30d228e-461e-478e-a260-aedccc279f3e";
   let name = summonerName.split("%3A")[0];
   let tag = summonerName.split("%3A")[1];
 
@@ -35,7 +35,7 @@ export async function getServerSideProps(summonerName: string){
   return getServerSidePropsExt(accountInfo.puuid);
 }
 export async function getServerSidePropsExt(puuid: string) {
-  const apiKey = "RGAPI-8c9240b2-3b52-4aba-aafe-04afdc0390cd";
+  const apiKey = "RGAPI-f30d228e-461e-478e-a260-aedccc279f3e";
 
   const apiUrlID = `https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-puuid/${puuid}?api_key=${apiKey}`;
 
@@ -86,7 +86,12 @@ interface Props {
 
 export async function SummonersInfo({ name }: Props) {
   let data ;
-  data = await getServerSideProps(name);
+  if(name.length > 60){
+    data = await getServerSidePropsExt(name);
+  }
+  else{
+    data = await getServerSideProps(name);
+  }
   // @ts-ignore
   const summonerInfo = new SummonerDTO(data[0]);
   const leagueInfoSoloq = data[1][0];
@@ -99,8 +104,9 @@ export async function SummonersInfo({ name }: Props) {
 
       <div className="flex w-full space-x-3">
         <div className=" flex w-5/12 flex-col space-y-1 ">
-          <Ranked data={leagueInfoSoloq}></Ranked>
+
           <Ranked data={leagueInfoFlex}></Ranked>
+          <Ranked data={leagueInfoSoloq}></Ranked>
         </div>
           <Matchs data={matches} id={summonerInfo.puuid}></Matchs>
       </div>

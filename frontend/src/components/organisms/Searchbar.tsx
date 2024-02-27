@@ -12,10 +12,27 @@ export function Searchbar() {
   const router = useRouter();
 
   const [summonerName, setSummonerName] = useState<string>("");
+  const [error, setError] = useState<string>("");
 
   const handleSummonerName = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSummonerName(event.target.value);
+    setError(""); // Clear error when input changes
   };
+
+  const handleSearch = () => {
+    if (summonerName.includes('#')) {
+      router.push(`/summoners/${summonerName.replace('#', ':')}`);
+    } else {
+      setError("Input must contain '#' character");
+    }
+  };
+
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === "Enter") {
+      handleSearch();
+    }
+  };
+
 
   return (
     <div className="mx-auto flex w-3/4 justify-between rounded-xl bg-slate-100 px-3 py-3.5">
@@ -38,15 +55,14 @@ export function Searchbar() {
           className="w-full bg-transparent text-slate-950 focus:outline-none"
           onChange={handleSummonerName}
           value={summonerName}
-          onKeyDown={(event) => {
-            event.key === "Enter" && router.push(`/summoners/${summonerName.replace('#',":")}`);
-          }}
+          onKeyDown={handleKeyDown}
         ></input>
+        {error && <p className="text-red-500 text-xs">{error}</p>}
       </div>
 
       <button
         className="rounded-md bg-blue-900 px-1 py-2.5"
-        onClick={() => router.push(`/summoners/${summonerName.replace('#',":")}`)}
+        onClick={handleSearch}
       >
         <h2>
           <Text

@@ -9,7 +9,7 @@ import Matchs from "@/components/organisms/SummonersInfo/Matchs";
 const League = dynamic(() => import("./Ranked"));
 
 export async function getServerSideProps(summonerName: string){
-  const apiKey = "RGAPI-f30d228e-461e-478e-a260-aedccc279f3e";
+  const apiKey = "RGAPI-d13f41fb-851c-4e63-bdb9-4e49c61cd073";
   let name = summonerName.split("%3A")[0];
   let tag = summonerName.split("%3A")[1];
 
@@ -35,7 +35,7 @@ export async function getServerSideProps(summonerName: string){
   return getServerSidePropsExt(accountInfo.puuid);
 }
 export async function getServerSidePropsExt(puuid: string) {
-  const apiKey = "RGAPI-f30d228e-461e-478e-a260-aedccc279f3e";
+  const apiKey = "RGAPI-d13f41fb-851c-4e63-bdb9-4e49c61cd073";
 
   const apiUrlID = `https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-puuid/${puuid}?api_key=${apiKey}`;
 
@@ -104,9 +104,8 @@ export async function SummonersInfo({ name }: Props) {
 
       <div className="flex w-full space-x-3">
         <div className=" flex w-5/12 flex-col space-y-1 ">
-
-          <Ranked data={leagueInfoFlex}></Ranked>
           <Ranked data={leagueInfoSoloq}></Ranked>
+          <Ranked data={leagueInfoFlex}></Ranked>
         </div>
           <Matchs data={matches} id={summonerInfo.puuid}></Matchs>
       </div>

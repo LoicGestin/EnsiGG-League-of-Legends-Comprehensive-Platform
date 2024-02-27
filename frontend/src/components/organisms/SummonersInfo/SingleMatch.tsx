@@ -108,7 +108,7 @@ export default function SingleMatch({ data, id }: Props) {
                 {players.slice(0,5).map((player: any, key: number) => (
                     <div key={key} className={"flex  "}>
                         <div style={{ fontSize: '10.5px', overflow: "hidden",whiteSpace: "nowrap" ,textOverflow:"ellipsis"}}>
-                        <Link  href={`/summoners/${player.summonerName}%3A${player.riotIdTagline}`}>{player.summonerName}</Link>
+                            <Link  href={`/summoners/${player.puuid}`}>{player.summonerName}</Link>
                         </div>
                         <img className="ml-auto shrink-0"  src={`https://ddragon.leagueoflegends.com/cdn/14.4.1/img/champion/${player.championName}.png`} alt={"Champion Image"} width={20} height={20}/>
                     </div>

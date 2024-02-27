@@ -1,10 +1,7 @@
 import { Searchbar } from "@/components/organisms/Searchbar";
+import { ChampionsLayout } from "@/components/templates/ChampionsLayout";
 
-export default function Page({
-  params: { nameUID },
-}: {
-  params: { nameUID: string };
-}) {
+export default function Page() {
   return (
     <div>
       <div className="mx-auto w-3/4">

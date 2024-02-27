@@ -18,7 +18,7 @@ export function Sidebar() {
       </Link>
       <div className="w-14 border border-slate-700"></div>
       <div className="flex flex-col space-y-5">
-        <Link href="/">
+        <Link href="/champions">
           <LabelImage
             text="Champions"
             textClass="text-white text-center text-xs"

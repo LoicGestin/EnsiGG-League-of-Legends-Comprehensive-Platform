@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation";
 import { Text } from "../atoms/Text";
 import Image from "next/image";
 import { useState } from "react";
+import championsData from "../../../public/assets/champions.json";
 
 /**
  * Searchbar for index all pages.
@@ -22,7 +23,11 @@ export function Searchbar() {
   const handleSearch = () => {
     if (summonerName.includes('#')) {
       router.push(`/summoners/${summonerName.replace('#', ':')}`);
-    } else {
+    }
+    else if(championsData.find(champion => champion.name.toLowerCase() === summonerName.toLowerCase())){
+      router.push(`/champions/${summonerName.toLowerCase()}`);
+    }
+    else {
       setError("Input must contain '#' character");
     }
   };

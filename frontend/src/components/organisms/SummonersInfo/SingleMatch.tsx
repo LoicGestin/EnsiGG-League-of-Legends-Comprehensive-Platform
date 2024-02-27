@@ -68,7 +68,9 @@ export default function SingleMatch({ data, id }: Props) {
 
         </div>
         <div className="w-2/12  my-auto  flex">
-            <img  src={`https://ddragon.leagueoflegends.com/cdn/14.4.1/img/champion/${user.championName}.png`} alt={"Champion Image"} width={72} height={72}/>
+            <Link href={`/champions/${user.championName.toLowerCase()}`}>
+                <img className={"max-w-fit"} src={`https://ddragon.leagueoflegends.com/cdn/14.4.1/img/champion/${user.championName}.png`} alt={"Champion Image"} width={72} height={72}/>
+            </Link>
             <div className="flex-col w-72">
                 <img  className="min-w-[36px]" src={`https://ddragon.leagueoflegends.com/cdn/14.4.1/img/spell/Summoner${firstSum}.png`} alt={firstSum} width={36} height={36}/>
                 <img  className="min-w-[36px]" src={`https://ddragon.leagueoflegends.com/cdn/14.4.1/img/spell/Summoner${secondSum}.png`} alt={secondSum} width={36} height={36}/>

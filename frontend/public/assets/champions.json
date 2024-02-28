@@ -27,7 +27,7 @@
       "attackspeedperlevel": 2.5,
       "attackspeed": 0.651
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Aatrox.png",
+    "icon": "../icons/champions/Aatrox.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion0.png",
       "x": 0,
@@ -63,7 +63,7 @@
       "attackspeedperlevel": 2,
       "attackspeed": 0.668
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Ahri.png",
+    "icon": "../icons/champions/Ahri.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion0.png",
       "x": 48,
@@ -99,7 +99,7 @@
       "attackspeedperlevel": 3.2,
       "attackspeed": 0.625
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Akali.png",
+    "icon": "../icons/champions/Akali.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion0.png",
       "x": 96,
@@ -135,7 +135,7 @@
       "attackspeedperlevel": 2.125,
       "attackspeed": 0.625
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Alistar.png",
+    "icon": "../icons/champions/Alistar.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion0.png",
       "x": 144,
@@ -171,7 +171,7 @@
       "attackspeedperlevel": 2.18,
       "attackspeed": 0.736
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Amumu.png",
+    "icon": "../icons/champions/Amumu.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion0.png",
       "x": 192,
@@ -207,7 +207,7 @@
       "attackspeedperlevel": 1.68,
       "attackspeed": 0.625
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Anivia.png",
+    "icon": "../icons/champions/Anivia.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion0.png",
       "x": 240,
@@ -243,7 +243,7 @@
       "attackspeedperlevel": 1.36,
       "attackspeed": 0.579
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Annie.png",
+    "icon": "../icons/champions/Annie.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion0.png",
       "x": 288,
@@ -279,7 +279,7 @@
       "attackspeedperlevel": 2.1,
       "attackspeed": 0.64
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Aphelios.png",
+    "icon": "../icons/champions/Aphelios.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion0.png",
       "x": 336,
@@ -315,7 +315,7 @@
       "attackspeedperlevel": 3.33,
       "attackspeed": 0.658
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Ashe.png",
+    "icon": "../icons/champions/Ashe.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion0.png",
       "x": 384,
@@ -351,7 +351,7 @@
       "attackspeedperlevel": 1.36,
       "attackspeed": 0.625
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/AurelionSol.png",
+    "icon": "../icons/champions/AurelionSol.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion0.png",
       "x": 432,
@@ -387,7 +387,7 @@
       "attackspeedperlevel": 3,
       "attackspeed": 0.625
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Azir.png",
+    "icon": "../icons/champions/Azir.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion0.png",
       "x": 0,
@@ -423,7 +423,7 @@
       "attackspeedperlevel": 2,
       "attackspeed": 0.625
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Bard.png",
+    "icon": "../icons/champions/Bard.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion0.png",
       "x": 48,
@@ -459,7 +459,7 @@
       "attackspeedperlevel": 1.13,
       "attackspeed": 0.625
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Blitzcrank.png",
+    "icon": "../icons/champions/Blitzcrank.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion0.png",
       "x": 96,
@@ -495,7 +495,7 @@
       "attackspeedperlevel": 1.36,
       "attackspeed": 0.625
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Brand.png",
+    "icon": "../icons/champions/Brand.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion0.png",
       "x": 144,
@@ -531,7 +531,7 @@
       "attackspeedperlevel": 3.5,
       "attackspeed": 0.644
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Braum.png",
+    "icon": "../icons/champions/Braum.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion0.png",
       "x": 192,
@@ -567,7 +567,7 @@
       "attackspeedperlevel": 3.5,
       "attackspeed": 0.681
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Caitlyn.png",
+    "icon": "../icons/champions/Caitlyn.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion0.png",
       "x": 240,
@@ -603,7 +603,7 @@
       "attackspeedperlevel": 2.5,
       "attackspeed": 0.644
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Camille.png",
+    "icon": "../icons/champions/Camille.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion0.png",
       "x": 288,
@@ -639,7 +639,7 @@
       "attackspeedperlevel": 1.5,
       "attackspeed": 0.647
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Cassiopeia.png",
+    "icon": "../icons/champions/Cassiopeia.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion0.png",
       "x": 336,
@@ -675,7 +675,7 @@
       "attackspeedperlevel": 1.44,
       "attackspeed": 0.625
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Chogath.png",
+    "icon": "../icons/champions/Chogath.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion0.png",
       "x": 384,
@@ -711,7 +711,7 @@
       "attackspeedperlevel": 2.3,
       "attackspeed": 0.638
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Corki.png",
+    "icon": "../icons/champions/Corki.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion0.png",
       "x": 432,
@@ -747,7 +747,7 @@
       "attackspeedperlevel": 1,
       "attackspeed": 0.625
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Darius.png",
+    "icon": "../icons/champions/Darius.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion0.png",
       "x": 0,
@@ -783,7 +783,7 @@
       "attackspeedperlevel": 2.25,
       "attackspeed": 0.625
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Diana.png",
+    "icon": "../icons/champions/Diana.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion0.png",
       "x": 48,
@@ -819,7 +819,7 @@
       "attackspeedperlevel": 2.7,
       "attackspeed": 0.679
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Draven.png",
+    "icon": "../icons/champions/Draven.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion0.png",
       "x": 96,
@@ -855,7 +855,7 @@
       "attackspeedperlevel": 2.8,
       "attackspeed": 0.721
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/DrMundo.png",
+    "icon": "../icons/champions/DrMundo.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion0.png",
       "x": 144,
@@ -891,7 +891,7 @@
       "attackspeedperlevel": 3.3,
       "attackspeed": 0.688
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Ekko.png",
+    "icon": "../icons/champions/Ekko.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion0.png",
       "x": 192,
@@ -927,7 +927,7 @@
       "attackspeedperlevel": 1.75,
       "attackspeed": 0.625
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Elise.png",
+    "icon": "../icons/champions/Elise.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion0.png",
       "x": 240,
@@ -963,7 +963,7 @@
       "attackspeedperlevel": 2.1,
       "attackspeed": 0.667
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Evelynn.png",
+    "icon": "../icons/champions/Evelynn.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion0.png",
       "x": 288,
@@ -999,7 +999,7 @@
       "attackspeedperlevel": 2.5,
       "attackspeed": 0.625
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Ezreal.png",
+    "icon": "../icons/champions/Ezreal.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion0.png",
       "x": 336,
@@ -1035,7 +1035,7 @@
       "attackspeedperlevel": 2.11,
       "attackspeed": 0.625
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Fiddlesticks.png",
+    "icon": "../icons/champions/Fiddlesticks.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion0.png",
       "x": 384,
@@ -1071,7 +1071,7 @@
       "attackspeedperlevel": 3.2,
       "attackspeed": 0.69
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Fiora.png",
+    "icon": "../icons/champions/Fiora.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion0.png",
       "x": 432,
@@ -1107,7 +1107,7 @@
       "attackspeedperlevel": 3.1,
       "attackspeed": 0.658
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Fizz.png",
+    "icon": "../icons/champions/Fizz.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion1.png",
       "x": 0,
@@ -1143,7 +1143,7 @@
       "attackspeedperlevel": 1.5,
       "attackspeed": 0.625
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Galio.png",
+    "icon": "../icons/champions/Galio.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion1.png",
       "x": 48,
@@ -1179,7 +1179,7 @@
       "attackspeedperlevel": 3.2,
       "attackspeed": 0.658
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Gangplank.png",
+    "icon": "../icons/champions/Gangplank.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion1.png",
       "x": 96,
@@ -1215,7 +1215,7 @@
       "attackspeedperlevel": 3.65,
       "attackspeed": 0.625
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Garen.png",
+    "icon": "../icons/champions/Garen.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion1.png",
       "x": 144,
@@ -1251,7 +1251,7 @@
       "attackspeedperlevel": 6,
       "attackspeed": 0.625
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Gnar.png",
+    "icon": "../icons/champions/Gnar.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion1.png",
       "x": 192,
@@ -1287,7 +1287,7 @@
       "attackspeedperlevel": 2.05,
       "attackspeed": 0.675
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Gragas.png",
+    "icon": "../icons/champions/Gragas.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion1.png",
       "x": 240,
@@ -1323,7 +1323,7 @@
       "attackspeedperlevel": 2.6,
       "attackspeed": 0.475
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Graves.png",
+    "icon": "../icons/champions/Graves.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion1.png",
       "x": 288,
@@ -1359,7 +1359,7 @@
       "attackspeedperlevel": 2.5,
       "attackspeed": 0.67
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Hecarim.png",
+    "icon": "../icons/champions/Hecarim.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion1.png",
       "x": 336,
@@ -1395,7 +1395,7 @@
       "attackspeedperlevel": 1.36,
       "attackspeed": 0.625
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Heimerdinger.png",
+    "icon": "../icons/champions/Heimerdinger.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion1.png",
       "x": 384,
@@ -1431,7 +1431,7 @@
       "attackspeedperlevel": 2.5,
       "attackspeed": 0.571
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Illaoi.png",
+    "icon": "../icons/champions/Illaoi.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion1.png",
       "x": 432,
@@ -1467,7 +1467,7 @@
       "attackspeedperlevel": 2.5,
       "attackspeed": 0.656
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Irelia.png",
+    "icon": "../icons/champions/Irelia.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion1.png",
       "x": 0,
@@ -1503,7 +1503,7 @@
       "attackspeedperlevel": 3.4,
       "attackspeed": 0.644
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Ivern.png",
+    "icon": "../icons/champions/Ivern.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion1.png",
       "x": 48,
@@ -1539,7 +1539,7 @@
       "attackspeedperlevel": 2.95,
       "attackspeed": 0.625
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Janna.png",
+    "icon": "../icons/champions/Janna.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion1.png",
       "x": 96,
@@ -1575,7 +1575,7 @@
       "attackspeedperlevel": 2.5,
       "attackspeed": 0.658
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/JarvanIV.png",
+    "icon": "../icons/champions/JarvanIV.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion1.png",
       "x": 144,
@@ -1611,7 +1611,7 @@
       "attackspeedperlevel": 3.4,
       "attackspeed": 0.638
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Jax.png",
+    "icon": "../icons/champions/Jax.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion1.png",
       "x": 192,
@@ -1647,7 +1647,7 @@
       "attackspeedperlevel": 3,
       "attackspeed": 0.658
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Jayce.png",
+    "icon": "../icons/champions/Jayce.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion1.png",
       "x": 240,
@@ -1683,7 +1683,7 @@
       "attackspeedperlevel": 0,
       "attackspeed": 0.625
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Jhin.png",
+    "icon": "../icons/champions/Jhin.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion1.png",
       "x": 288,
@@ -1719,7 +1719,7 @@
       "attackspeedperlevel": 1,
       "attackspeed": 0.625
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Jinx.png",
+    "icon": "../icons/champions/Jinx.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion1.png",
       "x": 336,
@@ -1755,7 +1755,7 @@
       "attackspeedperlevel": 1.8,
       "attackspeed": 0.644
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Kaisa.png",
+    "icon": "../icons/champions/Kaisa.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion1.png",
       "x": 384,
@@ -1791,7 +1791,7 @@
       "attackspeedperlevel": 4,
       "attackspeed": 0.694
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Kalista.png",
+    "icon": "../icons/champions/Kalista.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion1.png",
       "x": 432,
@@ -1827,7 +1827,7 @@
       "attackspeedperlevel": 2.3,
       "attackspeed": 0.625
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Karma.png",
+    "icon": "../icons/champions/Karma.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion1.png",
       "x": 0,
@@ -1863,7 +1863,7 @@
       "attackspeedperlevel": 2.11,
       "attackspeed": 0.625
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Karthus.png",
+    "icon": "../icons/champions/Karthus.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion1.png",
       "x": 48,
@@ -1899,7 +1899,7 @@
       "attackspeedperlevel": 3.7,
       "attackspeed": 0.64
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Kassadin.png",
+    "icon": "../icons/champions/Kassadin.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion1.png",
       "x": 96,
@@ -1935,7 +1935,7 @@
       "attackspeedperlevel": 2.74,
       "attackspeed": 0.658
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Katarina.png",
+    "icon": "../icons/champions/Katarina.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion1.png",
       "x": 144,
@@ -1971,7 +1971,7 @@
       "attackspeedperlevel": 1.5,
       "attackspeed": 0.625
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Kayle.png",
+    "icon": "../icons/champions/Kayle.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion1.png",
       "x": 192,
@@ -2007,7 +2007,7 @@
       "attackspeedperlevel": 2.7,
       "attackspeed": 0.669
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Kayn.png",
+    "icon": "../icons/champions/Kayn.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion1.png",
       "x": 240,
@@ -2043,7 +2043,7 @@
       "attackspeedperlevel": 3.4,
       "attackspeed": 0.625
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Kennen.png",
+    "icon": "../icons/champions/Kennen.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion1.png",
       "x": 288,
@@ -2079,7 +2079,7 @@
       "attackspeedperlevel": 2.7,
       "attackspeed": 0.668
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Khazix.png",
+    "icon": "../icons/champions/Khazix.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion1.png",
       "x": 336,
@@ -2115,7 +2115,7 @@
       "attackspeedperlevel": 3.5,
       "attackspeed": 0.625
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Kindred.png",
+    "icon": "../icons/champions/Kindred.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion1.png",
       "x": 384,
@@ -2151,7 +2151,7 @@
       "attackspeedperlevel": 3.5,
       "attackspeed": 0.625
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Kled.png",
+    "icon": "../icons/champions/Kled.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion1.png",
       "x": 432,
@@ -2187,7 +2187,7 @@
       "attackspeedperlevel": 2.65,
       "attackspeed": 0.665
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/KogMaw.png",
+    "icon": "../icons/champions/KogMaw.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion2.png",
       "x": 0,
@@ -2223,7 +2223,7 @@
       "attackspeedperlevel": 1.4,
       "attackspeed": 0.625
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Leblanc.png",
+    "icon": "../icons/champions/Leblanc.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion2.png",
       "x": 48,
@@ -2259,7 +2259,7 @@
       "attackspeedperlevel": 3,
       "attackspeed": 0.651
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/LeeSin.png",
+    "icon": "../icons/champions/LeeSin.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion2.png",
       "x": 96,
@@ -2295,7 +2295,7 @@
       "attackspeedperlevel": 2.9,
       "attackspeed": 0.625
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Leona.png",
+    "icon": "../icons/champions/Leona.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion2.png",
       "x": 144,
@@ -2331,7 +2331,7 @@
       "attackspeedperlevel": 2.7,
       "attackspeed": 0.625
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Lillia.png",
+    "icon": "../icons/champions/Lillia.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion2.png",
       "x": 192,
@@ -2367,7 +2367,7 @@
       "attackspeedperlevel": 1.36,
       "attackspeed": 0.656
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Lissandra.png",
+    "icon": "../icons/champions/Lissandra.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion2.png",
       "x": 240,
@@ -2403,7 +2403,7 @@
       "attackspeedperlevel": 3.3,
       "attackspeed": 0.638
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Lucian.png",
+    "icon": "../icons/champions/Lucian.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion2.png",
       "x": 288,
@@ -2439,7 +2439,7 @@
       "attackspeedperlevel": 2.25,
       "attackspeed": 0.625
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Lulu.png",
+    "icon": "../icons/champions/Lulu.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion2.png",
       "x": 336,
@@ -2475,7 +2475,7 @@
       "attackspeedperlevel": 1,
       "attackspeed": 0.669
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Lux.png",
+    "icon": "../icons/champions/Lux.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion2.png",
       "x": 384,
@@ -2511,7 +2511,7 @@
       "attackspeedperlevel": 3.4,
       "attackspeed": 0.736
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Malphite.png",
+    "icon": "../icons/champions/Malphite.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion2.png",
       "x": 432,
@@ -2547,7 +2547,7 @@
       "attackspeedperlevel": 1.5,
       "attackspeed": 0.625
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Malzahar.png",
+    "icon": "../icons/champions/Malzahar.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion2.png",
       "x": 0,
@@ -2583,7 +2583,7 @@
       "attackspeedperlevel": 2.125,
       "attackspeed": 0.8
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Maokai.png",
+    "icon": "../icons/champions/Maokai.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion2.png",
       "x": 48,
@@ -2619,7 +2619,7 @@
       "attackspeedperlevel": 2,
       "attackspeed": 0.679
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/MasterYi.png",
+    "icon": "../icons/champions/MasterYi.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion2.png",
       "x": 96,
@@ -2655,7 +2655,7 @@
       "attackspeedperlevel": 3,
       "attackspeed": 0.656
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/MissFortune.png",
+    "icon": "../icons/champions/MissFortune.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion2.png",
       "x": 144,
@@ -2691,7 +2691,7 @@
       "attackspeedperlevel": 3,
       "attackspeed": 0.711
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/MonkeyKing.png",
+    "icon": "../icons/champions/MonkeyKing.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion2.png",
       "x": 192,
@@ -2727,7 +2727,7 @@
       "attackspeedperlevel": 1,
       "attackspeed": 0.625
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Mordekaiser.png",
+    "icon": "../icons/champions/Mordekaiser.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion2.png",
       "x": 240,
@@ -2763,7 +2763,7 @@
       "attackspeedperlevel": 1.53,
       "attackspeed": 0.625
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Morgana.png",
+    "icon": "../icons/champions/Morgana.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion2.png",
       "x": 288,
@@ -2799,7 +2799,7 @@
       "attackspeedperlevel": 2.61,
       "attackspeed": 0.644
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Nami.png",
+    "icon": "../icons/champions/Nami.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion2.png",
       "x": 336,
@@ -2835,7 +2835,7 @@
       "attackspeedperlevel": 3.48,
       "attackspeed": 0.638
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Nasus.png",
+    "icon": "../icons/champions/Nasus.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion2.png",
       "x": 384,
@@ -2871,7 +2871,7 @@
       "attackspeedperlevel": 1,
       "attackspeed": 0.706
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Nautilus.png",
+    "icon": "../icons/champions/Nautilus.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion2.png",
       "x": 432,
@@ -2907,7 +2907,7 @@
       "attackspeedperlevel": 3.5,
       "attackspeed": 0.625
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Neeko.png",
+    "icon": "../icons/champions/Neeko.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion2.png",
       "x": 0,
@@ -2943,7 +2943,7 @@
       "attackspeedperlevel": 3.22,
       "attackspeed": 0.638
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Nidalee.png",
+    "icon": "../icons/champions/Nidalee.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion2.png",
       "x": 48,
@@ -2979,7 +2979,7 @@
       "attackspeedperlevel": 2.7,
       "attackspeed": 0.721
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Nocturne.png",
+    "icon": "../icons/champions/Nocturne.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion2.png",
       "x": 96,
@@ -3015,7 +3015,7 @@
       "attackspeedperlevel": 2.25,
       "attackspeed": 0.625
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Nunu.png",
+    "icon": "../icons/champions/Nunu.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion2.png",
       "x": 144,
@@ -3051,7 +3051,7 @@
       "attackspeedperlevel": 2.7,
       "attackspeed": 0.694
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Olaf.png",
+    "icon": "../icons/champions/Olaf.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion2.png",
       "x": 192,
@@ -3087,7 +3087,7 @@
       "attackspeedperlevel": 3.5,
       "attackspeed": 0.658
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Orianna.png",
+    "icon": "../icons/champions/Orianna.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion2.png",
       "x": 240,
@@ -3123,7 +3123,7 @@
       "attackspeedperlevel": 2,
       "attackspeed": 0.625
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Ornn.png",
+    "icon": "../icons/champions/Ornn.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion2.png",
       "x": 288,
@@ -3159,7 +3159,7 @@
       "attackspeedperlevel": 2.95,
       "attackspeed": 0.644
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Pantheon.png",
+    "icon": "../icons/champions/Pantheon.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion2.png",
       "x": 336,
@@ -3195,7 +3195,7 @@
       "attackspeedperlevel": 2.5,
       "attackspeed": 0.625
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Poppy.png",
+    "icon": "../icons/champions/Poppy.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion2.png",
       "x": 384,
@@ -3231,7 +3231,7 @@
       "attackspeedperlevel": 2.5,
       "attackspeed": 0.667
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Pyke.png",
+    "icon": "../icons/champions/Pyke.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion2.png",
       "x": 432,
@@ -3267,7 +3267,7 @@
       "attackspeedperlevel": 2.1,
       "attackspeed": 0.625
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Qiyana.png",
+    "icon": "../icons/champions/Qiyana.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion3.png",
       "x": 0,
@@ -3303,7 +3303,7 @@
       "attackspeedperlevel": 3.1,
       "attackspeed": 0.668
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Quinn.png",
+    "icon": "../icons/champions/Quinn.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion3.png",
       "x": 48,
@@ -3339,7 +3339,7 @@
       "attackspeedperlevel": 3,
       "attackspeed": 0.635
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Rakan.png",
+    "icon": "../icons/champions/Rakan.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion3.png",
       "x": 96,
@@ -3375,7 +3375,7 @@
       "attackspeedperlevel": 2.215,
       "attackspeed": 0.656
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Rammus.png",
+    "icon": "../icons/champions/Rammus.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion3.png",
       "x": 144,
@@ -3411,7 +3411,7 @@
       "attackspeedperlevel": 2,
       "attackspeed": 0.667
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/RekSai.png",
+    "icon": "../icons/champions/RekSai.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion3.png",
       "x": 192,
@@ -3447,7 +3447,7 @@
       "attackspeedperlevel": 2.75,
       "attackspeed": 0.665
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Renekton.png",
+    "icon": "../icons/champions/Renekton.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion3.png",
       "x": 240,
@@ -3483,7 +3483,7 @@
       "attackspeedperlevel": 3,
       "attackspeed": 0.667
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Rengar.png",
+    "icon": "../icons/champions/Rengar.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion3.png",
       "x": 288,
@@ -3519,7 +3519,7 @@
       "attackspeedperlevel": 3.5,
       "attackspeed": 0.625
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Riven.png",
+    "icon": "../icons/champions/Riven.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion3.png",
       "x": 336,
@@ -3555,7 +3555,7 @@
       "attackspeedperlevel": 1.85,
       "attackspeed": 0.644
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Rumble.png",
+    "icon": "../icons/champions/Rumble.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion3.png",
       "x": 384,
@@ -3591,7 +3591,7 @@
       "attackspeedperlevel": 2.112,
       "attackspeed": 0.625
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Ryze.png",
+    "icon": "../icons/champions/Ryze.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion3.png",
       "x": 432,
@@ -3627,7 +3627,7 @@
       "attackspeedperlevel": 3.3,
       "attackspeed": 0.658
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Samira.png",
+    "icon": "../icons/champions/Samira.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion3.png",
       "x": 0,
@@ -3663,7 +3663,7 @@
       "attackspeedperlevel": 3.5,
       "attackspeed": 0.688
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Sejuani.png",
+    "icon": "../icons/champions/Sejuani.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion3.png",
       "x": 48,
@@ -3699,7 +3699,7 @@
       "attackspeedperlevel": 4,
       "attackspeed": 0.625
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Senna.png",
+    "icon": "../icons/champions/Senna.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion3.png",
       "x": 96,
@@ -3735,7 +3735,7 @@
       "attackspeedperlevel": 1,
       "attackspeed": 0.669
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Seraphine.png",
+    "icon": "../icons/champions/Seraphine.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion3.png",
       "x": 144,
@@ -3771,7 +3771,7 @@
       "attackspeedperlevel": 1.75,
       "attackspeed": 0.625
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Sett.png",
+    "icon": "../icons/champions/Sett.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion3.png",
       "x": 192,
@@ -3807,7 +3807,7 @@
       "attackspeedperlevel": 3,
       "attackspeed": 0.694
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Shaco.png",
+    "icon": "../icons/champions/Shaco.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion3.png",
       "x": 240,
@@ -3843,7 +3843,7 @@
       "attackspeedperlevel": 3,
       "attackspeed": 0.751
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Shen.png",
+    "icon": "../icons/champions/Shen.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion3.png",
       "x": 288,
@@ -3879,7 +3879,7 @@
       "attackspeedperlevel": 2.5,
       "attackspeed": 0.658
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Shyvana.png",
+    "icon": "../icons/champions/Shyvana.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion3.png",
       "x": 336,
@@ -3915,7 +3915,7 @@
       "attackspeedperlevel": 1.9,
       "attackspeed": 0.613
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Singed.png",
+    "icon": "../icons/champions/Singed.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion3.png",
       "x": 384,
@@ -3951,7 +3951,7 @@
       "attackspeedperlevel": 1.3,
       "attackspeed": 0.679
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Sion.png",
+    "icon": "../icons/champions/Sion.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion3.png",
       "x": 432,
@@ -3987,7 +3987,7 @@
       "attackspeedperlevel": 1.6,
       "attackspeed": 0.625
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Sivir.png",
+    "icon": "../icons/champions/Sivir.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion3.png",
       "x": 0,
@@ -4023,7 +4023,7 @@
       "attackspeedperlevel": 2.1,
       "attackspeed": 0.625
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Skarner.png",
+    "icon": "../icons/champions/Skarner.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion3.png",
       "x": 48,
@@ -4059,7 +4059,7 @@
       "attackspeedperlevel": 2.3,
       "attackspeed": 0.644
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Sona.png",
+    "icon": "../icons/champions/Sona.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion3.png",
       "x": 96,
@@ -4095,7 +4095,7 @@
       "attackspeedperlevel": 2.14,
       "attackspeed": 0.625
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Soraka.png",
+    "icon": "../icons/champions/Soraka.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion3.png",
       "x": 144,
@@ -4131,7 +4131,7 @@
       "attackspeedperlevel": 2.11,
       "attackspeed": 0.625
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Swain.png",
+    "icon": "../icons/champions/Swain.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion3.png",
       "x": 192,
@@ -4167,7 +4167,7 @@
       "attackspeedperlevel": 3.5,
       "attackspeed": 0.645
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Sylas.png",
+    "icon": "../icons/champions/Sylas.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion3.png",
       "x": 240,
@@ -4203,7 +4203,7 @@
       "attackspeedperlevel": 2,
       "attackspeed": 0.625
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Syndra.png",
+    "icon": "../icons/champions/Syndra.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion3.png",
       "x": 288,
@@ -4239,7 +4239,7 @@
       "attackspeedperlevel": 2.5,
       "attackspeed": 0.658
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/TahmKench.png",
+    "icon": "../icons/champions/TahmKench.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion3.png",
       "x": 336,
@@ -4275,7 +4275,7 @@
       "attackspeedperlevel": 1.36,
       "attackspeed": 0.625
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Taliyah.png",
+    "icon": "../icons/champions/Taliyah.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion3.png",
       "x": 384,
@@ -4311,7 +4311,7 @@
       "attackspeedperlevel": 2.9,
       "attackspeed": 0.625
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Talon.png",
+    "icon": "../icons/champions/Talon.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion3.png",
       "x": 432,
@@ -4347,7 +4347,7 @@
       "attackspeedperlevel": 2,
       "attackspeed": 0.625
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Taric.png",
+    "icon": "../icons/champions/Taric.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion4.png",
       "x": 0,
@@ -4383,7 +4383,7 @@
       "attackspeedperlevel": 3.38,
       "attackspeed": 0.69
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Teemo.png",
+    "icon": "../icons/champions/Teemo.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion4.png",
       "x": 48,
@@ -4419,7 +4419,7 @@
       "attackspeedperlevel": 3.5,
       "attackspeed": 0.625
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Thresh.png",
+    "icon": "../icons/champions/Thresh.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion4.png",
       "x": 96,
@@ -4455,7 +4455,7 @@
       "attackspeedperlevel": 1.5,
       "attackspeed": 0.656
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Tristana.png",
+    "icon": "../icons/champions/Tristana.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion4.png",
       "x": 144,
@@ -4491,7 +4491,7 @@
       "attackspeedperlevel": 2.9,
       "attackspeed": 0.67
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Trundle.png",
+    "icon": "../icons/champions/Trundle.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion4.png",
       "x": 192,
@@ -4527,7 +4527,7 @@
       "attackspeedperlevel": 2.9,
       "attackspeed": 0.67
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Tryndamere.png",
+    "icon": "../icons/champions/Tryndamere.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion4.png",
       "x": 240,
@@ -4563,7 +4563,7 @@
       "attackspeedperlevel": 3.22,
       "attackspeed": 0.651
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/TwistedFate.png",
+    "icon": "../icons/champions/TwistedFate.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion4.png",
       "x": 288,
@@ -4599,7 +4599,7 @@
       "attackspeedperlevel": 3.38,
       "attackspeed": 0.679
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Twitch.png",
+    "icon": "../icons/champions/Twitch.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion4.png",
       "x": 336,
@@ -4635,7 +4635,7 @@
       "attackspeedperlevel": 2.67,
       "attackspeed": 0.658
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Udyr.png",
+    "icon": "../icons/champions/Udyr.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion4.png",
       "x": 384,
@@ -4671,7 +4671,7 @@
       "attackspeedperlevel": 3.75,
       "attackspeed": 0.625
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Urgot.png",
+    "icon": "../icons/champions/Urgot.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion4.png",
       "x": 432,
@@ -4707,7 +4707,7 @@
       "attackspeedperlevel": 4,
       "attackspeed": 0.658
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Varus.png",
+    "icon": "../icons/champions/Varus.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion4.png",
       "x": 0,
@@ -4743,7 +4743,7 @@
       "attackspeedperlevel": 3.3,
       "attackspeed": 0.658
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Vayne.png",
+    "icon": "../icons/champions/Vayne.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion4.png",
       "x": 48,
@@ -4779,7 +4779,7 @@
       "attackspeedperlevel": 2.24,
       "attackspeed": 0.625
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Veigar.png",
+    "icon": "../icons/champions/Veigar.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion4.png",
       "x": 96,
@@ -4815,7 +4815,7 @@
       "attackspeedperlevel": 1.36,
       "attackspeed": 0.625
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Velkoz.png",
+    "icon": "../icons/champions/Velkoz.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion4.png",
       "x": 144,
@@ -4851,7 +4851,7 @@
       "attackspeedperlevel": 2,
       "attackspeed": 0.644
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Vi.png",
+    "icon": "../icons/champions/Vi.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion4.png",
       "x": 192,
@@ -4887,7 +4887,7 @@
       "attackspeedperlevel": 2.11,
       "attackspeed": 0.658
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Viktor.png",
+    "icon": "../icons/champions/Viktor.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion4.png",
       "x": 240,
@@ -4923,7 +4923,7 @@
       "attackspeedperlevel": 2,
       "attackspeed": 0.658
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Vladimir.png",
+    "icon": "../icons/champions/Vladimir.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion4.png",
       "x": 288,
@@ -4959,7 +4959,7 @@
       "attackspeedperlevel": 2,
       "attackspeed": 0.625
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Volibear.png",
+    "icon": "../icons/champions/Volibear.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion4.png",
       "x": 336,
@@ -4995,7 +4995,7 @@
       "attackspeedperlevel": 2.3,
       "attackspeed": 0.638
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Warwick.png",
+    "icon": "../icons/champions/Warwick.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion4.png",
       "x": 384,
@@ -5031,7 +5031,7 @@
       "attackspeedperlevel": 3.9,
       "attackspeed": 0.625
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Xayah.png",
+    "icon": "../icons/champions/Xayah.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion4.png",
       "x": 432,
@@ -5067,7 +5067,7 @@
       "attackspeedperlevel": 1.36,
       "attackspeed": 0.625
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Xerath.png",
+    "icon": "../icons/champions/Xerath.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion4.png",
       "x": 0,
@@ -5103,7 +5103,7 @@
       "attackspeedperlevel": 3.5,
       "attackspeed": 0.645
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/XinZhao.png",
+    "icon": "../icons/champions/XinZhao.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion4.png",
       "x": 48,
@@ -5139,7 +5139,7 @@
       "attackspeedperlevel": 2.5,
       "attackspeed": 0.697
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Yasuo.png",
+    "icon": "../icons/champions/Yasuo.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion4.png",
       "x": 96,
@@ -5175,7 +5175,7 @@
       "attackspeedperlevel": 2.5,
       "attackspeed": 0.625
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Yone.png",
+    "icon": "../icons/champions/Yone.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion4.png",
       "x": 144,
@@ -5211,7 +5211,7 @@
       "attackspeedperlevel": 2,
       "attackspeed": 0.625
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Yorick.png",
+    "icon": "../icons/champions/Yorick.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion4.png",
       "x": 192,
@@ -5247,7 +5247,7 @@
       "attackspeedperlevel": 1,
       "attackspeed": 0.625
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Yuumi.png",
+    "icon": "../icons/champions/Yuumi.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion4.png",
       "x": 240,
@@ -5283,7 +5283,7 @@
       "attackspeedperlevel": 1.6,
       "attackspeed": 0.736
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Zac.png",
+    "icon": "../icons/champions/Zac.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion4.png",
       "x": 288,
@@ -5319,7 +5319,7 @@
       "attackspeedperlevel": 3.3,
       "attackspeed": 0.651
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Zed.png",
+    "icon": "../icons/champions/Zed.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion4.png",
       "x": 336,
@@ -5355,7 +5355,7 @@
       "attackspeedperlevel": 2,
       "attackspeed": 0.656
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Ziggs.png",
+    "icon": "../icons/champions/Ziggs.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion4.png",
       "x": 384,
@@ -5391,7 +5391,7 @@
       "attackspeedperlevel": 2.13,
       "attackspeed": 0.625
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Zilean.png",
+    "icon": "../icons/champions/Zilean.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion4.png",
       "x": 432,
@@ -5427,7 +5427,7 @@
       "attackspeedperlevel": 2.5,
       "attackspeed": 0.625
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Zoe.png",
+    "icon": "../icons/champions/Zoe.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion5.png",
       "x": 0,
@@ -5463,7 +5463,7 @@
       "attackspeedperlevel": 2.11,
       "attackspeed": 0.625
     },
-    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Zyra.png",
+    "icon": "../icons/champions/Zyra.png",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion5.png",
       "x": 48,

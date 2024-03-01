@@ -1,32 +1,104 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import championsData from "../../../../public/assets/champions.json";
 
 const ChampionsList = () => {
+  const [selectedLane, setSelectedLane] = useState("Fill");
+  const [filteredChampions, setFilteredChampions] = useState(championsData);
+
+  const handleLaneSelect = (lane) => {
+    setSelectedLane(lane);
+    if (lane === "Fill") {
+      setFilteredChampions(championsData);
+    } else {
+      const champions_filtered = championsData.filter((champion) =>
+        champion.role.includes(lane),
+      );
+      setFilteredChampions(champions_filtered);
+    }
+  };
+
   return (
     <div className="bg-gray-900 p-4">
       <div className="mb-16 flex items-end justify-between">
         <h1 className="px-8 py-8 text-4xl text-white">Champions</h1>
-        <div className="flex items-end">
-          <button className="h-25 w-25 mb-2 mr-4 bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700">
-            <img src="icons/lanes/Position_Gold-Top.png" alt="Top" />
+        <div className="flex items-end py-8">
+          <button
+            className={`mb-2 mr-4 flex h-10 w-10 items-center justify-center bg-blue-500 ${
+              selectedLane === "Fill" ? "bg-blue-700" : "hover:bg-blue-700"
+            }`}
+            onClick={() => handleLaneSelect("Fill")}
+          >
+            <img
+              className="h-6 w-6"
+              src="icons/lanes/icon-position-fill.png"
+              alt="Top"
+            />
           </button>
-          <button className="mb-2 mr-4 h-auto w-auto bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700">
-            <img src="icons/lanes/Position_Gold-Jungle.png" alt="Jungle" />
+          <button
+            className={`mb-2 mr-4 flex h-10 w-10 items-center justify-center bg-blue-500 ${
+              selectedLane === "Top" ? "bg-blue-700" : "hover:bg-blue-700"
+            }`}
+            onClick={() => handleLaneSelect("Top")}
+          >
+            <img
+              className="h-6 w-6"
+              src="icons/lanes/icon-position-top.png"
+              alt="Top"
+            />
           </button>
-          <button className="mb-2 mr-4 h-auto w-auto bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700">
-            <img src="icons/lanes/Position_Gold-Mid.png" alt="Mid" />
+          <button
+            className={`mb-2 mr-4 flex h-10 w-10 items-center justify-center bg-blue-500 ${
+              selectedLane === "Jungle" ? "bg-blue-700" : "hover:bg-blue-700"
+            }`}
+            onClick={() => handleLaneSelect("Jungle")}
+          >
+            <img
+              className="h-6 w-6"
+              src="icons/lanes/icon-position-jungle.png"
+              alt="Jungle"
+            />
           </button>
-          <button className="mb-2 mr-4 h-auto w-auto bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700">
-            <img src="icons/lanes/Position_Gold-Bot.png" alt="Adc" />
+          <button
+            className={`mb-2 mr-4 flex h-10 w-10 items-center justify-center bg-blue-500 ${
+              selectedLane === "Mid" ? "bg-blue-700" : "hover:bg-blue-700"
+            }`}
+            onClick={() => handleLaneSelect("Mid")}
+          >
+            <img
+              className="h-6 w-6"
+              src="icons/lanes/icon-position-middle.png"
+              alt="Mid"
+            />
           </button>
-          <button className="mb-2 mr-4 h-auto w-auto bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700">
-            <img src="icons/lanes/Position_Gold-Support.png" alt="Sup" />
+          <button
+            className={`mb-2 mr-4 flex h-10 w-10 items-center justify-center bg-blue-500 ${
+              selectedLane === "Adc" ? "bg-blue-700" : "hover:bg-blue-700"
+            }`}
+            onClick={() => handleLaneSelect("Adc")}
+          >
+            <img
+              className="h-6 w-6"
+              src="icons/lanes/icon-position-bottom.png"
+              alt="Adc"
+            />
+          </button>
+          <button
+            className={`mb-2 mr-4 flex h-10 w-10 items-center justify-center bg-blue-500 ${
+              selectedLane === "Support" ? "bg-blue-700" : "hover:bg-blue-700"
+            }`}
+            onClick={() => handleLaneSelect("Support")}
+          >
+            <img
+              className="h-6 w-6"
+              src="icons/lanes/icon-position-utility.png"
+              alt="Sup"
+            />
           </button>
         </div>
       </div>
       <div className="grid grid-cols-6 gap-4">
-        {championsData.map((champion) => (
+        {filteredChampions.map((champion) => (
           <Link key={champion.id} href={`/champions/${champion.id}`}>
             <div className="flex flex-col items-center text-white">
               <img src={champion.icon} alt={champion.name} />

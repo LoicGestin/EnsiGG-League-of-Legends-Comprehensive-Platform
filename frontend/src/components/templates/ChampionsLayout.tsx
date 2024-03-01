@@ -1,3 +1,5 @@
+"use client";
+
 import { ReactNode } from "react";
 import { Sidebar } from "../organisms/Sidebar";
 import { Searchbar } from "../organisms/Searchbar";
@@ -5,6 +7,7 @@ import ChampionsList from "../organisms/Champions/ChampionsList";
 /**
  * Template of the list of champions layout.
  */
+
 interface Props {
   children: ReactNode;
 }

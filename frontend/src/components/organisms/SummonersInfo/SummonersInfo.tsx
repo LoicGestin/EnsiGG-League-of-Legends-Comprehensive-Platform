@@ -9,7 +9,7 @@ import Matchs from "@/components/organisms/SummonersInfo/Matchs";
 const League = dynamic(() => import("./Ranked"));
 
 export async function getServerSideProps(summonerName: string){
-  const apiKey = "RGAPI-8c9240b2-3b52-4aba-aafe-04afdc0390cd";
+  const apiKey = "RRGAPI-b8015b21-1e11-4882-9838-dee49c0bc260";
   let name = summonerName.split("%3A")[0];
   let tag = summonerName.split("%3A")[1];
 
@@ -34,6 +34,7 @@ export async function getServerSideProps(summonerName: string){
 
   return getServerSidePropsExt(accountInfo.puuid);
 }
+
 export async function getServerSidePropsExt(puuid: string) {
   const apiKey = "RGAPI-8c9240b2-3b52-4aba-aafe-04afdc0390cd";
 
@@ -79,7 +80,6 @@ export async function getServerSidePropsExt(puuid: string) {
   return [summonerInfo, jsonResponseLeague, matches];
 }
 
-// @ts-ignore
 interface Props {
   name: string;
 }

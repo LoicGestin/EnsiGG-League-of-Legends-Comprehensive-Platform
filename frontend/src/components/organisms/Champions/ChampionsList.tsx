@@ -99,12 +99,12 @@ const ChampionsList = () => {
       </div>
       <div className="grid grid-cols-6 gap-4">
         {filteredChampions.map((champion) => (
-          <Link key={champion.id} href={`/champions/${champion.id}`}>
+          <Link key={champion.name} href={`/champions/${champion.name}`}>
             <div className="flex flex-col items-center text-white">
               <img src={champion.icon} alt={champion.name} />
               <div>{champion.name}</div>
             </div>
-          </Link>
+          </Link>   
         ))}
       </div>
     </div>

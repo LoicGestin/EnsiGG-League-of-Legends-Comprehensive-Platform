@@ -19,14 +19,13 @@ const ChampionsList = () => {
   };
 
   return (
-    <div className="bg-gray-900 p-4">
+    <div className="bg-gray-900 p-4 rounded" >
       <div className="mb-16 flex items-end justify-between">
         <h1 className="px-8 py-8 text-4xl text-white">Champions</h1>
         <div className="flex items-end py-8">
           <button
-            className={`mb-2 mr-4 flex h-10 w-10 items-center justify-center bg-blue-500 ${
-              selectedLane === "Fill" ? "bg-blue-700" : "hover:bg-blue-700"
-            }`}
+            className={`mb-2 mr-4 flex h-10 w-10 items-center justify-center bg-blue-600 rounded ${selectedLane === "Fill" ? "bg-blue-700" : "hover:bg-blue-700"
+              }`}
             onClick={() => handleLaneSelect("Fill")}
           >
             <img
@@ -36,9 +35,8 @@ const ChampionsList = () => {
             />
           </button>
           <button
-            className={`mb-2 mr-4 flex h-10 w-10 items-center justify-center bg-blue-500 ${
-              selectedLane === "Top" ? "bg-blue-700" : "hover:bg-blue-700"
-            }`}
+            className={`mb-2 mr-4 flex h-10 w-10 items-center justify-center bg-blue-600 rounded ${selectedLane === "Top" ? "bg-blue-700" : "hover:bg-blue-700"
+              }`}
             onClick={() => handleLaneSelect("Top")}
           >
             <img
@@ -48,9 +46,8 @@ const ChampionsList = () => {
             />
           </button>
           <button
-            className={`mb-2 mr-4 flex h-10 w-10 items-center justify-center bg-blue-500 ${
-              selectedLane === "Jungle" ? "bg-blue-700" : "hover:bg-blue-700"
-            }`}
+            className={`mb-2 mr-4 flex h-10 w-10 items-center justify-center bg-blue-600 rounded ${selectedLane === "Jungle" ? "bg-blue-700" : "hover:bg-blue-700"
+              }`}
             onClick={() => handleLaneSelect("Jungle")}
           >
             <img
@@ -60,9 +57,8 @@ const ChampionsList = () => {
             />
           </button>
           <button
-            className={`mb-2 mr-4 flex h-10 w-10 items-center justify-center bg-blue-500 ${
-              selectedLane === "Mid" ? "bg-blue-700" : "hover:bg-blue-700"
-            }`}
+            className={`mb-2 mr-4 flex h-10 w-10 items-center justify-center bg-blue-600 rounded ${selectedLane === "Mid" ? "bg-blue-700" : "hover:bg-blue-700"
+              }`}
             onClick={() => handleLaneSelect("Mid")}
           >
             <img
@@ -72,9 +68,8 @@ const ChampionsList = () => {
             />
           </button>
           <button
-            className={`mb-2 mr-4 flex h-10 w-10 items-center justify-center bg-blue-500 ${
-              selectedLane === "Adc" ? "bg-blue-700" : "hover:bg-blue-700"
-            }`}
+            className={`mb-2 mr-4 flex h-10 w-10 items-center justify-center bg-blue-600 rounded ${selectedLane === "Adc" ? "bg-blue-700" : "hover:bg-blue-700"
+              }`}
             onClick={() => handleLaneSelect("Adc")}
           >
             <img
@@ -84,9 +79,8 @@ const ChampionsList = () => {
             />
           </button>
           <button
-            className={`mb-2 mr-4 flex h-10 w-10 items-center justify-center bg-blue-500 ${
-              selectedLane === "Support" ? "bg-blue-700" : "hover:bg-blue-700"
-            }`}
+            className={`mb-2 mr-4 flex h-10 w-10 items-center justify-center bg-blue-600 rounded ${selectedLane === "Support" ? "bg-blue-700" : "hover:bg-blue-700"
+              }`}
             onClick={() => handleLaneSelect("Support")}
           >
             <img
@@ -104,7 +98,7 @@ const ChampionsList = () => {
               <img src={champion.icon} alt={champion.name} />
               <div>{champion.name}</div>
             </div>
-          </Link>   
+          </Link>
         ))}
       </div>
     </div>

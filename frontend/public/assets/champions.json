@@ -2,10 +2,15 @@
   {
     "id": "aatrox",
     "key": "266",
-    "role": ["Top"],
+    "role": [
+      "Top"
+    ],
     "name": "Aatrox",
     "title": "the Darkin Blade",
-    "tags": ["Fighter", "Tank"],
+    "tags": [
+      "Fighter",
+      "Tank"
+    ],
     "stats": {
       "hp": 580,
       "hpperlevel": 90,
@@ -39,10 +44,15 @@
   {
     "id": "ahri",
     "key": "103",
-    "role": ["Mid"],
+    "role": [
+      "Mid"
+    ],
     "name": "Ahri",
     "title": "the Nine-Tailed Fox",
-    "tags": ["Mage", "Assassin"],
+    "tags": [
+      "Mage",
+      "Assassin"
+    ],
     "stats": {
       "hp": 526,
       "hpperlevel": 92,
@@ -76,10 +86,15 @@
   {
     "id": "akali",
     "key": "84",
-    "role": ["Top", "Mid"],
+    "role": [
+      "Top",
+      "Mid"
+    ],
     "name": "Akali",
     "title": "the Rogue Assassin",
-    "tags": ["Assassin"],
+    "tags": [
+      "Assassin"
+    ],
     "stats": {
       "hp": 575,
       "hpperlevel": 95,
@@ -113,10 +128,15 @@
   {
     "id": "alistar",
     "key": "12",
-    "role": ["Support"],
+    "role": [
+      "Support"
+    ],
     "name": "Alistar",
     "title": "the Minotaur",
-    "tags": ["Tank", "Support"],
+    "tags": [
+      "Tank",
+      "Support"
+    ],
     "stats": {
       "hp": 600,
       "hpperlevel": 106,
@@ -150,10 +170,15 @@
   {
     "id": "amumu",
     "key": "32",
-    "role": ["Jungle"],
+    "role": [
+      "Jungle"
+    ],
     "name": "Amumu",
     "title": "the Sad Mummy",
-    "tags": ["Tank", "Mage"],
+    "tags": [
+      "Tank",
+      "Mage"
+    ],
     "stats": {
       "hp": 615,
       "hpperlevel": 80,
@@ -187,10 +212,15 @@
   {
     "id": "anivia",
     "key": "34",
-    "role": ["Mid"],
+    "role": [
+      "Mid"
+    ],
     "name": "Anivia",
     "title": "the Cryophoenix",
-    "tags": ["Mage", "Support"],
+    "tags": [
+      "Mage",
+      "Support"
+    ],
     "stats": {
       "hp": 480,
       "hpperlevel": 82,
@@ -224,10 +254,14 @@
   {
     "id": "annie",
     "key": "1",
-    "role": ["Mid"],
+    "role": [
+      "Mid"
+    ],
     "name": "Annie",
     "title": "the Dark Child",
-    "tags": ["Mage"],
+    "tags": [
+      "Mage"
+    ],
     "stats": {
       "hp": 524,
       "hpperlevel": 88,
@@ -261,10 +295,14 @@
   {
     "id": "aphelios",
     "key": "523",
-    "role": ["Adc"],
+    "role": [
+      "Adc"
+    ],
     "name": "Aphelios",
     "title": "the Weapon of the Faithful",
-    "tags": ["Marksman"],
+    "tags": [
+      "Marksman"
+    ],
     "stats": {
       "hp": 530,
       "hpperlevel": 88,
@@ -298,10 +336,16 @@
   {
     "id": "ashe",
     "key": "22",
-    "role": ["Adc", "Support"],
+    "role": [
+      "Adc",
+      "Support"
+    ],
     "name": "Ashe",
     "title": "the Frost Archer",
-    "tags": ["Marksman", "Support"],
+    "tags": [
+      "Marksman",
+      "Support"
+    ],
     "stats": {
       "hp": 570,
       "hpperlevel": 87,
@@ -335,10 +379,14 @@
   {
     "id": "aurelionsol",
     "key": "136",
-    "role": ["Mid"],
+    "role": [
+      "Mid"
+    ],
     "name": "Aurelion Sol",
     "title": "The Star Forger",
-    "tags": ["Mage"],
+    "tags": [
+      "Mage"
+    ],
     "stats": {
       "hp": 575,
       "hpperlevel": 92,
@@ -372,10 +420,15 @@
   {
     "id": "azir",
     "key": "268",
-    "role": ["Mid"],
+    "role": [
+      "Mid"
+    ],
     "name": "Azir",
     "title": "the Emperor of the Sands",
-    "tags": ["Mage", "Marksman"],
+    "tags": [
+      "Mage",
+      "Marksman"
+    ],
     "stats": {
       "hp": 552,
       "hpperlevel": 92,
@@ -409,10 +462,15 @@
   {
     "id": "bard",
     "key": "432",
-    "role": ["Support"],
+    "role": [
+      "Support"
+    ],
     "name": "Bard",
     "title": "the Wandering Caretaker",
-    "tags": ["Support", "Mage"],
+    "tags": [
+      "Support",
+      "Mage"
+    ],
     "stats": {
       "hp": 560,
       "hpperlevel": 89,
@@ -446,10 +504,15 @@
   {
     "id": "blitzcrank",
     "key": "53",
-    "role": ["Support"],
+    "role": [
+      "Support"
+    ],
     "name": "Blitzcrank",
     "title": "the Great Steam Golem",
-    "tags": ["Tank", "Fighter"],
+    "tags": [
+      "Tank",
+      "Fighter"
+    ],
     "stats": {
       "hp": 582.6,
       "hpperlevel": 95,
@@ -483,10 +546,16 @@
   {
     "id": "brand",
     "key": "63",
-    "role": ["Jungle", "Support", "Mid"],
+    "role": [
+      "Jungle",
+      "Support",
+      "Mid"
+    ],
     "name": "Brand",
     "title": "the Burning Vengeance",
-    "tags": ["Mage"],
+    "tags": [
+      "Mage"
+    ],
     "stats": {
       "hp": 519.68,
       "hpperlevel": 88,
@@ -520,10 +589,15 @@
   {
     "id": "braum",
     "key": "201",
-    "role": ["Support"],
+    "role": [
+      "Support"
+    ],
     "name": "Braum",
     "title": "the Heart of the Freljord",
-    "tags": ["Support", "Tank"],
+    "tags": [
+      "Support",
+      "Tank"
+    ],
     "stats": {
       "hp": 540,
       "hpperlevel": 98,
@@ -557,10 +631,14 @@
   {
     "id": "caitlyn",
     "key": "51",
-    "role": ["Adc"],
+    "role": [
+      "Adc"
+    ],
     "name": "Caitlyn",
     "title": "the Sheriff of Piltover",
-    "tags": ["Marksman"],
+    "tags": [
+      "Marksman"
+    ],
     "stats": {
       "hp": 510,
       "hpperlevel": 93,
@@ -594,10 +672,15 @@
   {
     "id": "camille",
     "key": "164",
-    "role": ["Top"],
+    "role": [
+      "Top"
+    ],
     "name": "Camille",
     "title": "the Steel Shadow",
-    "tags": ["Fighter", "Tank"],
+    "tags": [
+      "Fighter",
+      "Tank"
+    ],
     "stats": {
       "hp": 575.6,
       "hpperlevel": 85,
@@ -631,10 +714,15 @@
   {
     "id": "cassiopeia",
     "key": "69",
-    "role": ["Top", "Mid"],
+    "role": [
+      "Top",
+      "Mid"
+    ],
     "name": "Cassiopeia",
     "title": "the Serpent's Embrace",
-    "tags": ["Mage"],
+    "tags": [
+      "Mage"
+    ],
     "stats": {
       "hp": 560,
       "hpperlevel": 90,
@@ -668,10 +756,15 @@
   {
     "id": "chogath",
     "key": "31",
-    "role": ["Top"],
+    "role": [
+      "Top"
+    ],
     "name": "Cho'Gath",
     "title": "the Terror of the Void",
-    "tags": ["Tank", "Mage"],
+    "tags": [
+      "Tank",
+      "Mage"
+    ],
     "stats": {
       "hp": 574.4,
       "hpperlevel": 80,
@@ -705,10 +798,14 @@
   {
     "id": "corki",
     "key": "42",
-    "role": ["Mid"],
+    "role": [
+      "Mid"
+    ],
     "name": "Corki",
     "title": "the Daring Bombardier",
-    "tags": ["Marksman"],
+    "tags": [
+      "Marksman"
+    ],
     "stats": {
       "hp": 518,
       "hpperlevel": 87,
@@ -742,10 +839,15 @@
   {
     "id": "darius",
     "key": "122",
-    "role": ["Top"],
+    "role": [
+      "Top"
+    ],
     "name": "Darius",
     "title": "the Hand of Noxus",
-    "tags": ["Fighter", "Tank"],
+    "tags": [
+      "Fighter",
+      "Tank"
+    ],
     "stats": {
       "hp": 582.24,
       "hpperlevel": 100,
@@ -779,10 +881,16 @@
   {
     "id": "diana",
     "key": "131",
-    "role": ["Jungle", "Mid"],
+    "role": [
+      "Jungle",
+      "Mid"
+    ],
     "name": "Diana",
     "title": "Scorn of the Moon",
-    "tags": ["Fighter", "Mage"],
+    "tags": [
+      "Fighter",
+      "Mage"
+    ],
     "stats": {
       "hp": 570,
       "hpperlevel": 95,
@@ -816,10 +924,14 @@
   {
     "id": "draven",
     "key": "119",
-    "role": ["Adc"],
+    "role": [
+      "Adc"
+    ],
     "name": "Draven",
     "title": "the Glorious Executioner",
-    "tags": ["Marksman"],
+    "tags": [
+      "Marksman"
+    ],
     "stats": {
       "hp": 605,
       "hpperlevel": 90,
@@ -853,10 +965,15 @@
   {
     "id": "drmundo",
     "key": "36",
-    "role": ["Top"],
+    "role": [
+      "Top"
+    ],
     "name": "DrMundo",
     "title": "the Madman of Zaun",
-    "tags": ["Fighter", "Tank"],
+    "tags": [
+      "Fighter",
+      "Tank"
+    ],
     "stats": {
       "hp": 582.52,
       "hpperlevel": 89,
@@ -890,10 +1007,16 @@
   {
     "id": "ekko",
     "key": "245",
-    "role": ["Jungle", "Mid"],
+    "role": [
+      "Jungle",
+      "Mid"
+    ],
     "name": "Ekko",
     "title": "the Boy Who Shattered Time",
-    "tags": ["Assassin", "Fighter"],
+    "tags": [
+      "Assassin",
+      "Fighter"
+    ],
     "stats": {
       "hp": 585,
       "hpperlevel": 85,
@@ -927,10 +1050,15 @@
   {
     "id": "elise",
     "key": "60",
-    "role": ["Jungle"],
+    "role": [
+      "Jungle"
+    ],
     "name": "Elise",
     "title": "the Spider Queen",
-    "tags": ["Mage", "Fighter"],
+    "tags": [
+      "Mage",
+      "Fighter"
+    ],
     "stats": {
       "hp": 534,
       "hpperlevel": 93,
@@ -964,10 +1092,15 @@
   {
     "id": "evelynn",
     "key": "28",
-    "role": ["Jungle"],
+    "role": [
+      "Jungle"
+    ],
     "name": "Evelynn",
     "title": "Agony's Embrace",
-    "tags": ["Assassin", "Mage"],
+    "tags": [
+      "Assassin",
+      "Mage"
+    ],
     "stats": {
       "hp": 572,
       "hpperlevel": 84,
@@ -1001,10 +1134,15 @@
   {
     "id": "ezreal",
     "key": "81",
-    "role": ["Adc"],
+    "role": [
+      "Adc"
+    ],
     "name": "Ezreal",
     "title": "the Prodigal Explorer",
-    "tags": ["Marksman", "Mage"],
+    "tags": [
+      "Marksman",
+      "Mage"
+    ],
     "stats": {
       "hp": 530,
       "hpperlevel": 88,
@@ -1038,10 +1176,15 @@
   {
     "id": "fiddlesticks",
     "key": "9",
-    "role": ["Jungle"],
+    "role": [
+      "Jungle"
+    ],
     "name": "Fiddlesticks",
     "title": "the Ancient Fear",
-    "tags": ["Mage", "Support"],
+    "tags": [
+      "Mage",
+      "Support"
+    ],
     "stats": {
       "hp": 580.4,
       "hpperlevel": 92,
@@ -1075,10 +1218,15 @@
   {
     "id": "fiora",
     "key": "114",
-    "role": ["Top"],
+    "role": [
+      "Top"
+    ],
     "name": "Fiora",
     "title": "the Grand Duelist",
-    "tags": ["Fighter", "Assassin"],
+    "tags": [
+      "Fighter",
+      "Assassin"
+    ],
     "stats": {
       "hp": 550,
       "hpperlevel": 85,
@@ -1112,10 +1260,15 @@
   {
     "id": "fizz",
     "key": "105",
-    "role": ["Mid"],
+    "role": [
+      "Mid"
+    ],
     "name": "Fizz",
     "title": "the Tidal Trickster",
-    "tags": ["Assassin", "Fighter"],
+    "tags": [
+      "Assassin",
+      "Fighter"
+    ],
     "stats": {
       "hp": 570,
       "hpperlevel": 98,
@@ -1149,10 +1302,16 @@
   {
     "id": "galio",
     "key": "3",
-    "role": ["Mid", "Support"],
+    "role": [
+      "Mid",
+      "Support"
+    ],
     "name": "Galio",
     "title": "the Colossus",
-    "tags": ["Tank", "Mage"],
+    "tags": [
+      "Tank",
+      "Mage"
+    ],
     "stats": {
       "hp": 562,
       "hpperlevel": 112,
@@ -1186,10 +1345,14 @@
   {
     "id": "gangplank",
     "key": "41",
-    "role": ["Top"],
+    "role": [
+      "Top"
+    ],
     "name": "Gangplank",
     "title": "the Saltwater Scourge",
-    "tags": ["Fighter"],
+    "tags": [
+      "Fighter"
+    ],
     "stats": {
       "hp": 540,
       "hpperlevel": 82,
@@ -1223,10 +1386,15 @@
   {
     "id": "garen",
     "key": "86",
-    "role": ["Top"],
+    "role": [
+      "Top"
+    ],
     "name": "Garen",
     "title": "The Might of Demacia",
-    "tags": ["Fighter", "Tank"],
+    "tags": [
+      "Fighter",
+      "Tank"
+    ],
     "stats": {
       "hp": 620,
       "hpperlevel": 84,
@@ -1260,10 +1428,15 @@
   {
     "id": "gnar",
     "key": "150",
-    "role": ["Top"],
+    "role": [
+      "Top"
+    ],
     "name": "Gnar",
     "title": "the Missing Link",
-    "tags": ["Fighter", "Tank"],
+    "tags": [
+      "Fighter",
+      "Tank"
+    ],
     "stats": {
       "hp": 510,
       "hpperlevel": 65,
@@ -1297,10 +1470,16 @@
   {
     "id": "gragas",
     "key": "79",
-    "role": ["Top", "Jungle"],
+    "role": [
+      "Top",
+      "Jungle"
+    ],
     "name": "Gragas",
     "title": "the Rabble Rouser",
-    "tags": ["Fighter", "Mage"],
+    "tags": [
+      "Fighter",
+      "Mage"
+    ],
     "stats": {
       "hp": 600,
       "hpperlevel": 95,
@@ -1334,10 +1513,14 @@
   {
     "id": "graves",
     "key": "104",
-    "role": ["Jungle"],
+    "role": [
+      "Jungle"
+    ],
     "name": "Graves",
     "title": "the Outlaw",
-    "tags": ["Marksman"],
+    "tags": [
+      "Marksman"
+    ],
     "stats": {
       "hp": 555,
       "hpperlevel": 92,
@@ -1371,10 +1554,15 @@
   {
     "id": "hecarim",
     "key": "120",
-    "role": ["Jungle"],
+    "role": [
+      "Jungle"
+    ],
     "name": "Hecarim",
     "title": "the Shadow of War",
-    "tags": ["Fighter", "Tank"],
+    "tags": [
+      "Fighter",
+      "Tank"
+    ],
     "stats": {
       "hp": 580,
       "hpperlevel": 90,
@@ -1408,10 +1596,17 @@
   {
     "id": "heimerdinger",
     "key": "74",
-    "role": ["Top", "Mid", "Support"],
+    "role": [
+      "Top",
+      "Mid",
+      "Support"
+    ],
     "name": "Heimerdinger",
     "title": "the Revered Inventor",
-    "tags": ["Mage", "Support"],
+    "tags": [
+      "Mage",
+      "Support"
+    ],
     "stats": {
       "hp": 488,
       "hpperlevel": 87,
@@ -1445,10 +1640,15 @@
   {
     "id": "illaoi",
     "key": "420",
-    "role": ["Top"],
+    "role": [
+      "Top"
+    ],
     "name": "Illaoi",
     "title": "the Kraken Priestess",
-    "tags": ["Fighter", "Tank"],
+    "tags": [
+      "Fighter",
+      "Tank"
+    ],
     "stats": {
       "hp": 585.6,
       "hpperlevel": 95,
@@ -1482,10 +1682,16 @@
   {
     "id": "irelia",
     "key": "39",
-    "role": ["Top", "Mid"],
+    "role": [
+      "Top",
+      "Mid"
+    ],
     "name": "Irelia",
     "title": "the Blade Dancer",
-    "tags": ["Fighter", "Assassin"],
+    "tags": [
+      "Fighter",
+      "Assassin"
+    ],
     "stats": {
       "hp": 580,
       "hpperlevel": 95,
@@ -1519,10 +1725,15 @@
   {
     "id": "ivern",
     "key": "427",
-    "role": ["Jungle"],
+    "role": [
+      "Jungle"
+    ],
     "name": "Ivern",
     "title": "the Green Father",
-    "tags": ["Support", "Mage"],
+    "tags": [
+      "Support",
+      "Mage"
+    ],
     "stats": {
       "hp": 585,
       "hpperlevel": 95,
@@ -1556,10 +1767,15 @@
   {
     "id": "janna",
     "key": "40",
-    "role": ["Support"],
+    "role": [
+      "Support"
+    ],
     "name": "Janna",
     "title": "the Storm's Fury",
-    "tags": ["Support", "Mage"],
+    "tags": [
+      "Support",
+      "Mage"
+    ],
     "stats": {
       "hp": 500,
       "hpperlevel": 70,
@@ -1593,10 +1809,15 @@
   {
     "id": "jarvaniv",
     "key": "59",
-    "role": ["Jungle"],
+    "role": [
+      "Jungle"
+    ],
     "name": "Jarvan IV",
     "title": "the Exemplar of Demacia",
-    "tags": ["Tank", "Fighter"],
+    "tags": [
+      "Tank",
+      "Fighter"
+    ],
     "stats": {
       "hp": 570,
       "hpperlevel": 90,
@@ -1630,10 +1851,16 @@
   {
     "id": "jax",
     "key": "24",
-    "role": ["Top", "Jungle"],
+    "role": [
+      "Top",
+      "Jungle"
+    ],
     "name": "Jax",
     "title": "Grandmaster at Arms",
-    "tags": ["Fighter", "Assassin"],
+    "tags": [
+      "Fighter",
+      "Assassin"
+    ],
     "stats": {
       "hp": 592.8,
       "hpperlevel": 85,
@@ -1667,10 +1894,16 @@
   {
     "id": "jayce",
     "key": "126",
-    "role": ["Top", "Mid"],
+    "role": [
+      "Top",
+      "Mid"
+    ],
     "name": "Jayce",
     "title": "the Defender of Tomorrow",
-    "tags": ["Fighter", "Marksman"],
+    "tags": [
+      "Fighter",
+      "Marksman"
+    ],
     "stats": {
       "hp": 560,
       "hpperlevel": 90,
@@ -1704,10 +1937,15 @@
   {
     "id": "jhin",
     "key": "202",
-    "role": ["Adc"],
+    "role": [
+      "Adc"
+    ],
     "name": "Jhin",
     "title": "the Virtuoso",
-    "tags": ["Marksman", "Mage"],
+    "tags": [
+      "Marksman",
+      "Mage"
+    ],
     "stats": {
       "hp": 585,
       "hpperlevel": 93,
@@ -1741,10 +1979,14 @@
   {
     "id": "jinx",
     "key": "222",
-    "role": ["Adc"],
+    "role": [
+      "Adc"
+    ],
     "name": "Jinx",
     "title": "the Loose Cannon",
-    "tags": ["Marksman"],
+    "tags": [
+      "Marksman"
+    ],
     "stats": {
       "hp": 610,
       "hpperlevel": 86,
@@ -1778,10 +2020,14 @@
   {
     "id": "kaisa",
     "key": "145",
-    "role": ["Adc"],
+    "role": [
+      "Adc"
+    ],
     "name": "Kai'Sa",
     "title": "Daughter of the Void",
-    "tags": ["Marksman"],
+    "tags": [
+      "Marksman"
+    ],
     "stats": {
       "hp": 600,
       "hpperlevel": 88,
@@ -1815,10 +2061,14 @@
   {
     "id": "kalista",
     "key": "429",
-    "role": ["Adc"],
+    "role": [
+      "Adc"
+    ],
     "name": "Kalista",
     "title": "the Spear of Vengeance",
-    "tags": ["Marksman"],
+    "tags": [
+      "Marksman"
+    ],
     "stats": {
       "hp": 534,
       "hpperlevel": 100,
@@ -1852,10 +2102,17 @@
   {
     "id": "karma",
     "key": "43",
-    "role": ["Top", "Mid", "Support"],
+    "role": [
+      "Top",
+      "Mid",
+      "Support"
+    ],
     "name": "Karma",
     "title": "the Enlightened One",
-    "tags": ["Mage", "Support"],
+    "tags": [
+      "Mage",
+      "Support"
+    ],
     "stats": {
       "hp": 534,
       "hpperlevel": 95,
@@ -1889,10 +2146,14 @@
   {
     "id": "karthus",
     "key": "30",
-    "role": ["Jungle"],
+    "role": [
+      "Jungle"
+    ],
     "name": "Karthus",
     "title": "the Deathsinger",
-    "tags": ["Mage"],
+    "tags": [
+      "Mage"
+    ],
     "stats": {
       "hp": 550,
       "hpperlevel": 87,
@@ -1926,10 +2187,15 @@
   {
     "id": "kassadin",
     "key": "38",
-    "role": ["Mid"],
+    "role": [
+      "Mid"
+    ],
     "name": "Kassadin",
     "title": "the Void Walker",
-    "tags": ["Assassin", "Mage"],
+    "tags": [
+      "Assassin",
+      "Mage"
+    ],
     "stats": {
       "hp": 576,
       "hpperlevel": 90,
@@ -1963,10 +2229,15 @@
   {
     "id": "katarina",
     "key": "55",
-    "role": ["Mid"],
+    "role": [
+      "Mid"
+    ],
     "name": "Katarina",
     "title": "the Sinister Blade",
-    "tags": ["Assassin", "Mage"],
+    "tags": [
+      "Assassin",
+      "Mage"
+    ],
     "stats": {
       "hp": 602,
       "hpperlevel": 94,
@@ -2000,10 +2271,15 @@
   {
     "id": "kayle",
     "key": "10",
-    "role": ["Top"],
+    "role": [
+      "Top"
+    ],
     "name": "Kayle",
     "title": "the Righteous",
-    "tags": ["Fighter", "Support"],
+    "tags": [
+      "Fighter",
+      "Support"
+    ],
     "stats": {
       "hp": 600,
       "hpperlevel": 85,
@@ -2037,10 +2313,15 @@
   {
     "id": "kayn",
     "key": "141",
-    "role": ["Jungle"],
+    "role": [
+      "Jungle"
+    ],
     "name": "Kayn",
     "title": "the Shadow Reaper",
-    "tags": ["Fighter", "Assassin"],
+    "tags": [
+      "Fighter",
+      "Assassin"
+    ],
     "stats": {
       "hp": 585,
       "hpperlevel": 85,
@@ -2074,10 +2355,15 @@
   {
     "id": "kennen",
     "key": "85",
-    "role": ["Top"],
+    "role": [
+      "Top"
+    ],
     "name": "Kennen",
     "title": "the Heart of the Tempest",
-    "tags": ["Mage", "Marksman"],
+    "tags": [
+      "Mage",
+      "Marksman"
+    ],
     "stats": {
       "hp": 541,
       "hpperlevel": 84,
@@ -2111,10 +2397,14 @@
   {
     "id": "khazix",
     "key": "121",
-    "role": ["Jungle"],
+    "role": [
+      "Jungle"
+    ],
     "name": "Kha'Zix",
     "title": "the Voidreaver",
-    "tags": ["Assassin"],
+    "tags": [
+      "Assassin"
+    ],
     "stats": {
       "hp": 572.8,
       "hpperlevel": 85,
@@ -2148,10 +2438,14 @@
   {
     "id": "kindred",
     "key": "203",
-    "role": ["Jungle"],
+    "role": [
+      "Jungle"
+    ],
     "name": "Kindred",
     "title": "The Eternal Hunters",
-    "tags": ["Marksman"],
+    "tags": [
+      "Marksman"
+    ],
     "stats": {
       "hp": 540,
       "hpperlevel": 85,
@@ -2185,10 +2479,15 @@
   {
     "id": "kled",
     "key": "240",
-    "role": ["Top"],
+    "role": [
+      "Top"
+    ],
     "name": "Kled",
     "title": "the Cantankerous Cavalier",
-    "tags": ["Fighter", "Tank"],
+    "tags": [
+      "Fighter",
+      "Tank"
+    ],
     "stats": {
       "hp": 340,
       "hpperlevel": 70,
@@ -2222,10 +2521,15 @@
   {
     "id": "kogmaw",
     "key": "96",
-    "role": ["Adc"],
+    "role": [
+      "Adc"
+    ],
     "name": "Kog'Maw",
     "title": "the Mouth of the Abyss",
-    "tags": ["Marksman", "Mage"],
+    "tags": [
+      "Marksman",
+      "Mage"
+    ],
     "stats": {
       "hp": 565,
       "hpperlevel": 85,
@@ -2259,10 +2563,15 @@
   {
     "id": "leblanc",
     "key": "7",
-    "role": ["Mid"],
+    "role": [
+      "Mid"
+    ],
     "name": "LeBlanc",
     "title": "the Deceiver",
-    "tags": ["Assassin", "Mage"],
+    "tags": [
+      "Assassin",
+      "Mage"
+    ],
     "stats": {
       "hp": 528,
       "hpperlevel": 92,
@@ -2296,10 +2605,15 @@
   {
     "id": "leesin",
     "key": "64",
-    "role": ["Jungle"],
+    "role": [
+      "Jungle"
+    ],
     "name": "Lee Sin",
     "title": "the Blind Monk",
-    "tags": ["Fighter", "Assassin"],
+    "tags": [
+      "Fighter",
+      "Assassin"
+    ],
     "stats": {
       "hp": 575,
       "hpperlevel": 85,
@@ -2333,10 +2647,15 @@
   {
     "id": "leona",
     "key": "89",
-    "role": ["Support"],
+    "role": [
+      "Support"
+    ],
     "name": "Leona",
     "title": "the Radiant Dawn",
-    "tags": ["Tank", "Support"],
+    "tags": [
+      "Tank",
+      "Support"
+    ],
     "stats": {
       "hp": 576.16,
       "hpperlevel": 87,
@@ -2370,10 +2689,15 @@
   {
     "id": "lillia",
     "key": "876",
-    "role": ["Jungle"],
+    "role": [
+      "Jungle"
+    ],
     "name": "Lillia",
     "title": "the Bashful Bloom",
-    "tags": ["Fighter", "Mage"],
+    "tags": [
+      "Fighter",
+      "Mage"
+    ],
     "stats": {
       "hp": 580,
       "hpperlevel": 90,
@@ -2407,10 +2731,14 @@
   {
     "id": "lissandra",
     "key": "127",
-    "role": ["Mid"],
+    "role": [
+      "Mid"
+    ],
     "name": "Lissandra",
     "title": "the Ice Witch",
-    "tags": ["Mage"],
+    "tags": [
+      "Mage"
+    ],
     "stats": {
       "hp": 550,
       "hpperlevel": 90,
@@ -2444,10 +2772,14 @@
   {
     "id": "lucian",
     "key": "236",
-    "role": ["Adc"],
+    "role": [
+      "Adc"
+    ],
     "name": "Lucian",
     "title": "the Purifier",
-    "tags": ["Marksman"],
+    "tags": [
+      "Marksman"
+    ],
     "stats": {
       "hp": 571,
       "hpperlevel": 86,
@@ -2481,10 +2813,15 @@
   {
     "id": "lulu",
     "key": "117",
-    "role": ["Support"],
+    "role": [
+      "Support"
+    ],
     "name": "Lulu",
     "title": "the Fae Sorceress",
-    "tags": ["Support", "Mage"],
+    "tags": [
+      "Support",
+      "Mage"
+    ],
     "stats": {
       "hp": 525,
       "hpperlevel": 74,
@@ -2518,10 +2855,15 @@
   {
     "id": "lux",
     "key": "99",
-    "role": ["Support"],
+    "role": [
+      "Support"
+    ],
     "name": "Lux",
     "title": "the Lady of Luminosity",
-    "tags": ["Mage", "Support"],
+    "tags": [
+      "Mage",
+      "Support"
+    ],
     "stats": {
       "hp": 490,
       "hpperlevel": 85,
@@ -2555,10 +2897,15 @@
   {
     "id": "malphite",
     "key": "54",
-    "role": ["Top"],
+    "role": [
+      "Top"
+    ],
     "name": "Malphite",
     "title": "Shard of the Monolith",
-    "tags": ["Tank", "Fighter"],
+    "tags": [
+      "Tank",
+      "Fighter"
+    ],
     "stats": {
       "hp": 575,
       "hpperlevel": 90,
@@ -2592,10 +2939,15 @@
   {
     "id": "malzahar",
     "key": "90",
-    "role": ["Mid"],
+    "role": [
+      "Mid"
+    ],
     "name": "Malzahar",
     "title": "the Prophet of the Void",
-    "tags": ["Mage", "Assassin"],
+    "tags": [
+      "Mage",
+      "Assassin"
+    ],
     "stats": {
       "hp": 537,
       "hpperlevel": 87,
@@ -2629,10 +2981,17 @@
   {
     "id": "maokai",
     "key": "57",
-    "role": ["Top", "Jungle", "Support"],
+    "role": [
+      "Top",
+      "Jungle",
+      "Support"
+    ],
     "name": "Maokai",
     "title": "the Twisted Treant",
-    "tags": ["Tank", "Mage"],
+    "tags": [
+      "Tank",
+      "Mage"
+    ],
     "stats": {
       "hp": 565,
       "hpperlevel": 95,
@@ -2666,10 +3025,15 @@
   {
     "id": "masteryi",
     "key": "11",
-    "role": ["Jungle"],
+    "role": [
+      "Jungle"
+    ],
     "name": "Master Yi",
     "title": "the Wuju Bladesman",
-    "tags": ["Assassin", "Fighter"],
+    "tags": [
+      "Assassin",
+      "Fighter"
+    ],
     "stats": {
       "hp": 598.56,
       "hpperlevel": 92,
@@ -2703,10 +3067,14 @@
   {
     "id": "missfortune",
     "key": "21",
-    "role": ["Adc"],
+    "role": [
+      "Adc"
+    ],
     "name": "Miss Fortune",
     "title": "the Bounty Hunter",
-    "tags": ["Marksman"],
+    "tags": [
+      "Marksman"
+    ],
     "stats": {
       "hp": 570,
       "hpperlevel": 93,
@@ -2740,10 +3108,16 @@
   {
     "id": "monkeyking",
     "key": "62",
-    "role": ["Top", "Jungle"],
+    "role": [
+      "Top",
+      "Jungle"
+    ],
     "name": "Wukong",
     "title": "the Monkey King",
-    "tags": ["Fighter", "Tank"],
+    "tags": [
+      "Fighter",
+      "Tank"
+    ],
     "stats": {
       "hp": 540,
       "hpperlevel": 85,
@@ -2777,10 +3151,14 @@
   {
     "id": "mordekaiser",
     "key": "82",
-    "role": ["Top"],
+    "role": [
+      "Top"
+    ],
     "name": "Mordekaiser",
     "title": "the Iron Revenant",
-    "tags": ["Fighter"],
+    "tags": [
+      "Fighter"
+    ],
     "stats": {
       "hp": 575,
       "hpperlevel": 90,
@@ -2814,10 +3192,15 @@
   {
     "id": "morgana",
     "key": "25",
-    "role": ["Support"],
+    "role": [
+      "Support"
+    ],
     "name": "Morgana",
     "title": "the Fallen",
-    "tags": ["Mage", "Support"],
+    "tags": [
+      "Mage",
+      "Support"
+    ],
     "stats": {
       "hp": 560,
       "hpperlevel": 90,
@@ -2851,10 +3234,15 @@
   {
     "id": "nami",
     "key": "267",
-    "role": ["Support"],
+    "role": [
+      "Support"
+    ],
     "name": "Nami",
     "title": "the Tidecaller",
-    "tags": ["Support", "Mage"],
+    "tags": [
+      "Support",
+      "Mage"
+    ],
     "stats": {
       "hp": 475,
       "hpperlevel": 74,
@@ -2888,10 +3276,15 @@
   {
     "id": "nasus",
     "key": "75",
-    "role": ["Top"],
+    "role": [
+      "Top"
+    ],
     "name": "Nasus",
     "title": "the Curator of the Sands",
-    "tags": ["Fighter", "Tank"],
+    "tags": [
+      "Fighter",
+      "Tank"
+    ],
     "stats": {
       "hp": 561.2,
       "hpperlevel": 90,
@@ -2925,10 +3318,15 @@
   {
     "id": "nautilus",
     "key": "111",
-    "role": ["Support"],
+    "role": [
+      "Support"
+    ],
     "name": "Nautilus",
     "title": "the Titan of the Depths",
-    "tags": ["Tank", "Fighter"],
+    "tags": [
+      "Tank",
+      "Fighter"
+    ],
     "stats": {
       "hp": 576.48,
       "hpperlevel": 86,
@@ -2962,10 +3360,16 @@
   {
     "id": "neeko",
     "key": "518",
-    "role": ["Mid", "Support"],
+    "role": [
+      "Mid",
+      "Support"
+    ],
     "name": "Neeko",
     "title": "the Curious Chameleon",
-    "tags": ["Mage", "Support"],
+    "tags": [
+      "Mage",
+      "Support"
+    ],
     "stats": {
       "hp": 540,
       "hpperlevel": 90,
@@ -2999,10 +3403,15 @@
   {
     "id": "nidalee",
     "key": "76",
-    "role": ["Jungle"],
+    "role": [
+      "Jungle"
+    ],
     "name": "Nidalee",
     "title": "the Bestial Huntress",
-    "tags": ["Assassin", "Mage"],
+    "tags": [
+      "Assassin",
+      "Mage"
+    ],
     "stats": {
       "hp": 545,
       "hpperlevel": 85,
@@ -3036,10 +3445,15 @@
   {
     "id": "nocturne",
     "key": "56",
-    "role": ["Jungle"],
+    "role": [
+      "Jungle"
+    ],
     "name": "Nocturne",
     "title": "the Eternal Nightmare",
-    "tags": ["Assassin", "Fighter"],
+    "tags": [
+      "Assassin",
+      "Fighter"
+    ],
     "stats": {
       "hp": 585,
       "hpperlevel": 85,
@@ -3073,10 +3487,15 @@
   {
     "id": "nunu",
     "key": "20",
-    "role": ["Jungle"],
+    "role": [
+      "Jungle"
+    ],
     "name": "Nunu & Willump",
     "title": "the Boy and His Yeti",
-    "tags": ["Tank", "Fighter"],
+    "tags": [
+      "Tank",
+      "Fighter"
+    ],
     "stats": {
       "hp": 570,
       "hpperlevel": 82,
@@ -3110,10 +3529,15 @@
   {
     "id": "olaf",
     "key": "2",
-    "role": ["Top"],
+    "role": [
+      "Top"
+    ],
     "name": "Olaf",
     "title": "the Berserker",
-    "tags": ["Fighter", "Tank"],
+    "tags": [
+      "Fighter",
+      "Tank"
+    ],
     "stats": {
       "hp": 597.24,
       "hpperlevel": 93,
@@ -3147,10 +3571,15 @@
   {
     "id": "orianna",
     "key": "61",
-    "role": ["Mid"],
+    "role": [
+      "Mid"
+    ],
     "name": "Orianna",
     "title": "the Lady of Clockwork",
-    "tags": ["Mage", "Support"],
+    "tags": [
+      "Mage",
+      "Support"
+    ],
     "stats": {
       "hp": 530,
       "hpperlevel": 91,
@@ -3184,10 +3613,15 @@
   {
     "id": "ornn",
     "key": "516",
-    "role": ["Top"],
+    "role": [
+      "Top"
+    ],
     "name": "Ornn",
     "title": "The Fire below the Mountain",
-    "tags": ["Tank", "Fighter"],
+    "tags": [
+      "Tank",
+      "Fighter"
+    ],
     "stats": {
       "hp": 590,
       "hpperlevel": 95,
@@ -3221,10 +3655,16 @@
   {
     "id": "pantheon",
     "key": "80",
-    "role": ["Top", "Support"],
+    "role": [
+      "Top",
+      "Support"
+    ],
     "name": "Pantheon",
     "title": "the Unbreakable Spear",
-    "tags": ["Fighter", "Assassin"],
+    "tags": [
+      "Fighter",
+      "Assassin"
+    ],
     "stats": {
       "hp": 580,
       "hpperlevel": 95,
@@ -3258,10 +3698,16 @@
   {
     "id": "poppy",
     "key": "78",
-    "role": ["Top", "Jungle"],
+    "role": [
+      "Top",
+      "Jungle"
+    ],
     "name": "Poppy",
     "title": "Keeper of the Hammer",
-    "tags": ["Tank", "Fighter"],
+    "tags": [
+      "Tank",
+      "Fighter"
+    ],
     "stats": {
       "hp": 540,
       "hpperlevel": 90,
@@ -3295,10 +3741,15 @@
   {
     "id": "pyke",
     "key": "555",
-    "role": ["Support"],
+    "role": [
+      "Support"
+    ],
     "name": "Pyke",
     "title": "the Bloodharbor Ripper",
-    "tags": ["Support", "Assassin"],
+    "tags": [
+      "Support",
+      "Assassin"
+    ],
     "stats": {
       "hp": 600,
       "hpperlevel": 90,
@@ -3332,10 +3783,15 @@
   {
     "id": "qiyana",
     "key": "246",
-    "role": ["Mid"],
+    "role": [
+      "Mid"
+    ],
     "name": "Qiyana",
     "title": "Empress of the Elements",
-    "tags": ["Assassin", "Fighter"],
+    "tags": [
+      "Assassin",
+      "Fighter"
+    ],
     "stats": {
       "hp": 590,
       "hpperlevel": 90,
@@ -3369,10 +3825,15 @@
   {
     "id": "quinn",
     "key": "133",
-    "role": ["Top"],
+    "role": [
+      "Top"
+    ],
     "name": "Quinn",
     "title": "Demacia's Wings",
-    "tags": ["Marksman", "Assassin"],
+    "tags": [
+      "Marksman",
+      "Assassin"
+    ],
     "stats": {
       "hp": 532.8,
       "hpperlevel": 85,
@@ -3406,10 +3867,14 @@
   {
     "id": "rakan",
     "key": "497",
-    "role": ["Support"],
+    "role": [
+      "Support"
+    ],
     "name": "Rakan",
     "title": "The Charmer",
-    "tags": ["Support"],
+    "tags": [
+      "Support"
+    ],
     "stats": {
       "hp": 540,
       "hpperlevel": 85,
@@ -3443,10 +3908,15 @@
   {
     "id": "rammus",
     "key": "33",
-    "role": ["Jungle"],
+    "role": [
+      "Jungle"
+    ],
     "name": "Rammus",
     "title": "the Armordillo",
-    "tags": ["Tank", "Fighter"],
+    "tags": [
+      "Tank",
+      "Fighter"
+    ],
     "stats": {
       "hp": 564.48,
       "hpperlevel": 95,
@@ -3480,10 +3950,14 @@
   {
     "id": "reksai",
     "key": "421",
-    "role": ["Jungle"],
+    "role": [
+      "Jungle"
+    ],
     "name": "Rek'Sai",
     "title": "the Void Burrower",
-    "tags": ["Fighter"],
+    "tags": [
+      "Fighter"
+    ],
     "stats": {
       "hp": 570,
       "hpperlevel": 85,
@@ -3517,10 +3991,15 @@
   {
     "id": "renekton",
     "key": "58",
-    "role": ["Top"],
+    "role": [
+      "Top"
+    ],
     "name": "Renekton",
     "title": "the Butcher of the Sands",
-    "tags": ["Fighter", "Tank"],
+    "tags": [
+      "Fighter",
+      "Tank"
+    ],
     "stats": {
       "hp": 575,
       "hpperlevel": 87,
@@ -3554,10 +4033,15 @@
   {
     "id": "rengar",
     "key": "107",
-    "role": ["Jungle"],
+    "role": [
+      "Jungle"
+    ],
     "name": "Rengar",
     "title": "the Pridestalker",
-    "tags": ["Assassin", "Fighter"],
+    "tags": [
+      "Assassin",
+      "Fighter"
+    ],
     "stats": {
       "hp": 585,
       "hpperlevel": 90,
@@ -3591,10 +4075,15 @@
   {
     "id": "riven",
     "key": "92",
-    "role": ["Top"],
+    "role": [
+      "Top"
+    ],
     "name": "Riven",
     "title": "the Exile",
-    "tags": ["Fighter", "Assassin"],
+    "tags": [
+      "Fighter",
+      "Assassin"
+    ],
     "stats": {
       "hp": 560,
       "hpperlevel": 86,
@@ -3628,10 +4117,15 @@
   {
     "id": "rumble",
     "key": "68",
-    "role": ["Top"],
+    "role": [
+      "Top"
+    ],
     "name": "Rumble",
     "title": "the Mechanized Menace",
-    "tags": ["Fighter", "Mage"],
+    "tags": [
+      "Fighter",
+      "Mage"
+    ],
     "stats": {
       "hp": 589,
       "hpperlevel": 85,
@@ -3665,10 +4159,16 @@
   {
     "id": "ryze",
     "key": "13",
-    "role": ["Top", "Mid"],
+    "role": [
+      "Top",
+      "Mid"
+    ],
     "name": "Ryze",
     "title": "the Rune Mage",
-    "tags": ["Mage", "Fighter"],
+    "tags": [
+      "Mage",
+      "Fighter"
+    ],
     "stats": {
       "hp": 575,
       "hpperlevel": 98,
@@ -3702,10 +4202,14 @@
   {
     "id": "samira",
     "key": "360",
-    "role": ["Adc"],
+    "role": [
+      "Adc"
+    ],
     "name": "Samira",
     "title": "the Desert Rose",
-    "tags": ["Marksman"],
+    "tags": [
+      "Marksman"
+    ],
     "stats": {
       "hp": 530,
       "hpperlevel": 88,
@@ -3739,10 +4243,15 @@
   {
     "id": "sejuani",
     "key": "113",
-    "role": ["Jungle"],
+    "role": [
+      "Jungle"
+    ],
     "name": "Sejuani",
     "title": "Fury of the North",
-    "tags": ["Tank", "Fighter"],
+    "tags": [
+      "Tank",
+      "Fighter"
+    ],
     "stats": {
       "hp": 560,
       "hpperlevel": 100,
@@ -3776,10 +4285,16 @@
   {
     "id": "senna",
     "key": "235",
-    "role": ["Adc", "Support"],
+    "role": [
+      "Adc",
+      "Support"
+    ],
     "name": "Senna",
     "title": "the Redeemer",
-    "tags": ["Marksman", "Support"],
+    "tags": [
+      "Marksman",
+      "Support"
+    ],
     "stats": {
       "hp": 520,
       "hpperlevel": 75,
@@ -3813,10 +4328,17 @@
   {
     "id": "seraphine",
     "key": "147",
-    "role": ["Support", "Mid"],
+    "role": [
+      "Support",
+      "Mid",
+      "Adc"
+    ],
     "name": "Seraphine",
     "title": "the Starry-Eyed Songstress",
-    "tags": ["Mage", "Support"],
+    "tags": [
+      "Mage",
+      "Support"
+    ],
     "stats": {
       "hp": 500,
       "hpperlevel": 80,
@@ -3850,10 +4372,16 @@
   {
     "id": "sett",
     "key": "875",
-    "role": ["Top", "Support"],
+    "role": [
+      "Top",
+      "Support"
+    ],
     "name": "Sett",
     "title": "the Boss",
-    "tags": ["Fighter", "Tank"],
+    "tags": [
+      "Fighter",
+      "Tank"
+    ],
     "stats": {
       "hp": 600,
       "hpperlevel": 93,
@@ -3887,10 +4415,15 @@
   {
     "id": "shaco",
     "key": "35",
-    "role": ["Jungle", "Support"],
+    "role": [
+      "Jungle",
+      "Support"
+    ],
     "name": "Shaco",
     "title": "the Demon Jester",
-    "tags": ["Assassin"],
+    "tags": [
+      "Assassin"
+    ],
     "stats": {
       "hp": 587,
       "hpperlevel": 89,
@@ -3924,10 +4457,14 @@
   {
     "id": "shen",
     "key": "98",
-    "role": ["Top"],
+    "role": [
+      "Top"
+    ],
     "name": "Shen",
     "title": "the Eye of Twilight",
-    "tags": ["Tank"],
+    "tags": [
+      "Tank"
+    ],
     "stats": {
       "hp": 540,
       "hpperlevel": 85,
@@ -3961,10 +4498,15 @@
   {
     "id": "shyvana",
     "key": "102",
-    "role": ["Jungle"],
+    "role": [
+      "Jungle"
+    ],
     "name": "Shyvana",
     "title": "the Half-Dragon",
-    "tags": ["Fighter", "Tank"],
+    "tags": [
+      "Fighter",
+      "Tank"
+    ],
     "stats": {
       "hp": 595,
       "hpperlevel": 95,
@@ -3998,10 +4540,15 @@
   {
     "id": "singed",
     "key": "27",
-    "role": ["Top"],
+    "role": [
+      "Top"
+    ],
     "name": "Singed",
     "title": "the Mad Chemist",
-    "tags": ["Tank", "Fighter"],
+    "tags": [
+      "Tank",
+      "Fighter"
+    ],
     "stats": {
       "hp": 580,
       "hpperlevel": 85,
@@ -4035,10 +4582,15 @@
   {
     "id": "sion",
     "key": "14",
-    "role": ["Top"],
+    "role": [
+      "Top"
+    ],
     "name": "Sion",
     "title": "The Undead Juggernaut",
-    "tags": ["Tank", "Fighter"],
+    "tags": [
+      "Tank",
+      "Fighter"
+    ],
     "stats": {
       "hp": 545,
       "hpperlevel": 73,
@@ -4072,10 +4624,14 @@
   {
     "id": "sivir",
     "key": "15",
-    "role": ["Adc"],
+    "role": [
+      "Adc"
+    ],
     "name": "Sivir",
     "title": "the Battle Mistress",
-    "tags": ["Marksman"],
+    "tags": [
+      "Marksman"
+    ],
     "stats": {
       "hp": 562,
       "hpperlevel": 90,
@@ -4109,10 +4665,15 @@
   {
     "id": "skarner",
     "key": "72",
-    "role": ["Jungle"],
+    "role": [
+      "Jungle"
+    ],
     "name": "Skarner",
     "title": "the Crystal Vanguard",
-    "tags": ["Fighter", "Tank"],
+    "tags": [
+      "Fighter",
+      "Tank"
+    ],
     "stats": {
       "hp": 601.28,
       "hpperlevel": 90,
@@ -4146,10 +4707,15 @@
   {
     "id": "sona",
     "key": "37",
-    "role": ["Support"],
+    "role": [
+      "Support"
+    ],
     "name": "Sona",
     "title": "Maven of the Strings",
-    "tags": ["Support", "Mage"],
+    "tags": [
+      "Support",
+      "Mage"
+    ],
     "stats": {
       "hp": 480,
       "hpperlevel": 77,
@@ -4183,10 +4749,15 @@
   {
     "id": "soraka",
     "key": "16",
-    "role": ["Support"],
+    "role": [
+      "Support"
+    ],
     "name": "Soraka",
     "title": "the Starchild",
-    "tags": ["Support", "Mage"],
+    "tags": [
+      "Support",
+      "Mage"
+    ],
     "stats": {
       "hp": 535,
       "hpperlevel": 74,
@@ -4220,10 +4791,17 @@
   {
     "id": "swain",
     "key": "50",
-    "role": ["Mid", "Support"],
+    "role": [
+      "Mid",
+      "Support",
+      "Adc"
+    ],
     "name": "Swain",
     "title": "the Noxian Grand General",
-    "tags": ["Mage", "Fighter"],
+    "tags": [
+      "Mage",
+      "Fighter"
+    ],
     "stats": {
       "hp": 525,
       "hpperlevel": 85,
@@ -4257,10 +4835,15 @@
   {
     "id": "sylas",
     "key": "517",
-    "role": ["Mid"],
+    "role": [
+      "Mid"
+    ],
     "name": "Sylas",
     "title": "the Unshackled",
-    "tags": ["Mage", "Assassin"],
+    "tags": [
+      "Mage",
+      "Assassin"
+    ],
     "stats": {
       "hp": 525,
       "hpperlevel": 115,
@@ -4294,10 +4877,15 @@
   {
     "id": "syndra",
     "key": "134",
-    "role": ["Mid"],
+    "role": [
+      "Mid"
+    ],
     "name": "Syndra",
     "title": "the Dark Sovereign",
-    "tags": ["Mage", "Support"],
+    "tags": [
+      "Mage",
+      "Support"
+    ],
     "stats": {
       "hp": 523,
       "hpperlevel": 90,
@@ -4331,10 +4919,16 @@
   {
     "id": "tahmkench",
     "key": "223",
-    "role": ["Top", "Support"],
+    "role": [
+      "Top",
+      "Support"
+    ],
     "name": "Tahm Kench",
     "title": "the River King",
-    "tags": ["Support", "Tank"],
+    "tags": [
+      "Support",
+      "Tank"
+    ],
     "stats": {
       "hp": 600,
       "hpperlevel": 100,
@@ -4368,10 +4962,16 @@
   {
     "id": "taliyah",
     "key": "163",
-    "role": ["Mid", "Jungle"],
+    "role": [
+      "Mid",
+      "Jungle"
+    ],
     "name": "Taliyah",
     "title": "the Stoneweaver",
-    "tags": ["Mage", "Support"],
+    "tags": [
+      "Mage",
+      "Support"
+    ],
     "stats": {
       "hp": 532,
       "hpperlevel": 90,
@@ -4405,10 +5005,14 @@
   {
     "id": "talon",
     "key": "91",
-    "role": ["Jungle"],
+    "role": [
+      "Jungle"
+    ],
     "name": "Talon",
     "title": "the Blade's Shadow",
-    "tags": ["Assassin"],
+    "tags": [
+      "Assassin"
+    ],
     "stats": {
       "hp": 588,
       "hpperlevel": 95,
@@ -4442,10 +5046,15 @@
   {
     "id": "taric",
     "key": "44",
-    "role": ["Support"],
+    "role": [
+      "Support"
+    ],
     "name": "Taric",
     "title": "the Shield of Valoran",
-    "tags": ["Support", "Fighter"],
+    "tags": [
+      "Support",
+      "Fighter"
+    ],
     "stats": {
       "hp": 575,
       "hpperlevel": 85,
@@ -4479,10 +5088,15 @@
   {
     "id": "teemo",
     "key": "17",
-    "role": ["Top"],
+    "role": [
+      "Top"
+    ],
     "name": "Teemo",
     "title": "the Swift Scout",
-    "tags": ["Marksman", "Assassin"],
+    "tags": [
+      "Marksman",
+      "Assassin"
+    ],
     "stats": {
       "hp": 528,
       "hpperlevel": 90,
@@ -4516,10 +5130,15 @@
   {
     "id": "thresh",
     "key": "412",
-    "role": ["Support"],
+    "role": [
+      "Support"
+    ],
     "name": "Thresh",
     "title": "the Chain Warden",
-    "tags": ["Support", "Fighter"],
+    "tags": [
+      "Support",
+      "Fighter"
+    ],
     "stats": {
       "hp": 560.52,
       "hpperlevel": 93,
@@ -4553,10 +5172,16 @@
   {
     "id": "tristana",
     "key": "18",
-    "role": ["Adc", "Mid"],
+    "role": [
+      "Adc",
+      "Mid"
+    ],
     "name": "Tristana",
     "title": "the Yordle Gunner",
-    "tags": ["Marksman", "Assassin"],
+    "tags": [
+      "Marksman",
+      "Assassin"
+    ],
     "stats": {
       "hp": 559,
       "hpperlevel": 88,
@@ -4590,10 +5215,16 @@
   {
     "id": "trundle",
     "key": "48",
-    "role": ["Top", "Jungle"],
+    "role": [
+      "Top",
+      "Jungle"
+    ],
     "name": "Trundle",
     "title": "the Troll King",
-    "tags": ["Fighter", "Tank"],
+    "tags": [
+      "Fighter",
+      "Tank"
+    ],
     "stats": {
       "hp": 616,
       "hpperlevel": 96,
@@ -4627,10 +5258,15 @@
   {
     "id": "tryndamere",
     "key": "23",
-    "role": ["Top"],
+    "role": [
+      "Top"
+    ],
     "name": "Tryndamere",
     "title": "the Barbarian King",
-    "tags": ["Fighter", "Assassin"],
+    "tags": [
+      "Fighter",
+      "Assassin"
+    ],
     "stats": {
       "hp": 625.64,
       "hpperlevel": 98,
@@ -4664,10 +5300,16 @@
   {
     "id": "twistedfate",
     "key": "4",
-    "role": ["Top", "Mid", "Adc"],
+    "role": [
+      "Top",
+      "Mid",
+      "Adc"
+    ],
     "name": "Twisted Fate",
     "title": "the Card Master",
-    "tags": ["Mage"],
+    "tags": [
+      "Mage"
+    ],
     "stats": {
       "hp": 534,
       "hpperlevel": 94,
@@ -4701,10 +5343,16 @@
   {
     "id": "twitch",
     "key": "29",
-    "role": ["Jungle", "Adc"],
+    "role": [
+      "Jungle",
+      "Adc"
+    ],
     "name": "Twitch",
     "title": "the Plague Rat",
-    "tags": ["Marksman", "Assassin"],
+    "tags": [
+      "Marksman",
+      "Assassin"
+    ],
     "stats": {
       "hp": 612,
       "hpperlevel": 86,
@@ -4738,10 +5386,16 @@
   {
     "id": "udyr",
     "key": "77",
-    "role": ["Top", "Jungle"],
+    "role": [
+      "Top",
+      "Jungle"
+    ],
     "name": "Udyr",
     "title": "the Spirit Walker",
-    "tags": ["Fighter", "Tank"],
+    "tags": [
+      "Fighter",
+      "Tank"
+    ],
     "stats": {
       "hp": 594,
       "hpperlevel": 99,
@@ -4775,10 +5429,15 @@
   {
     "id": "urgot",
     "key": "6",
-    "role": ["Top"],
+    "role": [
+      "Top"
+    ],
     "name": "Urgot",
     "title": "the Dreadnought",
-    "tags": ["Fighter", "Tank"],
+    "tags": [
+      "Fighter",
+      "Tank"
+    ],
     "stats": {
       "hp": 585,
       "hpperlevel": 88,
@@ -4812,10 +5471,15 @@
   {
     "id": "varus",
     "key": "110",
-    "role": ["Adc"],
+    "role": [
+      "Adc"
+    ],
     "name": "Varus",
     "title": "the Arrow of Retribution",
-    "tags": ["Marksman", "Mage"],
+    "tags": [
+      "Marksman",
+      "Mage"
+    ],
     "stats": {
       "hp": 530,
       "hpperlevel": 91,
@@ -4849,10 +5513,16 @@
   {
     "id": "vayne",
     "key": "67",
-    "role": ["Top", "Adc"],
+    "role": [
+      "Top",
+      "Adc"
+    ],
     "name": "Vayne",
     "title": "the Night Hunter",
-    "tags": ["Marksman", "Assassin"],
+    "tags": [
+      "Marksman",
+      "Assassin"
+    ],
     "stats": {
       "hp": 515,
       "hpperlevel": 89,
@@ -4886,10 +5556,14 @@
   {
     "id": "veigar",
     "key": "45",
-    "role": ["Mid"],
+    "role": [
+      "Mid"
+    ],
     "name": "Veigar",
     "title": "the Tiny Master of Evil",
-    "tags": ["Mage"],
+    "tags": [
+      "Mage"
+    ],
     "stats": {
       "hp": 505,
       "hpperlevel": 94,
@@ -4923,10 +5597,15 @@
   {
     "id": "velkoz",
     "key": "161",
-    "role": ["Mid", "Support"],
+    "role": [
+      "Mid",
+      "Support"
+    ],
     "name": "Vel'Koz",
     "title": "the Eye of the Void",
-    "tags": ["Mage"],
+    "tags": [
+      "Mage"
+    ],
     "stats": {
       "hp": 520,
       "hpperlevel": 88,
@@ -4960,10 +5639,15 @@
   {
     "id": "vi",
     "key": "254",
-    "role": ["Jungle"],
+    "role": [
+      "Jungle"
+    ],
     "name": "Vi",
     "title": "the Piltover Enforcer",
-    "tags": ["Fighter", "Assassin"],
+    "tags": [
+      "Fighter",
+      "Assassin"
+    ],
     "stats": {
       "hp": 585,
       "hpperlevel": 85,
@@ -4997,10 +5681,14 @@
   {
     "id": "viktor",
     "key": "112",
-    "role": ["Mid"],
+    "role": [
+      "Mid"
+    ],
     "name": "Viktor",
     "title": "the Machine Herald",
-    "tags": ["Mage"],
+    "tags": [
+      "Mage"
+    ],
     "stats": {
       "hp": 530,
       "hpperlevel": 90,
@@ -5034,10 +5722,15 @@
   {
     "id": "vladimir",
     "key": "8",
-    "role": ["Top", "Mid"],
+    "role": [
+      "Top",
+      "Mid"
+    ],
     "name": "Vladimir",
     "title": "the Crimson Reaper",
-    "tags": ["Mage"],
+    "tags": [
+      "Mage"
+    ],
     "stats": {
       "hp": 537,
       "hpperlevel": 96,
@@ -5071,10 +5764,16 @@
   {
     "id": "volibear",
     "key": "106",
-    "role": ["Top", "Jungle"],
+    "role": [
+      "Top",
+      "Jungle"
+    ],
     "name": "Volibear",
     "title": "the Relentless Storm",
-    "tags": ["Fighter", "Tank"],
+    "tags": [
+      "Fighter",
+      "Tank"
+    ],
     "stats": {
       "hp": 580,
       "hpperlevel": 90,
@@ -5108,10 +5807,16 @@
   {
     "id": "warwick",
     "key": "19",
-    "role": ["Top", "Jungle"],
+    "role": [
+      "Top",
+      "Jungle"
+    ],
     "name": "Warwick",
     "title": "the Uncaged Wrath of Zaun",
-    "tags": ["Fighter", "Tank"],
+    "tags": [
+      "Fighter",
+      "Tank"
+    ],
     "stats": {
       "hp": 550,
       "hpperlevel": 85,
@@ -5145,10 +5850,14 @@
   {
     "id": "xayah",
     "key": "498",
-    "role": ["Adc"],
+    "role": [
+      "Adc"
+    ],
     "name": "Xayah",
     "title": "the Rebel",
-    "tags": ["Marksman"],
+    "tags": [
+      "Marksman"
+    ],
     "stats": {
       "hp": 590,
       "hpperlevel": 88,
@@ -5182,10 +5891,14 @@
   {
     "id": "xerath",
     "key": "101",
-    "role": ["Mid"],
+    "role": [
+      "Mid"
+    ],
     "name": "Xerath",
     "title": "the Magus Ascendant",
-    "tags": ["Mage"],
+    "tags": [
+      "Mage"
+    ],
     "stats": {
       "hp": 526,
       "hpperlevel": 92,
@@ -5219,10 +5932,15 @@
   {
     "id": "xinzhao",
     "key": "5",
-    "role": ["Jungle"],
+    "role": [
+      "Jungle"
+    ],
     "name": "Xin Zhao",
     "title": "the Seneschal of Demacia",
-    "tags": ["Fighter", "Assassin"],
+    "tags": [
+      "Fighter",
+      "Assassin"
+    ],
     "stats": {
       "hp": 570,
       "hpperlevel": 92,
@@ -5256,10 +5974,17 @@
   {
     "id": "yasuo",
     "key": "157",
-    "role": ["Top", "Mid", "Adc"],
+    "role": [
+      "Top",
+      "Mid",
+      "Adc"
+    ],
     "name": "Yasuo",
     "title": "the Unforgiven",
-    "tags": ["Fighter", "Assassin"],
+    "tags": [
+      "Fighter",
+      "Assassin"
+    ],
     "stats": {
       "hp": 490,
       "hpperlevel": 87,
@@ -5293,10 +6018,16 @@
   {
     "id": "yone",
     "key": "777",
-    "role": ["Top", "Mid"],
+    "role": [
+      "Top",
+      "Mid"
+    ],
     "name": "Yone",
     "title": "the Unforgotten",
-    "tags": ["Assassin", "Fighter"],
+    "tags": [
+      "Assassin",
+      "Fighter"
+    ],
     "stats": {
       "hp": 550,
       "hpperlevel": 85,
@@ -5330,10 +6061,15 @@
   {
     "id": "yorick",
     "key": "83",
-    "role": ["Top"],
+    "role": [
+      "Top"
+    ],
     "name": "Yorick",
     "title": "Shepherd of Souls",
-    "tags": ["Fighter", "Tank"],
+    "tags": [
+      "Fighter",
+      "Tank"
+    ],
     "stats": {
       "hp": 580,
       "hpperlevel": 100,
@@ -5367,10 +6103,15 @@
   {
     "id": "yuumi",
     "key": "350",
-    "role": ["Support"],
+    "role": [
+      "Support"
+    ],
     "name": "Yuumi",
     "title": "the Magical Cat",
-    "tags": ["Support", "Mage"],
+    "tags": [
+      "Support",
+      "Mage"
+    ],
     "stats": {
       "hp": 480,
       "hpperlevel": 70,
@@ -5404,10 +6145,16 @@
   {
     "id": "zac",
     "key": "154",
-    "role": ["Top", "Jungle"],
+    "role": [
+      "Top",
+      "Jungle"
+    ],
     "name": "Zac",
     "title": "the Secret Weapon",
-    "tags": ["Tank", "Fighter"],
+    "tags": [
+      "Tank",
+      "Fighter"
+    ],
     "stats": {
       "hp": 615,
       "hpperlevel": 95,
@@ -5441,10 +6188,14 @@
   {
     "id": "zed",
     "key": "238",
-    "role": ["Mid"],
+    "role": [
+      "Mid"
+    ],
     "name": "Zed",
     "title": "the Master of Shadows",
-    "tags": ["Assassin"],
+    "tags": [
+      "Assassin"
+    ],
     "stats": {
       "hp": 584,
       "hpperlevel": 85,
@@ -5478,10 +6229,15 @@
   {
     "id": "ziggs",
     "key": "115",
-    "role": ["Mid", "Adc"],
+    "role": [
+      "Mid",
+      "Adc"
+    ],
     "name": "Ziggs",
     "title": "the Hexplosives Expert",
-    "tags": ["Mage"],
+    "tags": [
+      "Mage"
+    ],
     "stats": {
       "hp": 536,
       "hpperlevel": 92,
@@ -5515,10 +6271,15 @@
   {
     "id": "zilean",
     "key": "26",
-    "role": ["Support"],
+    "role": [
+      "Support"
+    ],
     "name": "Zilean",
     "title": "the Chronokeeper",
-    "tags": ["Support", "Mage"],
+    "tags": [
+      "Support",
+      "Mage"
+    ],
     "stats": {
       "hp": 504,
       "hpperlevel": 82,
@@ -5552,10 +6313,15 @@
   {
     "id": "zoe",
     "key": "142",
-    "role": ["Mid"],
+    "role": [
+      "Mid"
+    ],
     "name": "Zoe",
     "title": "the Aspect of Twilight",
-    "tags": ["Mage", "Support"],
+    "tags": [
+      "Mage",
+      "Support"
+    ],
     "stats": {
       "hp": 560,
       "hpperlevel": 92,
@@ -5589,10 +6355,15 @@
   {
     "id": "zyra",
     "key": "143",
-    "role": ["Support"],
+    "role": [
+      "Support"
+    ],
     "name": "Zyra",
     "title": "Rise of the Thorns",
-    "tags": ["Mage", "Support"],
+    "tags": [
+      "Mage",
+      "Support"
+    ],
     "stats": {
       "hp": 504,
       "hpperlevel": 79,

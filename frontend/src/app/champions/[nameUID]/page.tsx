@@ -12,7 +12,7 @@ export default function Page({
       <div className="space-y-4">
         <Searchbar />
         <div
-          className="relative mx-auto h-96 w-3/4 rounded-t-xl bg-no-repeat px-8 py-6"
+          className="relative mx-auto h-96 w-3/4 rounded-t-xl bg-cover bg-no-repeat px-8 py-6"
           style={{ backgroundImage: `url(/icons/splashes/${nameUID}_0.jpg)` }}
         >
           <div className="absolute bottom-6 flex flex-col items-center">

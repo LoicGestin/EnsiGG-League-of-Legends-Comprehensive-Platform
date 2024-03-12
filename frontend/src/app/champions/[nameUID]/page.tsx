@@ -62,7 +62,7 @@ export default function Page({
 
       <div className="mx-auto flex w-3/4">
         <div className="flex w-3/4 flex-col">
-          <div className="relative flex h-96 flex-col justify-between  bg-[#05101F] px-8 py-6">
+          <div className="relative flex h-96 flex-col justify-between rounded-bl-lg bg-[#05101F] px-8 py-6">
             <div className="flex items-center justify-between text-white">
               <div className="flex items-center">
                 <span>Winrate</span>
@@ -75,7 +75,7 @@ export default function Page({
           </div>
         </div>
         <div className="flex w-1/4 flex-col">
-          <div className="relative flex h-96 flex-col justify-between rounded-t-xl bg-[#05101F] px-8 py-6">
+          <div className="relative flex h-96 flex-col justify-between rounded-br-lg bg-[#05101F] px-8 py-6">
             <div className="text-white">{nameUID} Runes</div>
             <div className="text-white">Summoners Spells</div>
           </div>

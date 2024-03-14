@@ -37,7 +37,7 @@ const ChampionsList = () => {
             <img
               className="h-6 w-6"
               src="icons/lanes/icon-position-fill.png"
-              alt="Top"
+              alt="Fill"
             />
           </button>
           <button

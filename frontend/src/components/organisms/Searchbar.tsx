@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation";
 import { Text } from "../atoms/Text";
 import Image from "next/image";
 import { useState } from "react";
+import championsData from "../../../public/assets/champions.json";
 
 /**
  * Searchbar for index all pages.
@@ -12,9 +13,32 @@ export function Searchbar() {
   const router = useRouter();
 
   const [summonerName, setSummonerName] = useState<string>("");
+  const [error, setError] = useState<string>("");
 
   const handleSummonerName = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSummonerName(event.target.value);
+    setError(""); // Clear error when input changes
+  };
+
+  const handleSearch = () => {
+    if (summonerName.includes("#")) {
+      router.push(`/summoners/${summonerName.replace("#", ":")}`);
+    } else if (
+      championsData.find(
+        (champion) =>
+          champion.name.toLowerCase() === summonerName.toLowerCase(),
+      )
+    ) {
+      router.push(`/champions/${summonerName.toLowerCase()}`);
+    } else {
+      setError("Input must contain '#' character");
+    }
+  };
+
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === "Enter") {
+      handleSearch();
+    }
   };
 
   return (
@@ -38,15 +62,14 @@ export function Searchbar() {
           className="w-full bg-transparent text-slate-950 focus:outline-none"
           onChange={handleSummonerName}
           value={summonerName}
-          onKeyDown={(event) => {
-            event.key === "Enter" && router.push(`/summoners/${summonerName.replace('#',":")}`);
-          }}
+          onKeyDown={handleKeyDown}
         ></input>
+        {error && <p className="text-xs text-red-500">{error}</p>}
       </div>
 
       <button
         className="rounded-md bg-blue-900 px-1 py-2.5"
-        onClick={() => router.push(`/summoners/${summonerName.replace('#',":")}`)}
+        onClick={handleSearch}
       >
         <h2>
           <Text

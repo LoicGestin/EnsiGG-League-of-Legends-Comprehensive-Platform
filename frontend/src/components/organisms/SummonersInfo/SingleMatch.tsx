@@ -68,7 +68,9 @@ export default function SingleMatch({ data, id }: Props) {
 
         </div>
         <div className="w-2/12  my-auto  flex">
-            <img  src={`https://ddragon.leagueoflegends.com/cdn/14.4.1/img/champion/${user.championName}.png`} alt={"Champion Image"} width={72} height={72}/>
+            <Link href={`/champions/${user.championName.toLowerCase()}`}>
+                <img className={"max-w-fit"} src={`https://ddragon.leagueoflegends.com/cdn/14.4.1/img/champion/${user.championName}.png`} alt={"Champion Image"} width={72} height={72}/>
+            </Link>
             <div className="flex-col w-72">
                 <img  className="min-w-[36px]" src={`https://ddragon.leagueoflegends.com/cdn/14.4.1/img/spell/Summoner${firstSum}.png`} alt={firstSum} width={36} height={36}/>
                 <img  className="min-w-[36px]" src={`https://ddragon.leagueoflegends.com/cdn/14.4.1/img/spell/Summoner${secondSum}.png`} alt={secondSum} width={36} height={36}/>
@@ -108,7 +110,7 @@ export default function SingleMatch({ data, id }: Props) {
                 {players.slice(0,5).map((player: any, key: number) => (
                     <div key={key} className={"flex  "}>
                         <div style={{ fontSize: '10.5px', overflow: "hidden",whiteSpace: "nowrap" ,textOverflow:"ellipsis"}}>
-                        <Link  href={`/summoners/${player.summonerName}%3A${player.riotIdTagline}`}>{player.summonerName}</Link>
+                            <Link  href={`/summoners/${player.puuid}`}>{player.summonerName}</Link>
                         </div>
                         <img className="ml-auto shrink-0"  src={`https://ddragon.leagueoflegends.com/cdn/14.4.1/img/champion/${player.championName}.png`} alt={"Champion Image"} width={20} height={20}/>
                     </div>
@@ -120,7 +122,7 @@ export default function SingleMatch({ data, id }: Props) {
                     <div key={key} className={"flex"}>
                         <img  src={`https://ddragon.leagueoflegends.com/cdn/14.4.1/img/champion/${player.championName}.png`} alt={"Champion Image"} width={20} height={20}/>
                         <div style={{ fontSize: '10.5px', overflow: "hidden",whiteSpace: "nowrap",textOverflow:"ellipsis" }}>
-                            <Link  href={`/summoners/${player.summonerName}%3A${player.riotIdTagline}`}>{player.summonerName}</Link>
+                            <Link  href={`/summoners/${player.puuid}`}>{player.summonerName}</Link>
                         </div>
                     </div>
                 ))}

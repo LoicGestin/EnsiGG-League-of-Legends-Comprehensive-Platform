@@ -41,6 +41,25 @@ export function Searchbar() {
     }
   };
 
+  const handleSearch = () => {
+    if (summonerName.includes('#')) {
+      router.push(`/summoners/${summonerName.replace('#', ':')}`);
+    }
+    else if(championsData.find(champion => champion.name.toLowerCase() === summonerName.toLowerCase())){
+      router.push(`/champions/${summonerName.toLowerCase()}`);
+    }
+    else {
+      setError("Input must contain '#' character");
+    }
+  };
+
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === "Enter") {
+      handleSearch();
+    }
+  };
+
+
   return (
     <div className="mx-auto flex w-3/4 justify-between rounded-xl bg-slate-100 px-3 py-3.5">
       <div className="flex grow items-center space-x-4">

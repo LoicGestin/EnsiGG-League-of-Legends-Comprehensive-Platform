@@ -5,6 +5,7 @@ import dynamic from "next/dynamic";
 import Ranked from "@/components/organisms/SummonersInfo/Ranked";
 import SummonerHeader from "@/components/organisms/SummonersInfo/SummonerHeader";
 import Matchs from "@/components/organisms/SummonersInfo/Matchs";
+import api from "@/services/api";
 
 const League = dynamic(() => import("./Ranked"));
 
@@ -13,15 +14,17 @@ export async function getServerSideProps(summonerName: string) {
   let name = summonerName.split("%3A")[0];
   let tag = summonerName.split("%3A")[1];
 
-  console.log(summonerName)
-  console.log(summonerName)
-  console.log(summonerName)
-  console.log(summonerName)
-  console.log(summonerName)
-  console.log(summonerName)
-  console.log(summonerName)
-  console.log(summonerName)
-  const apiUrlAccount = `https://europe.api.riotgames.com/riot/account/v1/accounts/by-riot-id/${name}/${tag}?api_key=${apiKey}`;
+  console.log(summonerName);
+  console.log(summonerName);
+  console.log(summonerName);
+  console.log(summonerName);
+  console.log(summonerName);
+  console.log(summonerName);
+  console.log(summonerName);
+  console.log(summonerName);
+
+  const apiUrlAccount = `http://localhost:8000/summoner/${name}/${tag}`;
+
   const data = await fetch(apiUrlAccount, {
     headers: {
       "Content-Type": "application/json",
@@ -31,8 +34,9 @@ export async function getServerSideProps(summonerName: string) {
 
   const accountInfo = await data.json();
 
+  console.log(accountInfo);
 
-  return getServerSidePropsExt(accountInfo.puuid);
+  return getServerSidePropsExt(accountInfo.summonerPuuid);
 }
 
 export async function getServerSidePropsExt(puuid: string) {
@@ -86,15 +90,18 @@ interface Props {
 
 export async function SummonersInfo({ name }: Props) {
   let data;
-  data = await getServerSideProps(name);
+  if (name.length > 60) {
+    data = await getServerSidePropsExt(name);
+  } else {
+    data = await getServerSideProps(name);
+  }
   // @ts-ignore
   const summonerInfo = new SummonerDTO(data[0]);
   const leagueInfoSoloq = data[1][0];
   const leagueInfoFlex = data[1][1];
   const matches = data[2];
   return (
-    <div className="mx-auto w-10/12 flex-col text-white space-y-3 ">
-
+    <div className="mx-auto w-10/12 flex-col space-y-3 text-white ">
       <SummonerHeader data={summonerInfo}></SummonerHeader>
 
       <div className="flex w-full space-x-3">

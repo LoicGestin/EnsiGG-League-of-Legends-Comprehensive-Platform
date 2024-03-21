@@ -10,7 +10,7 @@ import api from "@/services/api";
 const League = dynamic(() => import("./Ranked"));
 
 export async function getServerSideProps(summonerName: string) {
-  const apiKey = "RGAPI-5d063476-cbcf-4a4c-a30e-53fd34332a93";
+  const apiKey = "RGAPI-a5c0792d-ca6f-4d45-953a-e360612992ca";
   let name = summonerName.split("%3A")[0];
   let tag = summonerName.split("%3A")[1];
 
@@ -38,8 +38,9 @@ export async function getServerSideProps(summonerName: string) {
 
   return getServerSidePropsExt(accountInfo.summonerPuuid);
 }
+
 export async function getServerSidePropsExt(puuid: string) {
-  const apiKey = "RGAPI-5d063476-cbcf-4a4c-a30e-53fd34332a93";
+  const apiKey = "RGAPI-a5c0792d-ca6f-4d45-953a-e360612992ca";
 
   const apiUrlID = `https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-puuid/${puuid}?api_key=${apiKey}`;
 
@@ -83,7 +84,6 @@ export async function getServerSidePropsExt(puuid: string) {
   return [summonerInfo, jsonResponseLeague, matches];
 }
 
-// @ts-ignore
 interface Props {
   name: string;
 }

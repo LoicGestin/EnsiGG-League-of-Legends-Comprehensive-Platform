@@ -21,6 +21,27 @@ export function Searchbar() {
   };
 
   const handleSearch = () => {
+    if (summonerName.includes("#")) {
+      router.push(`/summoners/${summonerName.replace("#", ":")}`);
+    } else if (
+      championsData.find(
+        (champion) =>
+          champion.name.toLowerCase() === summonerName.toLowerCase(),
+      )
+    ) {
+      router.push(`/champions/${summonerName.toLowerCase()}`);
+    } else {
+      setError("Input must contain '#' character");
+    }
+  };
+
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === "Enter") {
+      handleSearch();
+    }
+  };
+
+  const handleSearch = () => {
     if (summonerName.includes('#')) {
       router.push(`/summoners/${summonerName.replace('#', ':')}`);
     }
@@ -62,7 +83,7 @@ export function Searchbar() {
           value={summonerName}
           onKeyDown={handleKeyDown}
         ></input>
-        {error && <p className="text-red-500 text-xs">{error}</p>}
+        {error && <p className="text-xs text-red-500">{error}</p>}
       </div>
 
       <button

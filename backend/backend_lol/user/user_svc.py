@@ -16,41 +16,47 @@ def get_and_save_user(summoner_name: str, tag: str) -> UserDto:
     session = Session()
 
     user_db = (
-        session.query(UserMod).filter(UserMod.summonerName == summoner_name).first()
+        session.query(UserMod).filter(UserMod.summonerName == summoner_name and UserMod.summonerTag == tag).first()
     )
 
     if not user_db:
-        logger.info(f"Requesting from LoL API the user \"{summoner_name}#{tag}\"")
-        
-        x = requests.get(
-            f"https://europe.api.riotgames.com/riot/account/v1/accounts/by-riot-id/{summoner_name}/{tag}?api_key={api_key}"
-        )
+        try:
+            logger.info(f"Requesting from LoL API the user \"{summoner_name}#{tag}\"")
+            
+            x = requests.get(
+                f"https://europe.api.riotgames.com/riot/account/v1/accounts/by-riot-id/{summoner_name}/{tag}?api_key={api_key}"
+            )
 
-        y = requests.get(
-            f"https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-puuid/{x.json()["puuid"]}?api_key={api_key}"
-        )
-        logger.info("Request done.")
+            y = requests.get(
+                f"https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-puuid/{x.json()["puuid"]}?api_key={api_key}"
+            )
+            logger.info("Request done.")
 
-        user = UserDto(
-            summonerId=y.json()["id"],
-            summonerPuuid=x.json()["puuid"],
-            summonerName=summoner_name,
-            summonerTag=tag,
-        )
+            user = UserDto(
+                summonerId=y.json()["id"],
+                summonerPuuid=y.json()["puuid"],
+                summonerName=summoner_name,
+                summonerTag=tag,
+                summonerLevel=y.json()["summonerLevel"],
+                summonerProfileIconId=y.json()["profileIconId"]
+            )
 
-        user_to_add = UserMod(
-            summonerId=y.json()["id"],
-            summonerPuuid=x.json()["puuid"],
-            summonerName=summoner_name,
-            summonerTag=tag,
-        )
-        logger.info("Adding user to db")
+            user_to_add = UserMod(
+                summonerId=y.json()["id"],
+                summonerPuuid=y.json()["puuid"],
+                summonerName=summoner_name,
+                summonerTag=tag,
+                summonerLevel=y.json()["summonerLevel"],
+                summonerProfileIconId=y.json()["profileIconId"]
+            )
+            logger.info("Adding user to db")
 
-        session.add(user_to_add)
-        session.commit()
-        conn.commit()
-        logger.info("Commit done..")
-
+            session.add(user_to_add)
+            session.commit()
+            conn.commit()
+            logger.info("Commit done..")
+        except Exception as e:
+            print(e)
     else:
         logger.info(f"The user \"{summoner_name}#{tag}\" already exist in db, requesting from db")
         user = UserDto(
@@ -58,6 +64,8 @@ def get_and_save_user(summoner_name: str, tag: str) -> UserDto:
             summonerPuuid=str(user_db.summonerPuuid),
             summonerName=summoner_name,
             summonerTag=tag,
+            summonerLevel=int(user_db.summonerLevel),
+            summonerProfileIconId=int(user_db.summonerProfileIconId)
         )
 
     return user
@@ -67,58 +75,107 @@ def get_and_save_user_ranks(summoner_name: str, tag: str) -> List[RanksDto]:
     Session = sessionmaker(bind=conn)
     session = Session()
     user = get_and_save_user(summoner_name, tag)
-
-    logger.info("Requesting summoner's ranks...")
-    x = requests.get(f"https://euw1.api.riotgames.com/lol/league/v4/entries/by-summoner/{user.summonerId}?api_key={api_key}")
-    logger.info("Request done...")
-    solo_ranks = x.json()[0]  if (x.json()[0]["queueType"] == "RANKED_SOLO_5x5") else x.json()[1]
-    flex_ranks = x.json()[1]  if (x.json()[0]["queueType"] == "RANKED_SOLO_5x5") else x.json()[0]
-    print(solo_ranks)
-
-    solo_ranks_to_add = RanksMod(
-        user=user.summonerId,
-        queueType=solo_ranks["queueType"],
-        wins=solo_ranks["wins"],
-        losses=solo_ranks["losses"],
-        tier=solo_ranks["tier"],
-        rank=solo_ranks["rank"],
-        leaguePoints=solo_ranks["leaguePoints"]
+    user_db = (
+        session.query(RanksMod).filter(RanksMod.summonerId == user.summonerId).first()
     )
+    if (not user_db):
+        logger.info("Requesting summoner's ranks...")
+        x = requests.get(f"https://euw1.api.riotgames.com/lol/league/v4/entries/by-summoner/{user.summonerId}?api_key={api_key}")
+        logger.info("Request done...")
+        solo_ranks = x.json()[0]  if (x.json()[0]["queueType"] == "RANKED_SOLO_5x5") else x.json()[1]
+        flex_ranks = x.json()[1]  if (x.json()[0]["queueType"] == "RANKED_SOLO_5x5") else x.json()[0]
 
-    solo_ranks = RanksDto(
-        summonerId = user.summonerId,
-        queueType=solo_ranks["queueType"],
-        wins=solo_ranks["wins"],
-        losses=solo_ranks["losses"],
-        tier=solo_ranks["tier"],
-        rank=solo_ranks["rank"],
-        leaguePoints=solo_ranks["leaguePoints"]
-    )
+        solo_ranks_to_add = RanksMod(
+            summonerId=user.summonerId,
+            summonerName = user.summonerName,
+            queueType=solo_ranks["queueType"],
+            wins=solo_ranks["wins"],
+            losses=solo_ranks["losses"],
+            tier=solo_ranks["tier"],
+            rank=solo_ranks["rank"],
+            leaguePoints=solo_ranks["leaguePoints"]
+        )
 
-    flex_ranks_to_add = RanksMod(
-        user=user.summonerId,
-        queueType=flex_ranks["queueType"],
-        wins=flex_ranks["wins"],
-        losses=flex_ranks["losses"],
-        tier=flex_ranks["tier"],
-        rank=flex_ranks["rank"],
-        leaguePoints=flex_ranks["leaguePoints"]
-    )
+        solo_ranks = RanksDto(
+            summonerId = user.summonerId,
+            summonerName = user.summonerName,
+            queueType=solo_ranks["queueType"],
+            wins=solo_ranks["wins"],
+            losses=solo_ranks["losses"],
+            tier=solo_ranks["tier"],
+            rank=solo_ranks["rank"],
+            leaguePoints=solo_ranks["leaguePoints"]
+        )
 
-    flex_ranks = RanksDto(
-        summonerId = user.summonerId,
-        queueType=flex_ranks["queueType"],
-        wins=flex_ranks["wins"],
-        losses=flex_ranks["losses"],
-        tier=flex_ranks["tier"],
-        rank=flex_ranks["rank"],
-        leaguePoints=flex_ranks["leaguePoints"]
-    )
+        flex_ranks_to_add = RanksMod(
+            summonerId=user.summonerId,
+            summonerName= user.summonerName,
+            queueType=flex_ranks["queueType"],
+            wins=flex_ranks["wins"],
+            losses=flex_ranks["losses"],
+            tier=flex_ranks["tier"],
+            rank=flex_ranks["rank"],
+            leaguePoints=flex_ranks["leaguePoints"]
+        )
 
-    logger.info("Adding soloQ and flexQ to db...")
-    session.add(solo_ranks_to_add)
-    session.add(flex_ranks_to_add)
+        flex_ranks = RanksDto(
+            summonerId = user.summonerId,
+            summonerName= user.summonerName,
+            queueType=flex_ranks["queueType"],
+            wins=flex_ranks["wins"],
+            losses=flex_ranks["losses"],
+            tier=flex_ranks["tier"],
+            rank=flex_ranks["rank"],
+            leaguePoints=flex_ranks["leaguePoints"]
+        )
+    
+        user_db_solo = (
+            session.query(RanksMod).filter(RanksMod.queueType == "RANKED_SOLO_5x5" and RanksMod.summonerId == user.summonerId).first()
+        )
+        if (not user_db_solo):
+            logger.info("Adding soloQ to db...")
+            session.add(solo_ranks_to_add)
 
-    session.commit()
-    conn.commit()
+        user_db_flex = (
+            session.query(RanksMod).filter(RanksMod.queueType == "RANKED_FLEX_SR" and RanksMod.summonerId == user.summonerId).first()
+        )
+        if (not user_db_flex):
+            logger.info("Adding flex to db...")
+            session.add(flex_ranks_to_add)
+
+        session.commit()
+        conn.commit()
+        logger.info("Commit done..")
+    else:
+        logger.info("Already exist in db...")
+        user_db_solo = (
+            session.query(RanksMod).filter(RanksMod.queueType == "RANKED_SOLO_5x5" and RanksMod.summonerId == user.summonerId).first()
+        )
+
+        user_db_flex = (
+            session.query(RanksMod).filter(RanksMod.queueType == "RANKED_FLEX_SR" and RanksMod.summonerId == user.summonerId ).first()
+        )
+
+        solo_ranks = RanksDto(
+            summonerId=str(user_db_solo.summonerId),
+            summonerName=str(user_db_solo.summonerName),
+            queueType=str(user_db_solo.queueType),
+            tier=str(user_db_solo.tier),
+            rank=str(user_db_solo.rank),
+            leaguePoints=int(user_db_solo.leaguePoints),
+            wins=int(user_db_solo.wins),
+            losses=int(user_db_solo.losses)
+        )
+
+        flex_ranks = RanksDto(
+            summonerId=str(user_db_flex.summonerId),
+            summonerName=str(user_db_flex.summonerName),
+            queueType=str(user_db_flex.queueType),
+            tier=str(user_db_flex.tier),
+            rank=str(user_db_flex.rank),
+            leaguePoints=int(user_db_flex.leaguePoints),
+            wins=int(user_db_flex.wins),
+            losses=int(user_db_flex.losses)
+        )
+
     return [solo_ranks, flex_ranks]

@@ -19,7 +19,7 @@ def get_summoner(summoner_name: str, tag: str) -> UserDto:
     return user
 
 
-@app.get("/{summoner_name}/{tag}/league")
+@app.get("/league/{summoner_name}/{tag}")
 def get_summoner_league(summoner_name: str, tag: str) -> List[RanksDto]:
     user_ranks = get_and_save_user_ranks(summoner_name, tag)
     return [user_ranks[0], user_ranks[1]]

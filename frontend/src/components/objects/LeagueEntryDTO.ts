@@ -1,5 +1,4 @@
 export function LeagueEntryDTO(data: any) {
-  this.leagueId = data.leagueId;
   this.summonerId = data.summonerId;
   this.summonerName = data.summonerName;
   this.queueType = data.queueType;
@@ -8,9 +7,4 @@ export function LeagueEntryDTO(data: any) {
   this.leaguePoints = data.leaguePoints;
   this.wins = data.wins;
   this.losses = data.losses;
-  this.hotStreak = data.hotStreak;
-  this.veteran = data.veteran;
-  this.freshBlood = data.freshBlood;
-  this.inactive = data.inactive;
-  this.miniSeries = data.miniSeries;
 }

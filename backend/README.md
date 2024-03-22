@@ -24,8 +24,12 @@ poetry install
 poetry install --update
 ```
 
-To run unit tests:
+Make sure to do and have virtualenvs.in-project = true
+
+Change your python interpreter to the .venv one.
 
 ```shell
-pytest
+poetry config --list
+poetry config virtualenvs.in-project true
+poetry config virtualenvs.options.system-site-packages true
 ```

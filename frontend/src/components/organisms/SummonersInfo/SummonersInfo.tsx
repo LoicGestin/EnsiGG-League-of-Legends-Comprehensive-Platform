@@ -1,11 +1,9 @@
 import { SummonerDTO } from "@/components/objects/SummonerDTO";
 import { LeagueEntryDTO } from "@/components/objects/LeagueEntryDTO";
-import { array } from "prop-types";
 import dynamic from "next/dynamic";
 import Ranked from "@/components/organisms/SummonersInfo/Ranked";
 import SummonerHeader from "@/components/organisms/SummonersInfo/SummonerHeader";
 import Matchs from "@/components/organisms/SummonersInfo/Matchs";
-import api from "@/services/api";
 
 const League = dynamic(() => import("./Ranked"));
 

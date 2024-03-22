@@ -47,5 +47,5 @@ def get_user_matches(summoner_puuid: str) -> List[MatchDto]:
         logger.info(f"Adding the data from the match id {match_id}")
         match = get_data_from_one_match(match_id)
         matches.append(match)
-
+    
     return matches

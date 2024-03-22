@@ -53,7 +53,7 @@ export async function getServerSidePropsExt(summonerInfo, summonerPuuid) {
   });
   const jsonResponseLeague = await league.json();
 
-  const apiUrlMatchId = `https://europe.api.riotgames.com/lol/match/v5/matches/by-puuid/${summonerPuuid}/ids?start=0&count=20&api_key=${apiKey}`;
+  const apiUrlMatchId = `http://localhost:8000/${summonerPuuid}/matches_id`;
   const matchIdResponse = await fetch(apiUrlMatchId, {
     headers: {
       "Content-Type": "application/json",
@@ -63,7 +63,7 @@ export async function getServerSidePropsExt(summonerInfo, summonerPuuid) {
   const matchIdJson = await matchIdResponse.json();
   const matches = [];
   for (let match of matchIdJson) {
-    const apiUrlMatch = `https://europe.api.riotgames.com/lol/match/v5/matches/${match}?api_key=${apiKey}`;
+    const apiUrlMatch = `http://localhost:8000/match?match_id=${match}`;
     const matchResponse = await fetch(apiUrlMatch, {
       headers: {
         "Content-Type": "application/json",

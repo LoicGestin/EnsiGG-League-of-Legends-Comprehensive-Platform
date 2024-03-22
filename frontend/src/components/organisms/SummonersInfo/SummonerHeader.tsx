@@ -1,7 +1,13 @@
 import { SummonerDTO } from "@/components/objects/SummonerDTO";
 import Image from "next/image";
 
-export default function SummonerHeader({ data }: SummonerDTO) {
+/**
+ * Handle and display summonerHeader
+ */
+interface Props {
+  data: SummonerDTO;
+}
+export default function SummonerHeader({ data }: Props) {
   return (
     <div className=" mb-10 flex-col rounded-md px-[1.5vw] py-[1.5vh]">
       <Image

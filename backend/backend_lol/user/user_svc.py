@@ -70,11 +70,18 @@ def get_and_save_user(summoner_name: str, tag: str) -> UserDto:
 
     return user
 
-def get_and_save_user_ranks(summoner_name: str, tag: str) -> List[RanksDto]:
+def get_and_save_user_by_puuid(summoner_puuid: str) -> UserDto:
+    """Get & Save the user in the db."""
+    account_info = requests.get(f"https://europe.api.riotgames.com/riot/account/v1/accounts/by-puuid/{summoner_puuid}?api_key={api_key}")
+    user = get_and_save_user(account_info.json()["gameName"], account_info.json()["tagLine"])
+    return user
+
+def get_and_save_user_ranks(summoner_puuid: str) -> List[RanksDto]:
     """Get & Save the user ranks in db."""
     Session = sessionmaker(bind=conn)
     session = Session()
-    user = get_and_save_user(summoner_name, tag)
+    account_info = requests.get(f"https://europe.api.riotgames.com/riot/account/v1/accounts/by-puuid/{summoner_puuid}?api_key={api_key}")
+    user = get_and_save_user(account_info.json()["gameName"], account_info.json()["tagLine"])
     user_db = (
         session.query(RanksMod).filter(RanksMod.summonerId == user.summonerId).first()
     )

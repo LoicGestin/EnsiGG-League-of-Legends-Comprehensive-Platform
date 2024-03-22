@@ -13,7 +13,7 @@ export async function getServerSideProps(summonerName: string) {
   let name = summonerName.split("%3A")[0];
   let tag = summonerName.split("%3A")[1];
 
-  const apiUrlAccount = `http://localhost:8000/summoner/${name}/${tag}`;
+  const apiUrlAccount = `http://localhost:8000/summoner/by-name/${name}/${tag}`;
 
   const data = await fetch(apiUrlAccount, {
     headers: {
@@ -23,16 +23,28 @@ export async function getServerSideProps(summonerName: string) {
   });
   const accountInfo = await data.json();
 
-  return getServerSidePropsExt(accountInfo);
+  return getServerSidePropsExt(accountInfo, accountInfo.summonerPuuid);
 }
 
-export async function getServerSidePropsExt(summonerInfo: SummonerDTO) {
-  const apiKey = "RGAPI-4f73f4ca-6f31-444c-9f8c-224bf12626e3";
+interface Props {
+  summonerInfo: SummonerDTO;
+  summonerPuuid: String;
+}
 
-  console.log(
-    `http://localhost:8000/league/${summonerInfo.summonerName}/${summonerInfo.summonerTag}`,
-  );
-  const apiUrlLeague = `http://localhost:8000/league/${summonerInfo.summonerName}/${summonerInfo.summonerTag}`;
+export async function getServerSidePropsExt(summonerInfo, summonerPuuid) {
+  const apiKey = "RGAPI-4f73f4ca-6f31-444c-9f8c-224bf12626e3";
+  if (summonerInfo === null) {
+    const apiUrlAccount = `http://localhost:8000/summoner/by-puuid/${summonerPuuid}`;
+    const x = await fetch(apiUrlAccount, {
+      headers: {
+        "Content-Type": "application/json",
+        "Accept-Charset": "application/json; charset=UTF-8",
+      },
+    });
+    summonerInfo = await x.json();
+  }
+
+  const apiUrlLeague = `http://localhost:8000/league/${summonerPuuid}`;
   const league = await fetch(apiUrlLeague, {
     headers: {
       "Content-Type": "application/json",
@@ -41,7 +53,7 @@ export async function getServerSidePropsExt(summonerInfo: SummonerDTO) {
   });
   const jsonResponseLeague = await league.json();
 
-  const apiUrlMatchId = `https://europe.api.riotgames.com/lol/match/v5/matches/by-puuid/${summonerInfo.summonerPuuid}/ids?start=0&count=20&api_key=${apiKey}`;
+  const apiUrlMatchId = `https://europe.api.riotgames.com/lol/match/v5/matches/by-puuid/${summonerPuuid}/ids?start=0&count=20&api_key=${apiKey}`;
   const matchIdResponse = await fetch(apiUrlMatchId, {
     headers: {
       "Content-Type": "application/json",
@@ -69,12 +81,16 @@ interface Props {
 }
 
 export async function SummonersInfo({ name }: Props) {
-  let data = await getServerSideProps(name);
+  let data;
+  if (name.length > 60) {
+    data = await getServerSidePropsExt(null, name);
+  } else {
+    data = await getServerSideProps(name);
+  }
 
-  // @ts-ignore
   const summonerInfo = data[0] as SummonerDTO;
-  const leagueInfoSoloq = data[1][0];
-  const leagueInfoFlex = data[1][1];
+  const leagueInfoSoloq = data[1][0] as LeagueEntryDTO;
+  const leagueInfoFlex = data[1][1] as LeagueEntryDTO;
   const matches = data[2];
 
   return (

@@ -5,7 +5,7 @@ import SingleMatch from "@/components/organisms/SummonersInfo/SingleMatch";
  */
 interface Props {
   data: any[];
-  id: string;
+  id: String;
 }
 
 export default function Matchs({ data, id }: Props) {

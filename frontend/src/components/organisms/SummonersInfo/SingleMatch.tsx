@@ -9,7 +9,7 @@ import Image from "next/image";
 
 interface Props {
   data: MatchData;
-  id: string;
+  id: String;
 }
 
 export default function SingleMatch({ data, id }: Props) {

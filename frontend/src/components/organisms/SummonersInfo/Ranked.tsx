@@ -4,32 +4,33 @@ import Image from "next/image";
 /**
  * Display summoners ranking.
  */
-export default function Ranked({ data }: any) {
-  // @ts-ignore
-    let league = new LeagueEntryDTO(data);
-  let isSoloq = league.queueType === "RANKED_SOLO_5x5";
-  let winrate = (league.wins / (league.losses + league.wins)) * 100;
+interface Props {
+  data: LeagueEntryDTO;
+}
+
+export default function Ranked({ data }: Props) {
+  let isSoloq = data.queueType === "RANKED_SOLO_5x5";
+  let winrate = (data.wins / (data.losses + data.wins)) * 100;
 
   return (
-    <div className="flex justify-between rounded-md space-x-5 bg-slate-800 px-[1vw] py-[1vh]">
+    <div className="flex justify-between space-x-5 rounded-md bg-slate-800 px-[1vw] py-[1vh]">
       <div className={"flex-col space-y-2"}>
         <h2>{"Ranked " + (isSoloq ? "Solo/Duo" : "Flex")}</h2>
-          <div className={"flex space-x-2"}>
+        <div className={"flex space-x-2"}>
           <Image
-            src={`/icons/RankedEmblemsLatest/Rank=${league.tier}.png`}
+            src={`/icons/RankedEmblemsLatest/Rank=${data.tier}.png`}
             alt="Rank"
             width={72}
             height={72}
           />
-              <div className={"flex-col"}>
-                  <p>{league.tier}</p>
-                  <p>LP: {league.leaguePoints}</p>
-              </div>
-
+          <div className={"flex-col"}>
+            <p>{data.tier}</p>
+            <p>LP: {data.leaguePoints}</p>
           </div>
+        </div>
       </div>
       <div className={"flex-col"}>
-        <p>{league.wins + "W - " + league.losses + "L"}</p>
+        <p>{data.wins + "W - " + data.losses + "L"}</p>
         <p>{winrate.toFixed(2)} %</p>
       </div>
     </div>

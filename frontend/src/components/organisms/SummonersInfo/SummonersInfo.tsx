@@ -5,13 +5,13 @@ import Ranked from "@/components/organisms/SummonersInfo/Ranked";
 import SummonerHeader from "@/components/organisms/SummonersInfo/SummonerHeader";
 import Matchs from "@/components/organisms/SummonersInfo/Matchs";
 
-const League = dynamic(() => import("./Ranked"));
+const BASE_URL = "http://localhost:8000";
 
 export async function getServerSideProps(summonerName: string) {
   let name = summonerName.split("%3A")[0];
   let tag = summonerName.split("%3A")[1];
 
-  const apiUrlAccount = `http://localhost:8000/summoner/by-name/${name}/${tag}`;
+  const apiUrlAccount = `${BASE_URL}/summoner/by-name/${name}/${tag}`;
 
   const data = await fetch(apiUrlAccount, {
     headers: {
@@ -29,10 +29,12 @@ interface Props {
   summonerPuuid: String;
 }
 
-export async function getServerSidePropsExt(summonerInfo, summonerPuuid) {
-  const apiKey = "RGAPI-4f73f4ca-6f31-444c-9f8c-224bf12626e3";
+export async function getServerSidePropsExt(
+  summonerInfo: SummonerDTO | null,
+  summonerPuuid: String,
+) {
   if (summonerInfo === null) {
-    const apiUrlAccount = `http://localhost:8000/summoner/by-puuid/${summonerPuuid}`;
+    const apiUrlAccount = `${BASE_URL}/summoner/by-puuid/${summonerPuuid}`;
     const x = await fetch(apiUrlAccount, {
       headers: {
         "Content-Type": "application/json",
@@ -42,7 +44,7 @@ export async function getServerSidePropsExt(summonerInfo, summonerPuuid) {
     summonerInfo = await x.json();
   }
 
-  const apiUrlLeague = `http://localhost:8000/league/${summonerPuuid}`;
+  const apiUrlLeague = `${BASE_URL}/league/${summonerPuuid}`;
   const league = await fetch(apiUrlLeague, {
     headers: {
       "Content-Type": "application/json",
@@ -51,7 +53,7 @@ export async function getServerSidePropsExt(summonerInfo, summonerPuuid) {
   });
   const jsonResponseLeague = await league.json();
 
-  const apiUrlMatchId = `http://localhost:8000/${summonerPuuid}/matches_id`;
+  const apiUrlMatchId = `${BASE_URL}/${summonerPuuid}/matches_id`;
   const matchIdResponse = await fetch(apiUrlMatchId, {
     headers: {
       "Content-Type": "application/json",
@@ -61,7 +63,7 @@ export async function getServerSidePropsExt(summonerInfo, summonerPuuid) {
   const matchIdJson = await matchIdResponse.json();
   const matches = [];
   for (let match of matchIdJson) {
-    const apiUrlMatch = `http://localhost:8000/match?match_id=${match}`;
+    const apiUrlMatch = `${BASE_URL}/match?match_id=${match}`;
     const matchResponse = await fetch(apiUrlMatch, {
       headers: {
         "Content-Type": "application/json",

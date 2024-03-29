@@ -89,7 +89,7 @@ export default function SingleMatch({ data, id }: Props) {
           {formatGameDuration(data.info.gameDuration)}
         </p>
       </div>
-      <div className="my-auto  flex  w-2/12">
+      <div className="my-auto flex w-2/12">
         <Link href={`/champions/${user.championName.toLowerCase()}`}>
           <Image
             className={"max-w-fit"}
@@ -200,7 +200,7 @@ export default function SingleMatch({ data, id }: Props) {
       <div className={"flex items-center"}>
         <div className={"flex-col "} style={{ width: "57.8px" }}>
           {players.slice(0, 5).map((player: any, key: number) => (
-            <div key={key} className={"flex  "}>
+            <div key={key} className={"flex"}>
               <div
                 style={{
                   fontSize: "10.5px",

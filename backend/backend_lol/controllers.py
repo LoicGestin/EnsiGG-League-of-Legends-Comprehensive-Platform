@@ -12,6 +12,7 @@ from user.user_svc import get_and_save_user, get_and_save_user_ranks, get_and_sa
 
 app = FastAPI()
 
+todos = {}
 
 @app.get("/summoner/by-name/{summoner_name}/{tag}")
 def get_summoner(summoner_name: str, tag: str) -> UserDto:

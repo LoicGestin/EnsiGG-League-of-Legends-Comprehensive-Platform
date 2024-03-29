@@ -13,25 +13,27 @@ export default function Ranked({ data }: Props) {
   let winrate = (data.wins / (data.losses + data.wins)) * 100;
 
   return (
-    <div className="flex justify-between space-x-5 rounded-md bg-slate-800 px-[1vw] py-[1vh]">
-      <div className={"flex-col space-y-2"}>
+    <div className="flex items-center justify-between space-x-5 rounded-md bg-slate-800 px-[1vw] py-[1vh]">
+      <div className={"flex-col items-start space-y-2"}>
         <h2>{"Ranked " + (isSoloq ? "Solo/Duo" : "Flex")}</h2>
-        <div className={"flex space-x-2"}>
-          <Image
-            src={`/icons/RankedEmblemsLatest/Rank=${data.tier}.png`}
-            alt="Rank"
-            width={72}
-            height={72}
-          />
+        <div className={"flex items-center space-x-2"}>
+          <div className="h-[72px] w-[72px]">
+            <Image
+              src={`/icons/RankedEmblemsLatest/Rank=${data.tier}.png`}
+              alt="Rank"
+              width={72}
+              height={72}
+            />
+          </div>
           <div className={"flex-col"}>
             <p>{data.tier}</p>
             <p>LP: {data.leaguePoints}</p>
           </div>
         </div>
       </div>
-      <div className={"flex-col"}>
-        <p>{data.wins + "W - " + data.losses + "L"}</p>
-        <p>{winrate.toFixed(2)} %</p>
+      <div className={"flex w-20 flex-col"}>
+        <span>{data.wins + "W - " + data.losses + "L"}</span>
+        <span>{winrate.toFixed(2)} %</span>
       </div>
     </div>
   );

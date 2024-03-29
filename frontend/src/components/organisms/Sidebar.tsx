@@ -29,7 +29,7 @@ export function Sidebar() {
             height={40}
           />
         </Link>
-        <Link href="/">
+        <Link href="/tierlist">
           <LabelImage
             text="Tier List"
             textClass="text-white text-center text-xs"

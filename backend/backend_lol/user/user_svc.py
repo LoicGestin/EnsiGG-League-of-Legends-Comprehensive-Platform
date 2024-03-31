@@ -82,11 +82,10 @@ def get_and_save_user_ranks(summoner_puuid: str) -> List[RanksDto]:
     with Session.begin() as session:
         account_info = requests.get(f"https://europe.api.riotgames.com/riot/account/v1/accounts/by-puuid/{summoner_puuid}?api_key={api_key}")
         user = get_and_save_user(account_info.json()["gameName"], account_info.json()["tagLine"])
-        logger.info("TESTTTTTTTTTTTTTTTTTTTTTTT")
+    
         user_db = (
             session.query(RanksMod).filter(RanksMod.summonerId == user.summonerId).first()
         )
-        print(user_db)
         if (not user_db):
             logger.info("Requesting summoner's ranks...")
             x = requests.get(f"https://euw1.api.riotgames.com/lol/league/v4/entries/by-summoner/{user.summonerId}?api_key={api_key}")

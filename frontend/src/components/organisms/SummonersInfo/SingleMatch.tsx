@@ -76,7 +76,7 @@ export default function SingleMatch({ data, id }: Props) {
     <div
       className={`flex justify-between rounded-md px-[1vw] py-[1vh] ${user.win ? "bg-blue-950" : "bg-red-950"}`}
     >
-      <div className={"w-2/12 flex-col pt-3 text-center "}>
+      <div className={"w-1/6 flex-col pt-3 text-center "}>
         <p className="text-[16px]">
           {
             queuesData.find((queue) => queue.queueId === data.info.queueId)
@@ -90,15 +90,20 @@ export default function SingleMatch({ data, id }: Props) {
         </p>
       </div>
       <div className="my-auto flex w-2/12">
-        <Link href={`/champions/${user.championName.toLowerCase()}`}>
-          <Image
-            className={"max-w-fit"}
-            src={`https://ddragon.leagueoflegends.com/cdn/14.4.1/img/champion/${user.championName}.png`}
-            alt={"Champion Image"}
-            width={72}
-            height={72}
-          />
-        </Link>
+        <div className="relative">
+          <span className="absolute bottom-0 right-0 rounded-full bg-slate-600 px-1.5 py-1 text-center text-sm">
+            {user.champLevel}
+          </span>
+          <Link href={`/champions/${user.championName.toLowerCase()}`}>
+            <Image
+              className={"max-w-fit"}
+              src={`https://ddragon.leagueoflegends.com/cdn/14.4.1/img/champion/${user.championName}.png`}
+              alt={"Champion Image"}
+              width={72}
+              height={72}
+            />
+          </Link>
+        </div>
         <div className="w-72 flex-col">
           <Image
             className="min-w-[36px]"

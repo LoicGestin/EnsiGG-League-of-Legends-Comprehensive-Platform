@@ -1,7 +1,7 @@
 from models import Base
 from sqlalchemy import create_engine
 
-db_path = "sqlite:///backend_lol/database.db"
+db_path = "sqlite:///backend/backend_lol/database.db"
 
 engine = create_engine(db_path)
 

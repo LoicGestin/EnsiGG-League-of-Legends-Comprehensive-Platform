@@ -5,12 +5,12 @@ import SingleMatch from "@/components/organisms/SummonersInfo/SingleMatch";
  */
 interface Props {
   data: any[];
-  id: string;
+  id: String;
 }
 
 export default function Matchs({ data, id }: Props) {
   return (
-    <div className={"flex-col w-full space-y-1"}>
+    <div className={"w-full flex-col space-y-1"}>
       {data.map((match: any, key: number) => (
         <SingleMatch key={key} data={match} id={id}></SingleMatch>
       ))}

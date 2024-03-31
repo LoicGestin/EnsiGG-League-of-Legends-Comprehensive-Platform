@@ -1,29 +1,17 @@
 import { SummonerDTO } from "@/components/objects/SummonerDTO";
 import { LeagueEntryDTO } from "@/components/objects/LeagueEntryDTO";
-import { array } from "prop-types";
 import dynamic from "next/dynamic";
 import Ranked from "@/components/organisms/SummonersInfo/Ranked";
 import SummonerHeader from "@/components/organisms/SummonersInfo/SummonerHeader";
 import Matchs from "@/components/organisms/SummonersInfo/Matchs";
-import api from "@/services/api";
 
-const League = dynamic(() => import("./Ranked"));
+const BASE_URL = "http://localhost:8000";
 
 export async function getServerSideProps(summonerName: string) {
-  const apiKey = "RGAPI-a5c0792d-ca6f-4d45-953a-e360612992ca";
   let name = summonerName.split("%3A")[0];
   let tag = summonerName.split("%3A")[1];
 
-  console.log(summonerName);
-  console.log(summonerName);
-  console.log(summonerName);
-  console.log(summonerName);
-  console.log(summonerName);
-  console.log(summonerName);
-  console.log(summonerName);
-  console.log(summonerName);
-
-  const apiUrlAccount = `http://localhost:8000/summoner/${name}/${tag}`;
+  const apiUrlAccount = `${BASE_URL}/summoner/by-name/${name}/${tag}`;
 
   const data = await fetch(apiUrlAccount, {
     headers: {
@@ -31,28 +19,32 @@ export async function getServerSideProps(summonerName: string) {
       "Accept-Charset": "application/json; charset=UTF-8",
     },
   });
-
   const accountInfo = await data.json();
 
-  console.log(accountInfo);
-
-  return getServerSidePropsExt(accountInfo.summonerPuuid);
+  return getServerSidePropsExt(accountInfo, accountInfo.summonerPuuid);
 }
 
-export async function getServerSidePropsExt(puuid: string) {
-  const apiKey = "RGAPI-a5c0792d-ca6f-4d45-953a-e360612992ca";
+interface Props {
+  summonerInfo: SummonerDTO;
+  summonerPuuid: String;
+}
 
-  const apiUrlID = `https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-puuid/${puuid}?api_key=${apiKey}`;
+export async function getServerSidePropsExt(
+  summonerInfo: SummonerDTO | null,
+  summonerPuuid: String,
+) {
+  if (summonerInfo === null) {
+    const apiUrlAccount = `${BASE_URL}/summoner/by-puuid/${summonerPuuid}`;
+    const x = await fetch(apiUrlAccount, {
+      headers: {
+        "Content-Type": "application/json",
+        "Accept-Charset": "application/json; charset=UTF-8",
+      },
+    });
+    summonerInfo = await x.json();
+  }
 
-  const data = await fetch(apiUrlID, {
-    headers: {
-      "Content-Type": "application/json",
-      "Accept-Charset": "application/json; charset=UTF-8",
-    },
-  });
-  const summonerInfo = await data.json();
-
-  const apiUrlLeague = `https://euw1.api.riotgames.com/lol/league/v4/entries/by-summoner/${summonerInfo.id}?api_key=${apiKey}`;
+  const apiUrlLeague = `${BASE_URL}/league/${summonerPuuid}`;
   const league = await fetch(apiUrlLeague, {
     headers: {
       "Content-Type": "application/json",
@@ -61,7 +53,7 @@ export async function getServerSidePropsExt(puuid: string) {
   });
   const jsonResponseLeague = await league.json();
 
-  const apiUrlMatchId = `https://europe.api.riotgames.com/lol/match/v5/matches/by-puuid/${summonerInfo.puuid}/ids?start=0&count=20&api_key=${apiKey}`;
+  const apiUrlMatchId = `${BASE_URL}/${summonerPuuid}/matches_id`;
   const matchIdResponse = await fetch(apiUrlMatchId, {
     headers: {
       "Content-Type": "application/json",
@@ -71,7 +63,7 @@ export async function getServerSidePropsExt(puuid: string) {
   const matchIdJson = await matchIdResponse.json();
   const matches = [];
   for (let match of matchIdJson) {
-    const apiUrlMatch = `https://europe.api.riotgames.com/lol/match/v5/matches/${match}?api_key=${apiKey}`;
+    const apiUrlMatch = `${BASE_URL}/match?match_id=${match}`;
     const matchResponse = await fetch(apiUrlMatch, {
       headers: {
         "Content-Type": "application/json",
@@ -91,25 +83,26 @@ interface Props {
 export async function SummonersInfo({ name }: Props) {
   let data;
   if (name.length > 60) {
-    data = await getServerSidePropsExt(name);
+    data = await getServerSidePropsExt(null, name);
   } else {
     data = await getServerSideProps(name);
   }
-  // @ts-ignore
-  const summonerInfo = new SummonerDTO(data[0]);
-  const leagueInfoSoloq = data[1][0];
-  const leagueInfoFlex = data[1][1];
+
+  const summonerInfo = data[0] as SummonerDTO;
+  const leagueInfoSoloq = data[1][0] as LeagueEntryDTO;
+  const leagueInfoFlex = data[1][1] as LeagueEntryDTO;
   const matches = data[2];
+
   return (
     <div className="mx-auto w-10/12 flex-col space-y-3 text-white ">
-      <SummonerHeader data={summonerInfo}></SummonerHeader>
+      <SummonerHeader data={summonerInfo} />
 
       <div className="flex w-full space-x-3">
         <div className=" flex w-5/12 flex-col space-y-1 ">
-          <Ranked data={leagueInfoSoloq}></Ranked>
-          <Ranked data={leagueInfoFlex}></Ranked>
+          <Ranked data={leagueInfoSoloq} />
+          <Ranked data={leagueInfoFlex} />
         </div>
-        <Matchs data={matches} id={summonerInfo.puuid}></Matchs>
+        <Matchs data={matches} id={summonerInfo.summonerPuuid} />
       </div>
     </div>
   );

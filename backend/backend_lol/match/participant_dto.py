@@ -3,45 +3,10 @@ from pydantic import BaseModel
 
 
 class ParticipantDto(BaseModel):
-    allInPings: int
-    assistMePings: int
     assists: int
-    baronKills: int
-    basicPings: int
-    bountyLevel: int
-    champExperience: int
     champLevel: int
-    championId: int
     championName: str
-    championTransform: int
-    commandPings: int
-    consumablesPurchased: int
-    damageDealtToBuildings: int
-    damageDealtToObjectives: int
-    damageDealtToTurrets: int
-    damageSelfMitigated: int
-    dangerPings: int
     deaths: int
-    detectorWardsPlaced: int
-    doubleKills: int
-    dragonKills: int
-    eligibleForProgression: bool
-    enemyMissingPings: int
-    enemyVisionPings: int
-    firstBloodAssist: bool
-    firstBloodKill: bool
-    firstTowerAssist: bool
-    firstTowerKill: bool
-    gameEndedInEarlySurrender: bool
-    gameEndedInSurrender: bool
-    getBackPings: int
-    goldEarned: int
-    goldSpent: int
-    holdPings: int
-    individualPosition: str
-    inhibitorKills: int
-    inhibitorTakedowns: int
-    inhibitorsLost: int
     item0: int
     item1: int
     item2: int
@@ -49,18 +14,7 @@ class ParticipantDto(BaseModel):
     item4: int
     item5: int
     item6: int
-    itemsPurchased: int
-    killingSprees: int
     kills: int
-    lane: str
-    largestCriticalStrike: int
-    largestKillingSpree: int
-    largestMultiKill: int
-    longestTimeSpentLiving: int
-    magicDamageDealt: int
-    magicDamageDealtToChampions: int
-    magicDamageTaken: int
-    needVisionPings: int
     neutralMinionsKilled: int
     nexusKills: int
     nexusLost: int
@@ -79,18 +33,6 @@ class ParticipantDto(BaseModel):
     playerAugment2: int
     playerAugment3: int
     playerAugment4: int
-    playerScore0: int
-    playerScore1: int
-    playerScore2: int
-    playerScore3: int
-    playerScore4: int
-    playerScore5: int
-    playerScore6: int
-    playerScore7: int
-    playerScore8: int
-    playerScore9: int
-    playerScore10: int
-    playerScore11: int
     playerSubteamId: int
     profileIcon: int
     pushPings: int

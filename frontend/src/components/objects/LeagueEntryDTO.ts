@@ -1,16 +1,10 @@
-export function LeagueEntryDTO(data: any) {
-  this.leagueId = data.leagueId;
-  this.summonerId = data.summonerId;
-  this.summonerName = data.summonerName;
-  this.queueType = data.queueType;
-  this.tier = data.tier;
-  this.rank = data.rank;
-  this.leaguePoints = data.leaguePoints;
-  this.wins = data.wins;
-  this.losses = data.losses;
-  this.hotStreak = data.hotStreak;
-  this.veteran = data.veteran;
-  this.freshBlood = data.freshBlood;
-  this.inactive = data.inactive;
-  this.miniSeries = data.miniSeries;
+export interface LeagueEntryDTO {
+  summonerId: String;
+  summonerName: String;
+  queueType: String;
+  tier: String;
+  rank: String;
+  leaguePoints: number;
+  wins: number;
+  losses: number;
 }

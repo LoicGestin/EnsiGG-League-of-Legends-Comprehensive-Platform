@@ -18,6 +18,7 @@ export async function getServerSideProps(summonerName: string) {
       "Content-Type": "application/json",
       "Accept-Charset": "application/json; charset=UTF-8",
     },
+    cache: "no-store",
   });
   const accountInfo = await data.json();
 
@@ -40,6 +41,7 @@ export async function getServerSidePropsExt(
         "Content-Type": "application/json",
         "Accept-Charset": "application/json; charset=UTF-8",
       },
+      cache: "no-store",
     });
     summonerInfo = await x.json();
   }
@@ -50,6 +52,7 @@ export async function getServerSidePropsExt(
       "Content-Type": "application/json",
       "Accept-Charset": "application/json; charset=UTF-8",
     },
+    cache: "no-store",
   });
   const jsonResponseLeague = await league.json();
 
@@ -59,6 +62,7 @@ export async function getServerSidePropsExt(
       "Content-Type": "application/json",
       "Accept-Charset": "application/json; charset=UTF-8",
     },
+    cache: "no-store",
   });
   const matchesResponseJson = await matchesResponse.json();
 

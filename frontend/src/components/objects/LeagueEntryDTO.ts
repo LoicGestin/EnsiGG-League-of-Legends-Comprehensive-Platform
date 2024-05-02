@@ -1,7 +1,7 @@
 export interface LeagueEntryDTO {
   summonerId: String;
   summonerName: String;
-  queueType: String;
+  queueId: number;
   tier: String;
   rank: String;
   leaguePoints: number;

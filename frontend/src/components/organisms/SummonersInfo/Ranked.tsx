@@ -9,7 +9,7 @@ interface Props {
 }
 
 export default function Ranked({ data }: Props) {
-  let isSoloq = data.queueType === "RANKED_SOLO_5x5";
+  let isSoloq = data.queueId === 420;
   let winrate = (data.wins / (data.losses + data.wins)) * 100;
 
   return (
@@ -31,7 +31,9 @@ export default function Ranked({ data }: Props) {
           </div>
         </div>
       </div>
-      <div className={"flex w-20 flex-col"}>
+      <div
+        className={`flex w-20 flex-col ${data.wins === 0 && data.losses === 0 && "hidden"}`}
+      >
         <span>{data.wins + "W - " + data.losses + "L"}</span>
         <span>{winrate.toFixed(2)} %</span>
       </div>

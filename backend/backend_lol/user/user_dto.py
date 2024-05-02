@@ -1,4 +1,4 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, ConfigDict
 
 
 class UserDto(BaseModel):
@@ -11,11 +11,32 @@ class UserDto(BaseModel):
 
 
 class RanksDto(BaseModel):
-    summonerId: str 
+    summonerId: str
     summonerName: str
-    queueType: str
+    queueId: int
     tier: str
     rank: str
     leaguePoints: int
     wins: int
     losses: int
+
+
+class PersonnageDto(BaseModel):
+    summonerId: str
+    queueId: int
+    championName: str
+    wins: int
+    losses: int
+    kills: int
+    deaths: int
+    assists: int
+    creeps: int
+
+
+class ChampionDto(BaseModel):
+    championName: str
+    wins: int
+    losses: int
+    ban: int
+    pick: int
+    description: str

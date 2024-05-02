@@ -1,17 +1,19 @@
 from typing import List
 
+from champions.champion_svc import get_champion
 from fastapi import FastAPI
-from match.match_dto import MatchDto
 from match.match_svc import (
     get_all_user_matches_id,
     get_data_from_one_match,
     get_user_matches,
 )
-from user.user_dto import RanksDto, UserDto
+from match.models.match_dto import MatchDto
+from user.user_dto import ChampionDto, PersonnageDto, RanksDto, UserDto
 from user.user_svc import (
     get_and_save_user,
     get_and_save_user_by_puuid,
     get_and_save_user_ranks,
+    get_user_personnages,
 )
 
 app = FastAPI()
@@ -34,7 +36,7 @@ def get_summoner_by_puuid(summoner_puuid: str) -> UserDto:
 @app.get("/league/{summoner_puuid}")
 def get_summoner_league(summoner_puuid: str) -> List[RanksDto]:
     user_ranks = get_and_save_user_ranks(summoner_puuid)
-    return [user_ranks[0], user_ranks[1]]
+    return user_ranks
 
 
 @app.get("/{summoner_puuid}/matches_id")
@@ -44,8 +46,10 @@ def get_user_matches_id(summoner_puuid: str) -> List[str]:
 
 
 @app.get("/match")
-def get_one_match(match_id: str) -> MatchDto:
+def get_one_match(match_id: str) -> MatchDto | None:
     match = get_data_from_one_match(match_id)
+    if match is None:
+        return None
     return match
 
 
@@ -53,3 +57,15 @@ def get_one_match(match_id: str) -> MatchDto:
 def get_summoner_matches(summoner_puuid: str) -> List[MatchDto]:
     matches = get_user_matches(summoner_puuid)
     return matches
+
+
+@app.get("/personnages/{summoner_id}")
+def get_summoner_personnages(summoner_id: str) -> List[PersonnageDto]:
+    personnages = get_user_personnages(summoner_id)
+    return personnages
+
+
+@app.get("/champion/{championName}")
+def get_champion_infos(championName: str) -> ChampionDto:
+    champion = get_champion(championName)
+    return champion

@@ -53,27 +53,16 @@ export async function getServerSidePropsExt(
   });
   const jsonResponseLeague = await league.json();
 
-  const apiUrlMatchId = `${BASE_URL}/${summonerPuuid}/matches_id`;
-  const matchIdResponse = await fetch(apiUrlMatchId, {
+  const apiUrlMatches = `${BASE_URL}/get_all_matches/?summoner_puuid=${summonerPuuid}`;
+  const matchesResponse = await fetch(apiUrlMatches, {
     headers: {
       "Content-Type": "application/json",
       "Accept-Charset": "application/json; charset=UTF-8",
     },
   });
-  const matchIdJson = await matchIdResponse.json();
-  const matches = [];
-  for (let match of matchIdJson) {
-    const apiUrlMatch = `${BASE_URL}/match?match_id=${match}`;
-    const matchResponse = await fetch(apiUrlMatch, {
-      headers: {
-        "Content-Type": "application/json",
-        "Accept-Charset": "application/json; charset=UTF-8",
-      },
-    });
-    const matchResponseJson = await matchResponse.json();
-    matches.push(matchResponseJson);
-  }
-  return [summonerInfo, jsonResponseLeague, matches];
+  const matchesResponseJson = await matchesResponse.json();
+
+  return [summonerInfo, jsonResponseLeague, matchesResponseJson];
 }
 
 interface Props {
@@ -94,7 +83,7 @@ export async function SummonersInfo({ name }: Props) {
   const matches = data[2];
 
   return (
-    <div className="mx-auto w-10/12 flex-col space-y-3 text-white ">
+    <div className="mx-auto w-5/6 flex-col space-y-3 text-white ">
       <SummonerHeader data={summonerInfo} />
 
       <div className="flex w-full space-x-3">

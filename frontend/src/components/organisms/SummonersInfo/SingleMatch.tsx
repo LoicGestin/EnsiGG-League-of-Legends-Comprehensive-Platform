@@ -1,5 +1,5 @@
 "use client";
-import { MatchData } from "./Matchs";
+import { GameData } from "./Matchs";
 import { useEffect, useState } from "react";
 const queuesData = require("../../../../public/assets/queues.json");
 const summonerData = require("../../../../public/assets/summoner.json");
@@ -8,36 +8,41 @@ import Link from "next/link";
 import Image from "next/image";
 
 interface Props {
-  data: MatchData;
+  data: GameData;
   id: String;
 }
 
 export default function SingleMatch({ data, id }: Props) {
   // Convert data object into an array of objects with index
 
-  let players = data.info.participants;
+  let players = data.participants;
   // @ts-ignore
-  let user = players.find((player) => player.puuid === id);
-
-  let firstSum = summonerData.find((spell) => spell.key == user.summoner1Id).id;
-  let secondSum = summonerData.find(
+  let user = players.find((player) => player.summonerPuuid === id);
+  // @ts-ignore
+  let firstSum = Object.values(summonerData.data).find(
+    (spell) => spell.key == user.summoner1Id,
+  ).id;
+  // @ts-ignore
+  let secondSum = Object.values(summonerData.data).find(
     (spell) => spell.key == user.summoner2Id,
   ).id;
 
   firstSum = firstSum.charAt(0).toUpperCase() + firstSum.slice(1);
   secondSum = secondSum.charAt(0).toUpperCase() + secondSum.slice(1);
-
+  /**
+   * 
   let firstRune = runesData.find(
     (rune) => rune.id == user.perks.styles[0].style,
   ).icon;
   let secondRune = runesData.find(
     (rune) => rune.id == user.perks.styles[1].style,
   ).icon;
+  */
 
   const [timeSinceCreation, setTimeSinceCreation] = useState("");
 
   useEffect(() => {
-    const gameCreationTimestamp = data.info.gameCreation;
+    const gameCreationTimestamp = data.gameCreation;
     const currentTimestamp = new Date().getTime();
     const timeDifference = currentTimestamp - gameCreationTimestamp;
     if (timeDifference < 60000) {
@@ -61,7 +66,7 @@ export default function SingleMatch({ data, id }: Props) {
       // More than 1 year
       setTimeSinceCreation("More than a year ago");
     }
-  }, [data.info.gameCreation]);
+  }, [data.gameCreation]);
 
   const formatGameDuration = (durationInSeconds: number) => {
     const minutes = Math.floor(durationInSeconds / 60);
@@ -79,14 +84,13 @@ export default function SingleMatch({ data, id }: Props) {
       <div className={"w-1/6 flex-col pt-3 text-center "}>
         <p className="text-[16px]">
           {
-            queuesData.find((queue) => queue.queueId === data.info.queueId)
+            queuesData.find((queue) => queue.queueId === data.queueId)
               .description
           }
         </p>
         <p className="text-[12px]">{timeSinceCreation}</p>
         <p className="text-[12px]">
-          {user.win ? "WIN " : "LOSS "}{" "}
-          {formatGameDuration(data.info.gameDuration)}
+          {user.win ? "WIN " : "LOSS "} {formatGameDuration(data.gameDuration)}
         </p>
       </div>
       <div className="my-auto flex w-2/12">
@@ -107,14 +111,14 @@ export default function SingleMatch({ data, id }: Props) {
         <div className="w-72 flex-col">
           <Image
             className="min-w-[36px]"
-            src={`https://ddragon.leagueoflegends.com/cdn/14.4.1/img/spell/Summoner${firstSum}.png`}
+            src={`https://ddragon.leagueoflegends.com/cdn/14.4.1/img/spell/${firstSum}.png`}
             alt={firstSum}
             width={36}
             height={36}
           />
           <Image
             className="min-w-[36px]"
-            src={`https://ddragon.leagueoflegends.com/cdn/14.4.1/img/spell/Summoner${secondSum}.png`}
+            src={`https://ddragon.leagueoflegends.com/cdn/14.4.1/img/spell/${secondSum}.png`}
             alt={secondSum}
             width={36}
             height={36}
@@ -123,15 +127,15 @@ export default function SingleMatch({ data, id }: Props) {
         <div className="w-72 flex-col">
           <img
             className="min-w-[36px]"
-            src={`https://ddragon.canisback.com/img/${firstRune}`}
-            alt={firstRune}
+            src={`https://ddragon.canisback.com/img/perk-images/Styles/Precision/Conqueror/Conqueror.png`}
+            alt={"firstRune"}
             width={36}
             height={36}
           />
           <img
             className="min-w-[36px]"
-            src={`https://ddragon.canisback.com/img/${secondRune}`}
-            alt={secondRune}
+            src={`https://ddragon.canisback.com/img/perk-images/Styles/7200_Domination.png`}
+            alt={"secondRune"}
             width={36}
             height={36}
           />
@@ -148,8 +152,7 @@ export default function SingleMatch({ data, id }: Props) {
         </p>
         <p>
           {user.totalMinionsKilled} CS (
-          {(user.totalMinionsKilled / (data.info.gameDuration / 60)).toFixed(2)}
-          )
+          {(user.totalMinionsKilled / (data.gameDuration / 60)).toFixed(2)})
         </p>
         <p>{user.visionScore} vision</p>
         <p>{user.visionWardsBoughtInGame} Control Ward</p>
@@ -214,7 +217,7 @@ export default function SingleMatch({ data, id }: Props) {
                   textOverflow: "ellipsis",
                 }}
               >
-                <Link href={`/summoners/${player.puuid}`}>
+                <Link href={`/summoners/${player.summonerPuuid}`}>
                   {player.summonerName}
                 </Link>
               </div>
@@ -246,7 +249,7 @@ export default function SingleMatch({ data, id }: Props) {
                   textOverflow: "ellipsis",
                 }}
               >
-                <Link href={`/summoners/${player.puuid}`}>
+                <Link href={`/summoners/${player.summonerPuuid}`}>
                   {player.summonerName}
                 </Link>
               </div>

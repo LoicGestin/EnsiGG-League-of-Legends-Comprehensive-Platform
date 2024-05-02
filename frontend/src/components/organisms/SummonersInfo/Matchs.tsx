@@ -22,7 +22,7 @@ export interface MatchData {
   info: GameData;
 }
 
-interface GameData {
+export interface GameData {
   queueId: any;
   gameMode: any;
   gameType: any;

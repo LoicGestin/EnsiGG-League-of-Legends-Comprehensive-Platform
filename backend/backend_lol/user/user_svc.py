@@ -7,6 +7,7 @@ from helpers import http_error_handler
 from loguru import logger
 from match.models.match_dto import ParticipantDto
 from models import PersonnageMod, RanksMod, UserMod
+from pydantic import Tag
 from services import init_services
 from sqlalchemy.orm import sessionmaker
 from user.user_dto import PersonnageDto, RanksDto, UserDto
@@ -24,10 +25,12 @@ def get_and_save_user(summoner_name: str, tag: str) -> UserDto:
             user_db = (
                 session.query(UserMod)
                 .filter(
-                    UserMod.summonerName == summoner_name, UserMod.summonerTag == tag
+                    UserMod.summonerName == summoner_name.lower(),
+                    UserMod.summonerTag == tag,
                 )
                 .first()
             )
+
             if not user_db:
                 logger.info(f'Requesting from LoL API the user "{summoner_name}#{tag}"')
 
@@ -43,7 +46,7 @@ def get_and_save_user(summoner_name: str, tag: str) -> UserDto:
                 user = UserDto(
                     summonerId=y.json()["id"],
                     summonerPuuid=y.json()["puuid"],
-                    summonerName=summoner_name,
+                    summonerName=summoner_name.lower(),
                     summonerTag=tag,
                     summonerLevel=y.json()["summonerLevel"],
                     summonerProfileIconId=y.json()["profileIconId"],
@@ -111,7 +114,6 @@ def get_and_save_user_ranks(summoner_puuid: str) -> List[RanksDto]:
                 .filter(RanksMod.summonerId == user.summonerId)
                 .first()
             )
-
             if not user_db:
                 logger.info("Requesting summoner's ranks...")
                 x = requests.get(
@@ -271,5 +273,7 @@ def get_user_personnages(summoner_id: str) -> List[PersonnageDto]:
             .filter(PersonnageMod.summonerId == summoner_id)
             .all()
         )
-        personnagesDto = [PersonnageDto.model_validate(user_db_i.__dict__) for user_db_i in user_db]
+        personnagesDto = [
+            PersonnageDto.model_validate(user_db_i.__dict__) for user_db_i in user_db
+        ]
         return personnagesDto

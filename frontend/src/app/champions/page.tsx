@@ -1,9 +1,8 @@
-"use client"
+"use client";
 import ChampionsList from "@/components/organisms/Champions/ChampionsList";
 import { Searchbar } from "@/components/organisms/Searchbar";
 
 import { AppLayout } from "@/components/templates/AppLayout";
-import { ChampionsLayout } from "@/components/templates/ChampionsLayout";
 
 export default function Page() {
   return (

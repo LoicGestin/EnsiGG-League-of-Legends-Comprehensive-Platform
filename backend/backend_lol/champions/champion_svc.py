@@ -1,15 +1,14 @@
-from loguru import logger
+from champions.champion_dto import ChampionDto
 from match.models.match_dto import ParticipantDto
 from models import ChampionMod
 from services import init_services
 from sqlalchemy.orm import sessionmaker
-from champions.champion_dto import ChampionDto
 
 conn = init_services()
 
 
 def add_champion_of_participant(participant: ParticipantDto):
-    """ Save in the database champion. """
+    """Save in the database champion."""
     Session = sessionmaker(bind=conn)
     with Session.begin() as session:
         champion_db = (

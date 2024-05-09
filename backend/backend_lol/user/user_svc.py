@@ -3,14 +3,13 @@ from typing import List
 
 import requests
 from cred import api_key
-from fastapi import HTTPException
 from helpers import http_error_handler
 from loguru import logger
 from match.models.match_dto import ParticipantDto
-from models import ChampionMod, PersonnageMod, RanksMod, UserMod
+from models import PersonnageMod, RanksMod, UserMod
 from services import init_services
 from sqlalchemy.orm import sessionmaker
-from user.user_dto import ChampionDto, PersonnageDto, RanksDto, UserDto
+from user.user_dto import PersonnageDto, RanksDto, UserDto
 
 conn = init_services()
 
@@ -272,6 +271,5 @@ def get_user_personnages(summoner_id: str) -> List[PersonnageDto]:
             .filter(PersonnageMod.summonerId == summoner_id)
             .all()
         )
-        return [
-            PersonnageDto.model_validate(user_db_i.__dict__) for user_db_i in user_db
-        ]
+        personnagesDto = [PersonnageDto.model_validate(user_db_i.__dict__) for user_db_i in user_db]
+        return personnagesDto

@@ -62,7 +62,6 @@ class ChampionMod(Base):
     losses: Mapped[int]
     ban: Mapped[int]
     pick: Mapped[int]
-    description: Mapped[str]
 
 
 class ParticipantMod(Base):

@@ -1,17 +1,15 @@
-from typing import List
-
-from cred import api_key
 from loguru import logger
 from match.models.match_dto import ParticipantDto
-from models import ChampionMod, PersonnageMod, RanksMod, UserMod
+from models import ChampionMod
 from services import init_services
 from sqlalchemy.orm import sessionmaker
-from user.user_dto import ChampionDto, PersonnageDto, RanksDto, UserDto
+from champions.champion_dto import ChampionDto
 
 conn = init_services()
 
 
 def add_champion_of_participant(participant: ParticipantDto):
+    """ Save in the database champion. """
     Session = sessionmaker(bind=conn)
     with Session.begin() as session:
         champion_db = (
@@ -26,7 +24,6 @@ def add_champion_of_participant(participant: ParticipantDto):
                 losses=1 - int(participant.win),
                 ban=0,
                 pick=1,
-                description="filou",
             )
             session.add(new_champion)
             session.commit()
@@ -40,7 +37,7 @@ def add_champion_of_participant(participant: ParticipantDto):
 
 
 def get_champion(championName: str) -> ChampionDto:
-    """Get & Save Champion Stat in db."""
+    """Get Champion Stat in db."""
     Session = sessionmaker(bind=conn)
     with Session.begin() as session:
         existing_champion = (
@@ -48,4 +45,7 @@ def get_champion(championName: str) -> ChampionDto:
             .filter(ChampionMod.championName == championName)
             .first()
         )
-    return existing_champion
+
+        championDto = ChampionDto.model_validate(existing_champion.__dict__)
+
+    return championDto

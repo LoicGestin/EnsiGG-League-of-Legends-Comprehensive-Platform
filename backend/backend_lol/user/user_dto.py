@@ -1,4 +1,4 @@
-from pydantic import BaseModel, ConfigDict
+from pydantic import BaseModel
 
 
 class UserDto(BaseModel):
@@ -30,13 +30,6 @@ class PersonnageDto(BaseModel):
     kills: int
     deaths: int
     assists: int
-    creeps: int
+    totalCreeps: int
+    totalGameDuration: int
 
-
-class ChampionDto(BaseModel):
-    championName: str
-    wins: int
-    losses: int
-    ban: int
-    pick: int
-    description: str

@@ -1,7 +1,7 @@
 from typing import List
 
 from champions.champion_svc import get_champion
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from match.match_svc import (
     get_all_user_matches_id,
     get_data_from_one_match,

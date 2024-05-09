@@ -12,7 +12,7 @@ export default function SummonerHeader({ data }: Props) {
     <div className=" mb-10 flex-col rounded-md px-[1.5vw] py-[1.5vh]">
       <Image
         className={"float-left mr-3 "}
-        src={`https://ddragon.leagueoflegends.com/cdn/14.4.1/img/profileicon/${data.summonerProfileIconId}.png`}
+        src={`https://ddragon.leagueoflegends.com/cdn/14.9.1/img/profileicon/${data.summonerProfileIconId}.png`}
         alt={"Item Image"}
         width={100}
         height={100}

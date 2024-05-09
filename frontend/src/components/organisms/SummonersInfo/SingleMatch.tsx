@@ -101,7 +101,7 @@ export default function SingleMatch({ data, id }: Props) {
           <Link href={`/champions/${user.championName.toLowerCase()}`}>
             <Image
               className={"max-w-fit"}
-              src={`https://ddragon.leagueoflegends.com/cdn/14.4.1/img/champion/${user.championName}.png`}
+              src={`https://ddragon.leagueoflegends.com/cdn/14.9.1/img/champion/${user.championName}.png`}
               alt={"Champion Image"}
               width={72}
               height={72}
@@ -111,14 +111,14 @@ export default function SingleMatch({ data, id }: Props) {
         <div className="w-72 flex-col">
           <Image
             className="min-w-[36px]"
-            src={`https://ddragon.leagueoflegends.com/cdn/14.4.1/img/spell/${firstSum}.png`}
+            src={`https://ddragon.leagueoflegends.com/cdn/14.9.1/img/spell/${firstSum}.png`}
             alt={firstSum}
             width={36}
             height={36}
           />
           <Image
             className="min-w-[36px]"
-            src={`https://ddragon.leagueoflegends.com/cdn/14.4.1/img/spell/${secondSum}.png`}
+            src={`https://ddragon.leagueoflegends.com/cdn/14.9.1/img/spell/${secondSum}.png`}
             alt={secondSum}
             width={36}
             height={36}
@@ -160,25 +160,25 @@ export default function SingleMatch({ data, id }: Props) {
       <div className="my-auto flex-col ">
         <div className="flex">
           <Image
-            src={`https://ddragon.leagueoflegends.com/cdn/14.4.1/img/item/${user.item0 == "0" ? "2056" : user.item0}.png`}
+            src={`https://ddragon.leagueoflegends.com/cdn/14.9.1/img/item/${user.item0 == "0" ? "2056" : user.item0}.png`}
             alt={"Item Image"}
             width={30}
             height={30}
           />
           <Image
-            src={`https://ddragon.leagueoflegends.com/cdn/14.4.1/img/item/${user.item1 == "0" ? "2056" : user.item1}.png`}
+            src={`https://ddragon.leagueoflegends.com/cdn/14.9.1/img/item/${user.item1 == "0" ? "2056" : user.item1}.png`}
             alt={"Item Image"}
             width={30}
             height={30}
           />
           <Image
-            src={`https://ddragon.leagueoflegends.com/cdn/14.4.1/img/item/${user.item2 == "0" ? "2056" : user.item2}.png`}
+            src={`https://ddragon.leagueoflegends.com/cdn/14.9.1/img/item/${user.item2 == "0" ? "2056" : user.item2}.png`}
             alt={"Item Image"}
             width={30}
             height={30}
           />
           <Image
-            src={`https://ddragon.leagueoflegends.com/cdn/14.4.1/img/item/${user.item6 == "0" ? "2056" : user.item6}.png`}
+            src={`https://ddragon.leagueoflegends.com/cdn/14.9.1/img/item/${user.item6 == "0" ? "2056" : user.item6}.png`}
             alt={"Item Image"}
             width={30}
             height={30}
@@ -186,19 +186,19 @@ export default function SingleMatch({ data, id }: Props) {
         </div>
         <div className="flex">
           <Image
-            src={`https://ddragon.leagueoflegends.com/cdn/14.4.1/img/item/${user.item3 == "0" ? "2056" : user.item3}.png`}
+            src={`https://ddragon.leagueoflegends.com/cdn/14.9.1/img/item/${user.item3 == "0" ? "2056" : user.item3}.png`}
             alt={"Item Image"}
             width={30}
             height={30}
           />
           <Image
-            src={`https://ddragon.leagueoflegends.com/cdn/14.4.1/img/item/${user.item4 == "0" ? "2056" : user.item4}.png`}
+            src={`https://ddragon.leagueoflegends.com/cdn/14.9.1/img/item/${user.item4 == "0" ? "2056" : user.item4}.png`}
             alt={"Item Image"}
             width={30}
             height={30}
           />
           <Image
-            src={`https://ddragon.leagueoflegends.com/cdn/14.4.1/img/item/${user.item5 == "0" ? "2056" : user.item5}.png`}
+            src={`https://ddragon.leagueoflegends.com/cdn/14.9.1/img/item/${user.item5 == "0" ? "2056" : user.item5}.png`}
             alt={"Item Image"}
             width={30}
             height={30}
@@ -223,7 +223,7 @@ export default function SingleMatch({ data, id }: Props) {
               </div>
               <img
                 className="ml-auto shrink-0"
-                src={`https://ddragon.leagueoflegends.com/cdn/14.4.1/img/champion/${player.championName}.png`}
+                src={`https://ddragon.leagueoflegends.com/cdn/14.9.1/img/champion/${player.championName}.png`}
                 alt={"Champion Image"}
                 width={20}
                 height={20}
@@ -236,7 +236,7 @@ export default function SingleMatch({ data, id }: Props) {
           {players.slice(5, 10).map((player: any, key: number) => (
             <div key={key} className={"flex"}>
               <img
-                src={`https://ddragon.leagueoflegends.com/cdn/14.4.1/img/champion/${player.championName}.png`}
+                src={`https://ddragon.leagueoflegends.com/cdn/14.9.1/img/champion/${player.championName}.png`}
                 alt={"Champion Image"}
                 width={20}
                 height={20}

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { ChampionDTO } from "@/components/objects/ChampionDTO";
+import ChampionStats from "./ChampionStat";
 const BASE_URL = "http://localhost:8000";
 
 interface Props {
@@ -70,33 +71,7 @@ export async function ChampionInfo({ championName }: Props) {
           </div>
         </div>
       </div>
-
-      <div className="mx-auto flex w-3/4">
-        <div className="flex w-3/4 flex-col">
-          <div className="relative flex h-96 flex-col justify-between rounded-bl-lg bg-[#05101F] px-8 py-6">
-            <div className="flex items-center justify-between text-white">
-              <div className="flex items-center">
-                <span>
-                  Winrate{" "}
-                  {Math.round((data.wins * 1000) / (data.losses + data.wins)) /
-                    10}{" "}
-                  %
-                </span>
-                <span className="ml-16">Ban Rate {data.ban}</span>
-                <span className="ml-16">Pick Rate {data.pick}</span>
-              </div>
-            </div>
-            <div className="text-white">Skill Order</div>
-            <div className="text-white">{championName} Build</div>
-          </div>
-        </div>
-        <div className="flex w-1/4 flex-col">
-          <div className="relative flex h-96 flex-col justify-between rounded-br-lg bg-[#05101F] px-8 py-6">
-            <div className="text-white">{championName} Runes</div>
-            <div className="text-white">Summoners Spells</div>
-          </div>
-        </div>
-      </div>
+      <ChampionStats data={data} championName={championName} />
     </div>
   );
 }

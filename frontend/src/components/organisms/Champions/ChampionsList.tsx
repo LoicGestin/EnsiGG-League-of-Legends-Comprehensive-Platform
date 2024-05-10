@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import championsData from "../../../../public/assets/champions.json";
+import ChampionStats from "./ChampionStat";
 import Image from "next/image";
 
 const ChampionsList = () => {

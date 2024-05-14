@@ -26,11 +26,6 @@ export async function getServerSideProps(summonerName: string) {
   return getServerSidePropsExt(accountInfo, accountInfo.summonerPuuid);
 }
 
-interface Props {
-  summonerInfo: SummonerDTO;
-  summonerPuuid: String;
-}
-
 export async function getServerSidePropsExt(
   summonerInfo: SummonerDTO | null,
   summonerPuuid: String,
@@ -79,11 +74,11 @@ export async function getServerSidePropsExt(
   ];
 }
 
-interface Props {
+interface SummonerInfoProps {
   name: string;
 }
 
-export async function SummonersInfo({ name }: Props) {
+export async function SummonersInfo({ name }: SummonerInfoProps) {
   let data;
   if (name.length > 60) {
     data = await getServerSidePropsExt(null, name);

@@ -19,12 +19,12 @@ export default function Personnages({ data }: Props) {
         <span
           className={`rounded-md p-1 ${actif === 0 ? "bg-slate-600" : "bg-slate-800"}`}
         >
-          <button onClick={() => setActif(1)}>Ranked Solo</button>
+          <button onClick={() => setActif(0)}>Ranked Solo</button>
         </span>
         <span
           className={`rounded-md p-1 ${actif === 1 ? "bg-slate-600" : "bg-slate-800"}`}
         >
-          <button onClick={() => setActif(2)}>Ranked Flex</button>
+          <button onClick={() => setActif(1)}>Ranked Flex</button>
         </span>
       </div>
       <div className="flex flex-col divide-y-2 divide-slate-950">

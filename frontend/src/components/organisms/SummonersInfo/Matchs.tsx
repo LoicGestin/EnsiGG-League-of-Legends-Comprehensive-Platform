@@ -27,6 +27,7 @@ export interface GameData {
   gameMode: any;
   gameType: any;
   gameCreation: any;
+  gameDuration: any;
   platformId: any;
   participants: any;
 }

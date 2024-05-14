@@ -20,11 +20,11 @@ export default function SingleMatch({ data, id }: Props) {
   let user = players.find((player) => player.summonerPuuid === id);
   // @ts-ignore
   let firstSum = Object.values(summonerData.data).find(
-    (spell) => spell.key == user.summoner1Id,
+    (spell: any) => spell.key == user.summoner1Id,
   ).id;
   // @ts-ignore
   let secondSum = Object.values(summonerData.data).find(
-    (spell) => spell.key == user.summoner2Id,
+    (spell: any) => spell.key == user.summoner2Id,
   ).id;
 
   firstSum = firstSum.charAt(0).toUpperCase() + firstSum.slice(1);
@@ -84,7 +84,7 @@ export default function SingleMatch({ data, id }: Props) {
       <div className={"w-1/6 flex-col pt-3 text-center "}>
         <p className="text-[16px]">
           {
-            queuesData.find((queue) => queue.queueId === data.queueId)
+            queuesData.find((queue: any) => queue.queueId === data.queueId)
               .description
           }
         </p>

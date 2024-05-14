@@ -4,6 +4,10 @@ import championsData from "../../../../public/assets/champions.json";
 import ChampionStats from "./ChampionStat";
 import Image from "next/image";
 
+/**
+ * Display role position and champions that can be played as the role.
+ */
+
 const ChampionsList = () => {
   const [selectedLane, setSelectedLane] = useState("Fill");
   const [filteredChampions, setFilteredChampions] = useState(championsData);

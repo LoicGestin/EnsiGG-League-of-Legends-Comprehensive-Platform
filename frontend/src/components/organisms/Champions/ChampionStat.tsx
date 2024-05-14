@@ -1,15 +1,13 @@
 import React from "react";
 
+/**
+ * Display statistics of a champion.
+ */
+
 const ChampionStats = ({ data, championName }) => {
   const winratePercentage =
     Math.round((data.wins * 1000) / (data.losses + data.wins)) / 10;
   const pickRate = data.pick;
-
-  // Calcul de la taille du cercle en fonction du winrate
-  const circleSize = 60; // Taille du cercle
-  const radius = circleSize / 2;
-  const circumference = 2 * Math.PI * radius;
-  const winrateStrokeDashoffset = circumference * (1 - winratePercentage / 100);
 
   return (
     <div className="mx-auto flex w-3/4">

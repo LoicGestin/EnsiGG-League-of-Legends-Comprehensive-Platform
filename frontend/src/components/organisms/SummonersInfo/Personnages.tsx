@@ -7,6 +7,9 @@ interface Props {
   data: PersonnageDTO[];
 }
 
+/**
+ * Personnage Pannel.
+ */
 export default function Personnages({ data }: Props) {
   const [actif, setActif] = useState<number>(1);
 

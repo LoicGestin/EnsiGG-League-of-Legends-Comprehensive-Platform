@@ -14,43 +14,55 @@ def test_personnage():
     response = client.get(f"/personnages/{summoner_id}")
     assert response.status_code == 200
     assert response.json() == [
-  {
-    "summonerId": "NGlurILZEiRx0MSuWmaQOX1ESvkdsuNGOFyTPoAROWhILpY",
-    "queueId": 420,
-    "championName": "Jinx",
-    "wins": 1,
-    "losses": 2,
-    "kills": 11,
-    "deaths": 12,
-    "assists": 9,
-    "totalCreeps": 570,
-    "totalGameDuration": 5147
-  },
-  {
-    "summonerId": "NGlurILZEiRx0MSuWmaQOX1ESvkdsuNGOFyTPoAROWhILpY",
-    "queueId": 420,
-    "championName": "Kaisa",
-    "wins": 1,
-    "losses": 1,
-    "kills": 15,
-    "deaths": 12,
-    "assists": 19,
-    "totalCreeps": 402,
-    "totalGameDuration": 3150
-  },
-  {
-    "summonerId": "NGlurILZEiRx0MSuWmaQOX1ESvkdsuNGOFyTPoAROWhILpY",
-    "queueId": 420,
-    "championName": "Vayne",
-    "wins": 2,
-    "losses": 2,
-    "kills": 15,
-    "deaths": 16,
-    "assists": 9,
-    "totalCreeps": 516,
-    "totalGameDuration": 4464
-  }
-]
+        {
+            "summonerId": "NGlurILZEiRx0MSuWmaQOX1ESvkdsuNGOFyTPoAROWhILpY",
+            "queueId": 420,
+            "championName": "Jinx",
+            "wins": 1,
+            "losses": 3,
+            "kills": 11,
+            "deaths": 17,
+            "assists": 10,
+            "totalCreeps": 754,
+            "totalGameDuration": 6608,
+        },
+        {
+            "summonerId": "NGlurILZEiRx0MSuWmaQOX1ESvkdsuNGOFyTPoAROWhILpY",
+            "queueId": 420,
+            "championName": "Kaisa",
+            "wins": 1,
+            "losses": 1,
+            "kills": 15,
+            "deaths": 12,
+            "assists": 19,
+            "totalCreeps": 402,
+            "totalGameDuration": 3150,
+        },
+        {
+            "summonerId": "NGlurILZEiRx0MSuWmaQOX1ESvkdsuNGOFyTPoAROWhILpY",
+            "queueId": 420,
+            "championName": "Vayne",
+            "wins": 2,
+            "losses": 2,
+            "kills": 15,
+            "deaths": 16,
+            "assists": 9,
+            "totalCreeps": 516,
+            "totalGameDuration": 4464,
+        },
+        {
+            "summonerId": "NGlurILZEiRx0MSuWmaQOX1ESvkdsuNGOFyTPoAROWhILpY",
+            "queueId": 440,
+            "championName": "Yasuo",
+            "wins": 0,
+            "losses": 1,
+            "kills": 2,
+            "deaths": 9,
+            "assists": 7,
+            "totalCreeps": 175,
+            "totalGameDuration": 1538,
+        },
+    ]
 
 
 def test_league_error():

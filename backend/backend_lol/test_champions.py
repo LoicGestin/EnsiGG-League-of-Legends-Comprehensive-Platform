@@ -13,9 +13,10 @@ def test_champions():
 
     response = client.get(f"/champion/{champion_name}")
     assert response.status_code == 200
-    assert response.json() == {"championName": "Vayne",
-        "wins": 2,
-        "losses": 3,
+    assert response.json() == {
+        "championName": "Vayne",
+        "wins": 13,
+        "losses": 8,
         "ban": 0,
-        "pick": 5
+        "pick": 21,
     }

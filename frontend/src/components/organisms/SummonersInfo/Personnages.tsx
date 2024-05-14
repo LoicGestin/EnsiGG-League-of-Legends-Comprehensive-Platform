@@ -11,25 +11,25 @@ interface Props {
  * Personnage Pannel.
  */
 export default function Personnages({ data }: Props) {
-  const [actif, setActif] = useState<number>(1);
+  const [actif, setActif] = useState<number>(0);
 
   return (
     <div className="flex flex-col space-y-4 divide-y-2 divide-slate-950 rounded-md bg-slate-800 p-2">
       <div className="flex justify-center space-x-1">
         <span
-          className={`rounded-md p-1 ${actif === 1 ? "bg-slate-600" : "bg-slate-800"}`}
+          className={`rounded-md p-1 ${actif === 0 ? "bg-slate-600" : "bg-slate-800"}`}
         >
           <button onClick={() => setActif(1)}>Ranked Solo</button>
         </span>
         <span
-          className={`rounded-md p-1 ${actif === 2 ? "bg-slate-600" : "bg-slate-800"}`}
+          className={`rounded-md p-1 ${actif === 1 ? "bg-slate-600" : "bg-slate-800"}`}
         >
           <button onClick={() => setActif(2)}>Ranked Flex</button>
         </span>
       </div>
       <div className="flex flex-col divide-y-2 divide-slate-950">
         {data.map((personnage, key) => {
-          if (personnage.queueId === (actif === 1 ? 420 : 440)) {
+          if (personnage.queueId === (actif === 0 ? 420 : 440)) {
             return (
               <div className="my-auto py-1" key={key}>
                 <SinglePersonnage personnage={personnage} />

@@ -4,6 +4,7 @@ import dynamic from "next/dynamic";
 import Ranked from "@/components/organisms/SummonersInfo/Ranked";
 import SummonerHeader from "@/components/organisms/SummonersInfo/SummonerHeader";
 import Matchs from "@/components/organisms/SummonersInfo/Matchs";
+import Personnages from "./Personnages";
 
 const BASE_URL = "http://localhost:8000";
 
@@ -66,7 +67,16 @@ export async function getServerSidePropsExt(
   });
   const matchesResponseJson = await matchesResponse.json();
 
-  return [summonerInfo, jsonResponseLeague, matchesResponseJson];
+  const apiUrlPersonnages = `${BASE_URL}/personnages/${summonerInfo?.summonerId}`;
+  const personnagesResponse = await fetch(apiUrlPersonnages);
+
+  const personnagesResponseJson = await personnagesResponse.json();
+  return [
+    summonerInfo,
+    jsonResponseLeague,
+    matchesResponseJson,
+    personnagesResponseJson,
+  ];
 }
 
 interface Props {
@@ -85,6 +95,7 @@ export async function SummonersInfo({ name }: Props) {
   const leagueInfoSoloq = data[1][0] as LeagueEntryDTO;
   const leagueInfoFlex = data[1][1] as LeagueEntryDTO;
   const matches = data[2];
+  const personnages = data[3];
 
   return (
     <div className="mx-auto w-5/6 flex-col space-y-3 text-white ">
@@ -94,6 +105,7 @@ export async function SummonersInfo({ name }: Props) {
         <div className=" flex w-5/12 flex-col space-y-1 ">
           <Ranked data={leagueInfoSoloq} />
           <Ranked data={leagueInfoFlex} />
+          <Personnages data={personnages} />
         </div>
         <Matchs data={matches} id={summonerInfo.summonerPuuid} />
       </div>

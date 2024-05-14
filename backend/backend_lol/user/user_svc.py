@@ -175,7 +175,7 @@ def get_and_save_user_ranks(summoner_puuid: str) -> List[RanksDto]:
                         **{
                             "summonerId": user.summonerId,
                             "summonerName": user.summonerName,
-                            "queueId": 450,
+                            "queueId": 440,
                         },
                     }
                 )
@@ -203,7 +203,7 @@ def get_and_save_user_ranks(summoner_puuid: str) -> List[RanksDto]:
                     session.query(RanksMod)
                     .filter(
                         (RanksMod.summonerId == user.summonerId),
-                        (RanksMod.queueId == 450),
+                        (RanksMod.queueId == 440),
                     )
                     .first()
                 )

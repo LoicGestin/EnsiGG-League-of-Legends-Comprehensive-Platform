@@ -1,5 +1,9 @@
 import React from "react";
 
+/**
+ * Display statistics of a champion.
+ */
+
 const ChampionStats = ({ data, championName }) => {
   const winratePercentage =
     Math.round((data.wins * 1000) / (data.losses + data.wins)) / 10;

@@ -29,17 +29,6 @@ export function Sidebar() {
             height={40}
           />
         </Link>
-        <Link href="/">
-          <LabelImage
-            text="Tier List"
-            textClass="text-white text-center text-xs"
-            imageClass="bg-slate-700 p-2 rounded-xl"
-            path="/tierlist.webp"
-            alt="TierList"
-            width={40}
-            height={40}
-          />
-        </Link>
         <Link href="/prodraft">
           <LabelImage
             text="Draft"

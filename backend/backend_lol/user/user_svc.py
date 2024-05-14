@@ -3,14 +3,13 @@ from typing import List
 
 import requests
 from cred import api_key
-from fastapi import HTTPException
 from helpers import http_error_handler
 from loguru import logger
 from match.models.match_dto import ParticipantDto
-from models import ChampionMod, PersonnageMod, RanksMod, UserMod
+from models import PersonnageMod, RanksMod, UserMod
 from services import init_services
 from sqlalchemy.orm import sessionmaker
-from user.user_dto import ChampionDto, PersonnageDto, RanksDto, UserDto
+from user.user_dto import PersonnageDto, RanksDto, UserDto
 
 conn = init_services()
 
@@ -25,10 +24,12 @@ def get_and_save_user(summoner_name: str, tag: str) -> UserDto:
             user_db = (
                 session.query(UserMod)
                 .filter(
-                    UserMod.summonerName == summoner_name, UserMod.summonerTag == tag
+                    UserMod.summonerName == summoner_name.lower(),
+                    UserMod.summonerTag == tag.lower(),
                 )
                 .first()
             )
+
             if not user_db:
                 logger.info(f'Requesting from LoL API the user "{summoner_name}#{tag}"')
 
@@ -44,8 +45,8 @@ def get_and_save_user(summoner_name: str, tag: str) -> UserDto:
                 user = UserDto(
                     summonerId=y.json()["id"],
                     summonerPuuid=y.json()["puuid"],
-                    summonerName=summoner_name,
-                    summonerTag=tag,
+                    summonerName=summoner_name.lower(),
+                    summonerTag=tag.lower(),
                     summonerLevel=y.json()["summonerLevel"],
                     summonerProfileIconId=y.json()["profileIconId"],
                 )
@@ -112,7 +113,6 @@ def get_and_save_user_ranks(summoner_puuid: str) -> List[RanksDto]:
                 .filter(RanksMod.summonerId == user.summonerId)
                 .first()
             )
-
             if not user_db:
                 logger.info("Requesting summoner's ranks...")
                 x = requests.get(
@@ -175,7 +175,7 @@ def get_and_save_user_ranks(summoner_puuid: str) -> List[RanksDto]:
                         **{
                             "summonerId": user.summonerId,
                             "summonerName": user.summonerName,
-                            "queueId": 450,
+                            "queueId": 440,
                         },
                     }
                 )
@@ -203,7 +203,7 @@ def get_and_save_user_ranks(summoner_puuid: str) -> List[RanksDto]:
                     session.query(RanksMod)
                     .filter(
                         (RanksMod.summonerId == user.summonerId),
-                        (RanksMod.queueId == 450),
+                        (RanksMod.queueId == 440),
                     )
                     .first()
                 )
@@ -272,6 +272,7 @@ def get_user_personnages(summoner_id: str) -> List[PersonnageDto]:
             .filter(PersonnageMod.summonerId == summoner_id)
             .all()
         )
-        return [
+        personnagesDto = [
             PersonnageDto.model_validate(user_db_i.__dict__) for user_db_i in user_db
         ]
+        return personnagesDto

@@ -8,7 +8,8 @@ from match.match_svc import (
     get_user_matches,
 )
 from match.models.match_dto import MatchDto
-from user.user_dto import ChampionDto, PersonnageDto, RanksDto, UserDto
+from user.user_dto import  PersonnageDto, RanksDto, UserDto
+from champions.champion_dto import ChampionDto
 from user.user_svc import (
     get_and_save_user,
     get_and_save_user_by_puuid,

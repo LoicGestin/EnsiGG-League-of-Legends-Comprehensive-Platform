@@ -16,8 +16,8 @@ def test_summoner_by_name():
     assert response.json() == {
         "summonerId": "NGlurILZEiRx0MSuWmaQOX1ESvkdsuNGOFyTPoAROWhILpY",
         "summonerPuuid": "HZjiCzLo8bFNuecnPFK1Jskchhq_h-q7xhFCfsmp1NA6FGK3kEeAyiKUbj0VAYHD97l6z5tz_ZU5OA",
-        "summonerName": "Haruyukis",
-        "summonerTag": "EUW",
+        "summonerName": "haruyukis",
+        "summonerTag": "euw",
         "summonerLevel": 377,
         "summonerProfileIconId": 4660,
     }
@@ -47,8 +47,8 @@ def test_summoner_by_puuid():
     assert response.json() == {
         "summonerId": "NGlurILZEiRx0MSuWmaQOX1ESvkdsuNGOFyTPoAROWhILpY",
         "summonerPuuid": "HZjiCzLo8bFNuecnPFK1Jskchhq_h-q7xhFCfsmp1NA6FGK3kEeAyiKUbj0VAYHD97l6z5tz_ZU5OA",
-        "summonerName": "Haruyukis",
-        "summonerTag": "EUW",
+        "summonerName": "haruyukis",
+        "summonerTag": "euw",
         "summonerLevel": 377,
         "summonerProfileIconId": 4660,
     }

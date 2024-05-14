@@ -1,12 +1,18 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import championsData from "../../../../public/assets/champions.json";
+import ChampionStats from "./ChampionStat";
+import Image from "next/image";
+
+/**
+ * Display role position and champions that can be played as the role.
+ */
 
 const ChampionsList = () => {
   const [selectedLane, setSelectedLane] = useState("Fill");
   const [filteredChampions, setFilteredChampions] = useState(championsData);
 
-  const handleLaneSelect = (lane) => {
+  const handleLaneSelect = (lane: any) => {
     setSelectedLane(lane);
     if (lane === "Fill") {
       setFilteredChampions(championsData);
@@ -22,9 +28,21 @@ const ChampionsList = () => {
     <div className="rounded bg-gray-900 p-4">
       <div className="mb-16 flex items-end justify-between rounded bg-black p-4 text-white">
         <h1 className="mb-2 mr-4 flex items-center font-serif text-4xl">
-          <img className="ml-4 h-20 w-20" src="chibi-yasuo-r.png" alt="Yasuo" />
+          <Image
+            className="ml-4 h-20 w-20"
+            src="/chibi-yasuo-r.png"
+            alt="Yasuo"
+            width={80}
+            height={80}
+          />
           Champions
-          <img className="ml-4 h-20 w-20" src="chibi-yasuo.png" alt="Yasuo" />
+          <Image
+            className="ml-4 h-20 w-20"
+            src="/chibi-yasuo.png"
+            alt="Yasuo"
+            width={80}
+            height={80}
+          />
         </h1>
 
         <div className="mb-4 flex items-end">
@@ -34,10 +52,11 @@ const ChampionsList = () => {
             }`}
             onClick={() => handleLaneSelect("Fill")}
           >
-            <img
-              className="h-6 w-6"
-              src="icons/lanes/icon-position-fill.png"
+            <Image
+              src="/icons/lanes/icon-position-fill.png"
               alt="Fill"
+              height={24}
+              width={24}
             />
           </button>
           <button
@@ -46,10 +65,11 @@ const ChampionsList = () => {
             }`}
             onClick={() => handleLaneSelect("Top")}
           >
-            <img
-              className="h-6 w-6"
-              src="icons/lanes/icon-position-top.png"
+            <Image
+              src="/icons/lanes/icon-position-top.png"
               alt="Top"
+              height={24}
+              width={24}
             />
           </button>
           <button
@@ -58,10 +78,11 @@ const ChampionsList = () => {
             }`}
             onClick={() => handleLaneSelect("Jungle")}
           >
-            <img
-              className="h-6 w-6"
-              src="icons/lanes/icon-position-jungle.png"
+            <Image
+              src="/icons/lanes/icon-position-jungle.png"
               alt="Jungle"
+              height={24}
+              width={24}
             />
           </button>
           <button
@@ -70,10 +91,11 @@ const ChampionsList = () => {
             }`}
             onClick={() => handleLaneSelect("Mid")}
           >
-            <img
-              className="h-6 w-6"
-              src="icons/lanes/icon-position-middle.png"
+            <Image
+              src="/icons/lanes/icon-position-middle.png"
               alt="Mid"
+              height={24}
+              width={24}
             />
           </button>
           <button
@@ -82,10 +104,11 @@ const ChampionsList = () => {
             }`}
             onClick={() => handleLaneSelect("Adc")}
           >
-            <img
-              className="h-6 w-6"
-              src="icons/lanes/icon-position-bottom.png"
+            <Image
+              src="/icons/lanes/icon-position-bottom.png"
               alt="Adc"
+              height={24}
+              width={24}
             />
           </button>
           <button
@@ -94,10 +117,11 @@ const ChampionsList = () => {
             }`}
             onClick={() => handleLaneSelect("Support")}
           >
-            <img
-              className="h-6 w-6"
-              src="icons/lanes/icon-position-utility.png"
-              alt="Sup"
+            <Image
+              src="/icons/lanes/icon-position-utility.png"
+              alt="Adc"
+              height={24}
+              width={24}
             />
           </button>
         </div>
@@ -106,7 +130,12 @@ const ChampionsList = () => {
         {filteredChampions.map((champion) => (
           <Link key={champion.name} href={`/champions/${champion.name}`}>
             <div className="flex flex-col items-center text-white">
-              <img src={champion.icon} alt={champion.name} />
+              <Image
+                src={champion.icon}
+                alt={champion.name}
+                width={104}
+                height={104}
+              />
               <div>{champion.name}</div>
             </div>
           </Link>

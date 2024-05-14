@@ -4,6 +4,7 @@ import dynamic from "next/dynamic";
 import Ranked from "@/components/organisms/SummonersInfo/Ranked";
 import SummonerHeader from "@/components/organisms/SummonersInfo/SummonerHeader";
 import Matchs from "@/components/organisms/SummonersInfo/Matchs";
+import Personnages from "./Personnages";
 
 const BASE_URL = "http://localhost:8000";
 
@@ -23,11 +24,6 @@ export async function getServerSideProps(summonerName: string) {
   const accountInfo = await data.json();
 
   return getServerSidePropsExt(accountInfo, accountInfo.summonerPuuid);
-}
-
-interface Props {
-  summonerInfo: SummonerDTO;
-  summonerPuuid: String;
 }
 
 export async function getServerSidePropsExt(
@@ -66,14 +62,23 @@ export async function getServerSidePropsExt(
   });
   const matchesResponseJson = await matchesResponse.json();
 
-  return [summonerInfo, jsonResponseLeague, matchesResponseJson];
+  const apiUrlPersonnages = `${BASE_URL}/personnages/${summonerInfo?.summonerId}`;
+  const personnagesResponse = await fetch(apiUrlPersonnages);
+
+  const personnagesResponseJson = await personnagesResponse.json();
+  return [
+    summonerInfo,
+    jsonResponseLeague,
+    matchesResponseJson,
+    personnagesResponseJson,
+  ];
 }
 
-interface Props {
+interface SummonerInfoProps {
   name: string;
 }
 
-export async function SummonersInfo({ name }: Props) {
+export async function SummonersInfo({ name }: SummonerInfoProps) {
   let data;
   if (name.length > 60) {
     data = await getServerSidePropsExt(null, name);
@@ -85,6 +90,7 @@ export async function SummonersInfo({ name }: Props) {
   const leagueInfoSoloq = data[1][0] as LeagueEntryDTO;
   const leagueInfoFlex = data[1][1] as LeagueEntryDTO;
   const matches = data[2];
+  const personnages = data[3];
 
   return (
     <div className="mx-auto w-5/6 flex-col space-y-3 text-white ">
@@ -94,6 +100,7 @@ export async function SummonersInfo({ name }: Props) {
         <div className=" flex w-5/12 flex-col space-y-1 ">
           <Ranked data={leagueInfoSoloq} />
           <Ranked data={leagueInfoFlex} />
+          <Personnages data={personnages} />
         </div>
         <Matchs data={matches} id={summonerInfo.summonerPuuid} />
       </div>

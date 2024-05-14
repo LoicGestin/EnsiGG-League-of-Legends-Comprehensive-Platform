@@ -28,7 +28,7 @@ def test_league():
         {
             "summonerId": "NGlurILZEiRx0MSuWmaQOX1ESvkdsuNGOFyTPoAROWhILpY",
             "summonerName": "Haruyukis",
-            "queueId": 450,
+            "queueId": 440,
             "tier": "DIAMOND",
             "rank": "II",
             "leaguePoints": 50,

@@ -94,7 +94,7 @@ def get_data_from_one_match(match_id: str) -> MatchDto:
                 queueId = match_dto.queueId
                 gameDuration = match_dto.gameDuration
                 for participant in participants_dto:
-                    if queueId == 420:
+                    if queueId == 420 or queueId == 440:
                         add_participant_to_personnages(
                             participant, queueId, gameDuration
                         )

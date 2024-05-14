@@ -1,27 +1,49 @@
-describe("ProdraftLink page", () => {
-  beforeEach(() => {
-    cy.visit("http://localhost:3001/prodraft");
-  });
+describe("Test Cypress pour Prodraft", () => {
+  it("Sélectionne différents champions avec les liens bleus et rouges selon la séquence spécifiée", () => {
+    const sequence = [
+      3, 4, 3, 4, 3, 4, 1, 2, 2, 1, 1, 2, 4, 3, 4, 3, 2, 1, 1, 2,
+    ];
 
-  it("should navigate to the correct Blue Picks & Bans Link", () => {
-    cy.get(".link-rect1 a").click();
-    cy.url().should("include", "_blue");
-  });
+    const champions = [
+      "Aatrox",
+      "Ahri",
+      "Akali",
+      "Alistar",
+      "Amumu",
+      "Anivia",
+      "Annie",
+      "Aphelios",
+      "Ashe",
+      "Azir",
+      "Bard",
+      "Blitzcrank",
+      "Brand",
+      "Braum",
+      "Caitlyn",
+      "Camille",
+      "Cassiopeia",
+      "Corki",
+      "Darius",
+      "Diana",
+    ];
 
-  it("should navigate to the correct Red Picks & Bans Link", () => {
-    cy.get(".link-rect2 a").click();
-    cy.url().should("include", "_red");
-  });
+    let currentIndex = 0;
 
-  it("should navigate to the correct Spectator Picks & Bans Link", () => {
-    cy.get(".link-rect3 a").click();
-    cy.url().should("not.include", "_blue");
-    cy.url().should("not.include", "_red");
-  });
+    sequence.forEach((action) => {
+      const isBlue = action === 1 || action === 3;
+      const link =  "abcdefg_blue";
 
-  it("should navigate back to the ProdraftLink page after clicking the Spectator Picks & Bans Link", () => {
-    cy.get(".link-rect3 a").click();
-    cy.go("back");
-    cy.url().should("include", "prodraft");
+      cy.visit(`http://localhost:3001/prodraft/${link}`);
+      const champion = champions[currentIndex];
+      cy.contains(".grid-cols-6 > div", champion)
+          .should("not.have.class", "opacity-15")
+          .click();
+
+
+      cy.contains(".flex-col.items-center.text-white", champion)
+          .should('have.class', 'opacity-15');
+
+      currentIndex++;
+    });
   });
 });

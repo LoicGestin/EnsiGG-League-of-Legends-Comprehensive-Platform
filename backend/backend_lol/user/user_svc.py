@@ -7,7 +7,6 @@ from helpers import http_error_handler
 from loguru import logger
 from match.models.match_dto import ParticipantDto
 from models import PersonnageMod, RanksMod, UserMod
-from pydantic import Tag
 from services import init_services
 from sqlalchemy.orm import sessionmaker
 from user.user_dto import PersonnageDto, RanksDto, UserDto
@@ -26,7 +25,7 @@ def get_and_save_user(summoner_name: str, tag: str) -> UserDto:
                 session.query(UserMod)
                 .filter(
                     UserMod.summonerName == summoner_name.lower(),
-                    UserMod.summonerTag == tag,
+                    UserMod.summonerTag == tag.lower(),
                 )
                 .first()
             )
@@ -47,7 +46,7 @@ def get_and_save_user(summoner_name: str, tag: str) -> UserDto:
                     summonerId=y.json()["id"],
                     summonerPuuid=y.json()["puuid"],
                     summonerName=summoner_name.lower(),
-                    summonerTag=tag,
+                    summonerTag=tag.lower(),
                     summonerLevel=y.json()["summonerLevel"],
                     summonerProfileIconId=y.json()["profileIconId"],
                 )

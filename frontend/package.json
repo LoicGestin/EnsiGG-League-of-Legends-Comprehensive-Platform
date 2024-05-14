@@ -12,7 +12,10 @@
     "jsonpath": "^1.1.1",
     "next": "14.1.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "serve-handler": "^6.1.5",
+    "socket.io-client": "^4.7.5",
+    "ws": "^8.16.0"
   },
   "devDependencies": {
     "@types/node": "^20.11.20",

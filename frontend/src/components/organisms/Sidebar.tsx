@@ -40,7 +40,7 @@ export function Sidebar() {
             height={40}
           />
         </Link>
-        <Link href="/">
+        <Link href="/prodraft">
           <LabelImage
             text="Draft"
             textClass="text-white text-center text-xs"

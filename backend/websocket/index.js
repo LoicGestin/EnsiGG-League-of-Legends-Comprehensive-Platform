@@ -71,6 +71,6 @@ function removeColorFromRoom(room) {
   return room;
 }
 
-httpServer.listen(3000, () => {
-  console.log("HTTP and Socket.io server is running on port 3000");
+httpServer.listen(3001, () => {
+  console.log("Socket.io server is running on port 3001");
 });

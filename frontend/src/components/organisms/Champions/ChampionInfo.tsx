@@ -76,7 +76,7 @@ export async function ChampionInfo({ championName }: Props) {
             </div>
           </div>
         </div>
-        <ChampionStats data={data} championName={championName} />
+        <ChampionStats data={data} />
       </div>
     );
   } catch (error) {

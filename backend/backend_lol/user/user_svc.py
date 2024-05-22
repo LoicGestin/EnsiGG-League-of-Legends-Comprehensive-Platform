@@ -107,12 +107,13 @@ def get_and_save_user_ranks(summoner_puuid: str) -> List[RanksDto]:
             user = get_and_save_user(
                 account_info.json()["gameName"], account_info.json()["tagLine"]
             )
-
+            logger.info("Requesting from db the summoner's ranks.")
             user_db = (
                 session.query(RanksMod)
                 .filter(RanksMod.summonerId == user.summonerId)
                 .first()
             )
+
             if not user_db:
                 logger.info("Requesting summoner's ranks...")
                 x = requests.get(
@@ -128,30 +129,14 @@ def get_and_save_user_ranks(summoner_puuid: str) -> List[RanksDto]:
                     "losses": 0,
                 }
 
-                if len(x.json()) == 0:
-                    solo_ranks = init_ranks
+                solo_ranks = init_ranks
+                flex_ranks = init_ranks
 
-                    flex_ranks = init_ranks
-                elif len(x.json()) == 1:
-                    if x.json()["queueType" == "RANKED_SOLO_5x5"]:
-                        solo_ranks = x.json()
-
-                        flex_ranks = init_ranks
-                    else:
-                        solo_ranks = init_ranks
-                        flex_ranks = x.json()
-                else:
-                    solo_ranks = (
-                        x.json()[0]
-                        if (x.json()[0]["queueType"] == "RANKED_SOLO_5x5")
-                        else x.json()[1]
-                    )
-
-                    flex_ranks = (
-                        x.json()[1]
-                        if (x.json()[0]["queueType"] == "RANKED_SOLO_5x5")
-                        else x.json()[0]
-                    )
+                for rank in x.json():
+                    if rank["queueType"] == "RANKED_SOLO_5x5":
+                        solo_ranks = rank
+                    elif rank["queueType"] == "RANKED_FLEX_SR":
+                        flex_ranks = rank
 
                 solo_ranks = RanksDto.model_validate(
                     {

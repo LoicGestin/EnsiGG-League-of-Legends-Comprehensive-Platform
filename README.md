@@ -4,6 +4,8 @@ Introducing Ensi.GG, your all-in-one platform for champions builds, tier lists, 
 
 Accessible at - https://ensi.gg
 
+**Note:** If the site is not live, please refer to the [frontend README](./frontend/README.md) and [backend README](./backend/README.md) files to deploy the site locally.
+
 For contributing, please install [VSCode](https://code.visualstudio.com/download) and the extension Git Graph.
 
 ## Design
